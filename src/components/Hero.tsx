@@ -12,7 +12,7 @@ export const Hero: React.FC = () => {
                     src="/assets/images/ps-outdoor-yoga-class-atlanta-laure-photography-45_edited.jpg"
                     alt="Outdoor Yoga Class"
                     fill
-                    className="object-cover md:hidden"
+                    className="object-cover object-left object-bottom md:hidden"
                     priority
                 />
                 {/* Desktop Image */}
@@ -20,7 +20,7 @@ export const Hero: React.FC = () => {
                     src="/assets/images/ps-outdoor-yoga-class-atlanta-laure-photography-45_edited.jpg"
                     alt="Outdoor Yoga Class"
                     fill
-                    className="object-cover hidden md:block"
+                    className="object-cover object-bottom hidden md:block"
                     priority
                 />
                 {/* Overlay to ensure text readability */}

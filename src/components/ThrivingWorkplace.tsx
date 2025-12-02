@@ -6,7 +6,7 @@ export const ThrivingWorkplace: React.FC = () => {
     return (
         <section className="w-full bg-[#f8fcfc]">
             {/* Header Section */}
-            <div className="py-16 text-center px-4">
+            <div className="bg-[#F5FAF5] py-16 text-center px-4">
                 <h1 className="text-[#053d3d] font-bold text-lg mb-2 font-display">
                     Let's Build a Thriving Workplace, Together
                 </h1>

@@ -19,7 +19,7 @@ export const WhyGatherUp: React.FC = () => {
     return (
         <section className="w-full">
             {/* Header Section */}
-            <div className="bg-[#053d3d] py-16 text-center px-4">
+            <div className="bg-[#053d3d] py-12 text-center px-4">
                 <h2 className="text-3xl md:text-5xl font-bold text-white font-display">
                     Happier Tenants, <br />
                     <span className="text-[#a6ff48]">Better Business Outcomes</span>
