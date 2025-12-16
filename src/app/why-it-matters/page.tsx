@@ -14,7 +14,7 @@ export default function WhyItMatters() {
                             Why does Employee Well-Being Matter
                         </h1>
                         <h2 className="text-xl md:text-2xl font-bold text-[#053d3d] mb-6">
-                            Employee well-being isn’t just a feel-good initiative, it’s a business imperative.
+                            Employee well-being isn't just a feel-good initiative, it's a business imperative.
                         </h2>
                         <p className="text-lg text-gray-700 leading-relaxed">
                             Organizations that invest in the health, connection, and fulfillment of their people experience stronger culture, higher retention, and real business growth.
@@ -26,20 +26,22 @@ export default function WhyItMatters() {
                 <section className="py-20 bg-white">
                     <div className="container mx-auto px-4">
                         <div className="text-center mb-12">
-                            <h3 className="text-3xl font-bold text-[#053d3d] font-display mb-4">What’s at Stake?</h3>
+                            <h3 className="text-3xl font-bold text-[#053d3d] font-display mb-4">What's at Stake?</h3>
                             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                                 Workplace well-being is the antidote to disengagement, turnover, and culture.
+                            </p>
+                            <p className="text-base text-gray-600 max-w-2xl mx-auto mt-2">
+                                Businesses that ignore employee well-being, witness:
                             </p>
                         </div>
 
                         <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
                             {/* Negative Stakes */}
                             <div className="bg-red-50 p-8 rounded-2xl border border-red-100">
-                                <h4 className="text-xl font-bold text-red-800 mb-6">Businesses that ignore employee well-being, witness:</h4>
                                 <ul className="space-y-3">
                                     {["Decreased morale", "Low retention", "Quiet quitting", "Leadership burnout", "Team fragmentation"].map((item, i) => (
-                                        <li key={i} className="flex items-center gap-3 text-red-700">
-                                            <span className="w-2 h-2 bg-red-500 rounded-full"></span>
+                                        <li key={i} className="flex items-start gap-3 text-red-700 text-base">
+                                            <span className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></span>
                                             {item}
                                         </li>
                                     ))}
@@ -48,11 +50,13 @@ export default function WhyItMatters() {
 
                             {/* Positive Stakes */}
                             <div className="bg-[#f0fdf4] p-8 rounded-2xl border border-[#a6ff48]/50">
-                                <h4 className="text-xl font-bold text-[#053d3d] mb-6">Businesses that prioritize employee well-being, witness:</h4>
+                                <p className="text-base text-[#053d3d] mb-4 font-medium">
+                                    Businesses that prioritize employee well-being, witness:
+                                </p>
                                 <ul className="space-y-3">
                                     {["Thriving teams", "Energized leaders", "Deep loyalty", "Culture as a competitive edge"].map((item, i) => (
-                                        <li key={i} className="flex items-center gap-3 text-[#053d3d]">
-                                            <span className="w-2 h-2 bg-[#a6ff48] rounded-full"></span>
+                                        <li key={i} className="flex items-start gap-3 text-[#053d3d] text-base">
+                                            <span className="w-2 h-2 bg-[#a6ff48] rounded-full mt-2 flex-shrink-0"></span>
                                             {item}
                                         </li>
                                     ))}
@@ -69,7 +73,7 @@ export default function WhyItMatters() {
                             The Impact on Business
                         </h3>
 
-                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
                             {[
                                 {
                                     title: "Retention",
@@ -98,7 +102,7 @@ export default function WhyItMatters() {
                             ].map((item, index) => (
                                 <div key={index} className="bg-white/10 p-8 rounded-xl backdrop-blur-sm border border-white/10 hover:bg-white/20 transition-colors">
                                     <h4 className="text-[#a6ff48] font-bold text-xl mb-4 font-display">{item.title}</h4>
-                                    <p className="text-gray-200 leading-relaxed">
+                                    <p className="text-gray-200 leading-relaxed text-sm">
                                         {item.stat}
                                     </p>
                                 </div>
@@ -110,12 +114,12 @@ export default function WhyItMatters() {
                 {/* Beyond Perks Section */}
                 <section className="py-20 bg-white">
                     <div className="container mx-auto px-4 max-w-4xl text-center">
-                        <h3 className="text-3xl font-bold text-[#053d3d] mb-6 font-display">Beyond Perks, This Is Strategy</h3>
+                        <h3 className="text-3xl font-bold text-[#053d3d] mb-6 font-display">Beyond Perks, This Is  Strategy</h3>
                         <p className="text-lg text-gray-600 mb-8">
-                            The old approach to “wellness” was surface-level: fruit in the kitchen, the occasional yoga class, maybe a quarterly lunch-and-learn.
+                            The old approach to "wellness" was surface-level: fruit in the kitchen, the occasional yoga class, maybe a quarterly lunch-and-learn.
                         </p>
                         <p className="text-2xl font-bold text-[#053d3d]">
-                            Today’s workplaces need more than perks... they need strategy.
+                            Today's workplaces need more than perks... they need strategy.
                         </p>
                     </div>
                 </section>
@@ -124,6 +128,9 @@ export default function WhyItMatters() {
                 <section className="py-20 bg-[#f8fcfc]">
                     <div className="container mx-auto px-4 max-w-4xl text-center">
                         <h3 className="text-3xl font-bold text-[#053d3d] mb-8 font-display">At GatherUp</h3>
+                        <p className="text-base text-[#053d3d] mb-6">
+                            We believe that:
+                        </p>
                         <div className="flex flex-wrap justify-center gap-6 mb-12 text-lg font-medium text-[#053d3d]">
                             <span className="flex items-center gap-2">
                                 <span className="text-[#a6ff48]">✔</span> Work should feel human
@@ -139,8 +146,24 @@ export default function WhyItMatters() {
                             We exist to help organizations create workplaces where people feel well, valued, and part of something bigger.
                         </p>
                         <p className="text-xl font-bold text-[#053d3d]">
-                            That’s not just fluff. That’s the foundation of high-performing, healthy, loyal teams.
+                            That's not just fluff. That's the foundation of high-performing, healthy, loyal teams.
                         </p>
+                    </div>
+                </section>
+
+                {/* Blog Post Preview Section */}
+                <section className="py-16 bg-white">
+                    <div className="container mx-auto px-4 max-w-4xl">
+                        <a
+                            href="https://gluckjamin.wixsite.com/website-1/post/why-you-don-t-need-to-reply-right-away-reclaiming-your-time-through-healthy-email-boundaries"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="block group"
+                        >
+                            <h3 className="text-2xl md:text-3xl font-bold text-[#053d3d] mb-4 group-hover:text-[#a6ff48] transition-colors">
+                                Why You Don't Need to Reply Right Away: Reclaiming Your Time Through Healthy Email Boundaries
+                            </h3>
+                        </a>
                     </div>
                 </section>
 
@@ -151,11 +174,12 @@ export default function WhyItMatters() {
                             Ready to Turn Your Culture into a Business Advantage?
                         </h3>
                         <p className="text-xl text-[#a6ff48] mb-10">
-                            Let’s make employee well-being your strategy for sustainable success.
+                            Let's make employee well-being your strategy for sustainable success.
                         </p>
                         <a
                             href="https://tidycal.com/gluckjamin/free-gatherup-consultation"
                             target="_blank"
+                            rel="noopener noreferrer"
                             className="inline-block bg-[#a6ff48] text-[#053d3d] font-bold py-4 px-8 rounded-full hover:bg-white transition-colors duration-300"
                         >
                             Book a Demo
