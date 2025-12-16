@@ -10,7 +10,7 @@ export const Header: React.FC = () => {
 
     return (
         <header className="fixed top-0 left-0 right-0 z-50 bg-[#053d3d] shadow-md transition-all duration-300">
-            <div className="container mx-auto max-w-7xl px-[2px] py-[2px] flex justify-start items-center gap-4 lg:gap-8">
+            <div className="container mx-auto max-w-7xl px-4 py-2 sm:px-6 lg:px-8 flex justify-start items-center gap-4 lg:gap-8">
                 {/* Logo */}
                 {/* <Link href="/" className="relative w-[72px] h-[72px]">
                     <Image
@@ -53,7 +53,7 @@ export const Header: React.FC = () => {
                     className="hidden md:flex bg-[#a6ff48] text-[#053d3d] font-bold py-2.5 px-6 rounded-full hover:bg-white transition-colors duration-300 items-center gap-2 text-sm ml-auto"
                 >
                     Book a Demo
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-4 h-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-4 h-4 ml-[10px] mr-[10px]">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                     </svg>
                 </Link>
