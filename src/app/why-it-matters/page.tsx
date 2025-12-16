@@ -1,6 +1,7 @@
 import React from 'react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+import Image from 'next/image';
 
 export default function WhyItMatters() {
     return (
@@ -8,36 +9,59 @@ export default function WhyItMatters() {
             <Header />
             <main className="pt-24">
                 {/* Hero Section */}
-                <section className="bg-[#f8fcfc] py-20">
+                <section className="relative min-h-[600px] md:min-h-[650px] flex items-center overflow-hidden">
+                    {/* Background Image */}
+                    <div className="absolute inset-0 z-0">
+                        <Image
+                            src="/assets/images/High Five after Workout_edited.png"
+                            alt="Employee Well-Being"
+                            fill
+                            className="object-cover object-center"
+                            priority
+                        />
+                        {/* Overlay to ensure text readability */}
+                        <div className="absolute inset-0 bg-white/60"></div>
+                    </div>
+
+                    {/* Content */}
+                    <div className="container mx-auto max-w-7xl px-4 md:px-8 relative z-10 py-12 md:py-20">
+                        <div className="max-w-4xl mx-auto text-center animate-fade-in-up">
+                            <h1 className="text-7xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-[#053d3d] leading-tight drop-shadow-sm font-display">
+                                Why does Employee<br />
+                                Well-Being Matter
+                            </h1>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Introduction Section */}
+                <section className="py-20 bg-[#053d3d]">
                     <div className="container mx-auto px-4 text-center max-w-4xl">
-                        <h1 className="text-4xl md:text-6xl font-bold text-[#053d3d] mb-6 font-display">
-                            Why does Employee Well-Being Matter
-                        </h1>
-                        <h2 className="text-xl md:text-2xl font-bold text-[#053d3d] mb-6">
+                        <h2 className="text-2xl md:text-3xl font-bold text-[#a6ff48] mb-6">
                             Employee well-being isn't just a feel-good initiative, it's a business imperative.
                         </h2>
-                        <p className="text-lg text-gray-700 leading-relaxed">
+                        <p className="text-lg md:text-xl text-white leading-relaxed">
                             Organizations that invest in the health, connection, and fulfillment of their people experience stronger culture, higher retention, and real business growth.
                         </p>
                     </div>
                 </section>
 
                 {/* What's at Stake Section */}
-                <section className="py-20 bg-white">
+                <section className="py-20 bg-[#053d3d]">
                     <div className="container mx-auto px-4">
                         <div className="text-center mb-12">
-                            <h3 className="text-3xl font-bold text-[#053d3d] font-display mb-4">What's at Stake?</h3>
-                            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                            <h3 className="text-3xl font-bold text-[#a6ff48] font-display mb-4">What's at Stake?</h3>
+                            <p className="text-lg text-white max-w-2xl mx-auto">
                                 Workplace well-being is the antidote to disengagement, turnover, and culture.
-                            </p>
-                            <p className="text-base text-gray-600 max-w-2xl mx-auto mt-2">
-                                Businesses that ignore employee well-being, witness:
                             </p>
                         </div>
 
                         <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
                             {/* Negative Stakes */}
                             <div className="bg-red-50 p-8 rounded-2xl border border-red-100">
+                                <p className="text-base text-[#053d3d] mb-4 font-medium">
+                                    Businesses that ignore employee well-being, witness:
+                                </p>
                                 <ul className="space-y-3">
                                     {["Decreased morale", "Low retention", "Quiet quitting", "Leadership burnout", "Team fragmentation"].map((item, i) => (
                                         <li key={i} className="flex items-start gap-3 text-red-700 text-base">
