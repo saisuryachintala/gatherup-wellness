@@ -20,38 +20,48 @@ export const WhatsAtStake: React.FC = () => {
         <section className="py-20 bg-[#053d3d]">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-12">
-                    <h3 className="text-3xl font-bold text-[#a6ff48] font-display mb-4">What's at Stake?</h3>
-                    <p className="text-lg text-white max-w-2xl mx-auto">
+                    <h2 className="text-3xl font-bold text-[#a6ff48] font-display mb-4">What's at Stake?</h2>
+                    <p className="text-lg text-white max-w-2xl mx-auto mb-8">
                         Workplace well-being is the antidote to disengagement, turnover, and culture.
                     </p>
+                    {/* White separator line */}
+                    <div className="w-full max-w-5xl mx-auto h-px bg-white/30"></div>
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
                     {/* Negative Stakes */}
-                    <div className="bg-red-50 p-8 rounded-2xl border border-red-100">
-                        <p className="text-base text-[#053d3d] mb-4 font-medium">
+                    <div>
+                        <p className="text-base text-[#a6ff48] mb-4 font-medium">
                             Businesses that ignore employee well-being, witness:
                         </p>
-                        <ul className="space-y-3">
+                        <ul className="space-y-0">
                             {negativeStakes.map((item, i) => (
-                                <li key={i} className="flex items-start gap-3 text-red-700 text-base">
-                                    <span className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></span>
-                                    {item}
+                                <li key={i}>
+                                    <div className="py-3 text-white text-base">
+                                        {item}
+                                    </div>
+                                    {i < negativeStakes.length - 1 && (
+                                        <div className="h-px bg-white/30"></div>
+                                    )}
                                 </li>
                             ))}
                         </ul>
                     </div>
 
                     {/* Positive Stakes */}
-                    <div className="bg-[#f0fdf4] p-8 rounded-2xl border border-[#a6ff48]/50">
-                        <p className="text-base text-[#053d3d] mb-4 font-medium">
+                    <div>
+                        <p className="text-base text-[#a6ff48] mb-4 font-medium">
                             Businesses that prioritize employee well-being, witness:
                         </p>
-                        <ul className="space-y-3">
+                        <ul className="space-y-0">
                             {positiveStakes.map((item, i) => (
-                                <li key={i} className="flex items-start gap-3 text-[#053d3d] text-base">
-                                    <span className="w-2 h-2 bg-[#a6ff48] rounded-full mt-2 flex-shrink-0"></span>
-                                    {item}
+                                <li key={i}>
+                                    <div className="py-3 text-white text-base">
+                                        {item}
+                                    </div>
+                                    {i < positiveStakes.length - 1 && (
+                                        <div className="h-px bg-white/30"></div>
+                                    )}
                                 </li>
                             ))}
                         </ul>
