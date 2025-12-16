@@ -20,7 +20,7 @@ export default function WhyItMatters() {
             <BusinessImpact />
             <BeyondPerks />
             <AtGatherUp />
-            <BlogPreview />
+            {/* <BlogPreview /> */}
             <CTASection />
             <Footer />
         </main>

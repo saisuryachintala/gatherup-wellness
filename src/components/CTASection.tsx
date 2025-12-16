@@ -14,12 +14,12 @@ export const CTASection: React.FC<CTASectionProps> = ({
     buttonLink = "https://tidycal.com/gluckjamin/free-gatherup-consultation"
 }) => {
     return (
-        <section className="py-20 bg-[#053d3d] text-center">
+        <section className="py-20 bg-[#f5faf5] text-center">
             <div className="container mx-auto px-4">
-                <h3 className="text-3xl md:text-4xl font-bold text-white mb-8 font-display">
+                <h3 className="text-3xl md:text-4xl font-bold text-[#053d3d] mb-8 font-display">
                     {title}
                 </h3>
-                <p className="text-xl text-[#a6ff48] mb-10">
+                <p className="text-xl text-[#053d3d] mb-10">
                     {subtitle}
                 </p>
                 <a
