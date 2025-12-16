@@ -12,11 +12,22 @@ export const Header: React.FC = () => {
         <header className="fixed top-0 left-0 right-0 z-50 bg-[#053d3d] shadow-md transition-all duration-300">
             <div className="container mx-auto max-w-7xl px-3 py-3 flex justify-start items-center gap-4 lg:gap-8">
                 {/* Logo */}
-                <Link href="/" className="relative w-[72px] h-[72px]">
+                {/* <Link href="/" className="relative w-[72px] h-[72px]">
                     <Image
                         src="/assets/GatherUp-Lockups/PNG/Lockups_Symbol_Fresh_Green_Transparent_Background_v2.png"
                         alt="GatherUp Wellness"
                         fill
+                        className="object-contain"
+                        priority
+                    />
+                </Link> */}
+                <Link href="/" className="relative w-[60px] h-[60px] sm:w-[60px] sm:h-[60px] md:w-[80px] md:h-[80px] lg:w-[100px] lg:h-[100px]">
+                    <Image
+                        src="/assets/GatherUp-Lockups/PNG/Lockups_Symbol_Fresh_Green_Transparent_Background_v2.png"
+                        alt="GatherUp Wellness"
+                        fill
+                        // sizes="180vw"
+                        sizes="(max-width: 640px) 60px, (max-width: 768px) 60px, (max-width: 1024px) 80px, 100px"
                         className="object-contain"
                         priority
                     />
