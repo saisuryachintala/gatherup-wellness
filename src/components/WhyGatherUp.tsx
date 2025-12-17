@@ -1,18 +1,22 @@
 import React from 'react';
+import Image from 'next/image';
 
 export const WhyGatherUp: React.FC = () => {
     const features = [
         {
             title: "Boost Engagement",
-            description: "Drive participation with interactive programming designed to energize employees, tenants, or members."
+            description: "Drive participation with interactive programming designed to energize employees, tenants, or members.",
+            icon: "/assets/icons/Engagement.png"
         },
         {
             title: "Increase Retention",
-            description: "Reduce turnover by cultivating a strong sense of community and belonging through custom initiatives."
+            description: "Reduce turnover by cultivating a strong sense of community and belonging through custom initiatives.",
+            icon: "/assets/icons/Retention.png"
         },
         {
             title: "Strengthen Culture & Foster belonging",
-            description: "Strengthen team dynamics and reduce turnover with custom community-building initiatives."
+            description: "Strengthen team dynamics and reduce turnover with custom community-building initiatives.",
+            icon: "/assets/icons/Culture.png"
         }
     ];
 
@@ -49,8 +53,16 @@ export const WhyGatherUp: React.FC = () => {
                         <div className="space-y-6">
                             {features.map((feature, index) => (
                                 <div key={index} className="bg-[#053d3d] rounded-xl p-6 flex items-start gap-4 shadow-lg text-white">
-                                    {/* Placeholder for Icon/Image */}
-                                    <div className="flex-shrink-0 w-16 h-16 bg-white/10 rounded-lg"></div>
+                                    {/* Icon */}
+                                    <div className="flex-shrink-0 w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 bg-white/10 rounded-lg flex items-center justify-center p-2 md:p-3">
+                                        <Image
+                                            src={feature.icon}
+                                            alt={feature.title}
+                                            width={112}
+                                            height={112}
+                                            className="object-contain w-14 h-14 md:w-20 md:h-20 lg:w-24 lg:h-24"
+                                        />
+                                    </div>
 
                                     <div>
                                         <h4 className="text-[#a6ff48] font-bold text-lg mb-2 font-display">
