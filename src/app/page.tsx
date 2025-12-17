@@ -6,6 +6,7 @@ import { WhyChoose } from "@/components/WhyChoose";
 import { PowerOfTenant } from "@/components/PowerOfTenant";
 import { ThrivingWorkplace } from "@/components/ThrivingWorkplace";
 import { Footer } from "@/components/Footer";
+import { Testimonial } from "@/components/Testimonial";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <WhyChoose />
       <PowerOfTenant />
       <ThrivingWorkplace />
+      <Testimonial />
       <Footer />
     </main>
   );

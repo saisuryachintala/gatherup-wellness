@@ -3,86 +3,108 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Button } from './Button';
 
 export const Header: React.FC = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const pathname = usePathname();
+
+    const isActive = (path: string) => pathname === path;
 
     return (
-        <header className="fixed top-0 left-0 right-0 z-50 bg-[#053d3d] shadow-md transition-all duration-300">
-            <div className="container mx-auto max-w-7xl px-4 py-2 sm:px-6 lg:px-8 flex justify-start items-center gap-4 lg:gap-8">
-                {/* Logo */}
-                {/* <Link href="/" className="relative w-[72px] h-[72px]">
-                    <Image
-                        src="/assets/GatherUp-Lockups/PNG/Lockups_Symbol_Fresh_Green_Transparent_Background_v2.png"
-                        alt="GatherUp Wellness"
-                        fill
-                        className="object-contain"
-                        priority
-                    />
-                </Link> */}
-                <Link href="/" className="relative w-[60px] h-[60px] sm:w-[60px] sm:h-[60px] md:w-[80px] md:h-[80px] lg:w-[100px] lg:h-[100px]">
-                    <Image
-                        src="/assets/GatherUp-Lockups/PNG/Lockups_Symbol_Fresh_Green_Transparent_Background_v2.png"
-                        alt="GatherUp Wellness"
-                        fill
-                        // sizes="180vw"
-                        sizes="(max-width: 640px) 60px, (max-width: 768px) 60px, (max-width: 1024px) 80px, 100px"
-                        className="object-contain"
-                        priority
-                    />
-                </Link>
-
-                {/* Navigation Links */}
-                <nav className="hidden md:flex items-center gap-6">
-                    <Link href="/our-solutions" className="text-white hover:text-[#a6ff48] font-normal text-base transition-colors">
-                        Our Solutions
+        <header className="fixed top-0 left-0 right-0 z-50 bg-[#053d3d] shadow-md transition-all duration-300" style={{ height: '92px' }}>
+            <div className="container mx-auto max-w-14xl px-4 h-full flex items-center justify-center">
+                <div className="w-full md:w-[65%] flex items-center justify-between gap-4 lg:gap-6">
+                    {/* Logo */}
+                    <Link href="/" className="relative w-[96px] h-[96px] sm:w-[72px] sm:h-[72px] md:w-[84px] md:h-[84px] lg:w-[96px] lg:h-[96px] flex-shrink-0">
+                        <Image
+                            src="/assets/GatherUp-Lockups/PNG/Lockups_Symbol_Fresh_Green_Transparent_Background_v2.png"
+                            alt="GatherUp Wellness"
+                            fill
+                            sizes="(max-width: 640px) 96px, (max-width: 768px) 72px, (max-width: 1024px) 84px, 96px"
+                            className="object-contain"
+                            priority
+                        />
                     </Link>
-                    <Link href="/why-it-matters" className="text-white hover:text-[#a6ff48] font-normal text-base transition-colors">
-                        Why it matters
-                    </Link>
-                    <Link href="/about-us" className="text-white hover:text-[#a6ff48] font-normal text-base transition-colors">
-                        About us
-                    </Link>
-                </nav>
 
-                {/* Book a Demo Button */}
-                <Link
-                    href="https://tidycal.com/gluckjamin/free-gatherup-consultation"
-                    target="_blank"
-                    className="hidden md:flex bg-[#a6ff48] text-[#053d3d] font-bold py-2.5 px-6 rounded-full hover:bg-white transition-colors duration-300 items-center gap-2 text-sm ml-auto"
-                >
-                    Book a Demo
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-4 h-4 ml-[10px] mr-[10px]">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                    </svg>
-                </Link>
+                    {/* Navigation Links */}
+                    <nav className="hidden md:flex items-center gap-6 flex-1 justify-left">
+                        <Link 
+                            href="/our-solutions" 
+                            className={`transition-all duration-500 ease-in-out ${
+                                isActive('/our-solutions')
+                                    ? 'text-[#a6ff48] drop-shadow-[0_2px_4px_rgba(166,255,72,0.3)]'
+                                    : 'text-white hover:text-[#a6ff48] font-normal'
+                            }`}
+                            style={{
+                                fontSize: '1.05rem',
+                                transition: 'color 0.5s ease-in-out, font-size 0.5s ease-in-out, font-weight 0.5s ease-in-out, filter 0.5s ease-in-out'
+                            }}
+                        >
+                            Our Solutions
+                        </Link>
+                        <Link 
+                            href="/why-it-matters" 
+                            className={`transition-all duration-500 ease-in-out ${
+                                isActive('/why-it-matters')
+                                    ? 'text-[#a6ff48] drop-shadow-[0_2px_4px_rgba(166,255,72,0.3)]'
+                                    : 'text-white hover:text-[#a6ff48] font-normal'
+                            }`}
+                            style={{
+                                fontSize: '1.05rem',
+                                transition: 'color 1s ease-in-out, font-size 1s ease-in-out, font-weight 1s ease-in-out, filter 1s ease-in-out'
+                            }}
+                        >
+                            Why it matters
+                        </Link>
+                        <Link 
+                            href="/about-us" 
+                            className={`transition-all duration-500 ease-in-out ${
+                                isActive('/about-us')
+                                    ? 'text-[#a6ff48] drop-shadow-[0_2px_4px_rgba(166,255,72,0.3)]'
+                                    : 'text-white hover:text-[#a6ff48] font-normal'
+                            }`}
+                            style={{
+                                fontSize: '1.05rem',
+                                transition: 'color 0.5s ease-in-out, font-size 0.5s ease-in-out, font-weight 0.5s ease-in-out, filter 0.5s ease-in-out'
+                            }}
+                        >
+                            About us
+                        </Link>
+                    </nav>
 
-                {/* Mobile Menu Button - Hidden on desktop, visible on mobile */}
-                {/* Note: The previous button was outside the div, moving it inside or adjusting layout if needed. 
-                    The previous layout had a second nav for the button. 
-                    I will remove the second nav and keep everything in one flow or keep the button separate if it was intended to be distinct.
-                    Target site has "Book a Demo" as a link in the nav, not necessarily a separate button element in the header, 
-                    but often it's a button. The text dump showed it as a link. 
-                    I'll keep it as a link in the nav for now as per the text dump order.
-                */}
-
-                {/* Mobile Menu Button */}
-                <button
-                    className="md:hidden text-white ml-auto"
-                    onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                    aria-label="Toggle menu"
-                >
-                    {mobileMenuOpen ? (
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    {/* Book a Demo Button */}
+                    <Link
+                        href="https://tidycal.com/gluckjamin/free-gatherup-consultation"
+                        target="_blank"
+                        className="hidden md:flex bg-[#a6ff48] text-[#053d3d] font-bold py-4 px-5 rounded-full hover:bg-white transition-all duration-300 items-center gap-2 text-sm whitespace-nowrap flex-shrink-0 group"
+                    >
+                        <span className="button-text-lift">
+                            Book a Demo
+                        </span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3.5} stroke="currentColor" className="w-4 h-4 transition-transform duration-300">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                         </svg>
-                    ) : (
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                        </svg>
-                    )}
-                </button>
+                    </Link>
+
+                    {/* Mobile Menu Button */}
+                    <button
+                        className="md:hidden text-white ml-auto"
+                        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                        aria-label="Toggle menu"
+                    >
+                        {mobileMenuOpen ? (
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        ) : (
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            </svg>
+                        )}
+                    </button>
+                </div>
             </div>
             <div className="border-t border-[#a6ff48] w-full" />
 
@@ -92,21 +114,48 @@ export const Header: React.FC = () => {
                     <div className="container mx-auto max-w-7xl px-6 py-4 flex flex-col gap-4">
                         <Link
                             href="/our-solutions"
-                            className="text-white hover:text-[#a6ff48] font-normal text-lg transition-colors py-2"
+                            className={`py-2 ${
+                                isActive('/our-solutions')
+                                    ? 'text-[#a6ff48] drop-shadow-[0_2px_4px_rgba(166,255,72,0.3)]'
+                                    : 'text-white hover:text-[#a6ff48] font-normal'
+                            }`}
+                            style={{
+                                fontSize: isActive('/our-solutions') ? '1.125rem' : '1.125rem',
+                                fontWeight: isActive('/our-solutions') ? '600' : '400',
+                                transition: 'color 0.5s ease-in-out, font-weight 0.5s ease-in-out, filter 0.5s ease-in-out'
+                            }}
                             onClick={() => setMobileMenuOpen(false)}
                         >
                             Our Solutions
                         </Link>
                         <Link
                             href="/why-it-matters"
-                            className="text-white hover:text-[#a6ff48] font-normal text-lg transition-colors py-2"
+                            className={`py-2 ${
+                                isActive('/why-it-matters')
+                                    ? 'text-[#a6ff48] drop-shadow-[0_2px_4px_rgba(166,255,72,0.3)]'
+                                    : 'text-white hover:text-[#a6ff48] font-normal'
+                            }`}
+                            style={{
+                                fontSize: isActive('/why-it-matters') ? '1.125rem' : '1.125rem',
+                                fontWeight: isActive('/why-it-matters') ? '600' : '400',
+                                transition: 'color 0.5s ease-in-out, font-weight 0.5s ease-in-out, filter 0.5s ease-in-out'
+                            }}
                             onClick={() => setMobileMenuOpen(false)}
                         >
                             Why it matters
                         </Link>
                         <Link
                             href="/about-us"
-                            className="text-white hover:text-[#a6ff48] font-normal text-lg transition-colors py-2"
+                            className={`py-2 ${
+                                isActive('/about-us')
+                                    ? 'text-[#a6ff48] drop-shadow-[0_2px_4px_rgba(166,255,72,0.3)]'
+                                    : 'text-white hover:text-[#a6ff48] font-normal'
+                            }`}
+                            style={{
+                                fontSize: isActive('/about-us') ? '1.125rem' : '1.125rem',
+                                fontWeight: isActive('/about-us') ? '600' : '400',
+                                transition: 'color 0.5s ease-in-out, font-weight 0.5s ease-in-out, filter 0.5s ease-in-out'
+                            }}
                             onClick={() => setMobileMenuOpen(false)}
                         >
                             About us
