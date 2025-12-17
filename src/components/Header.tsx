@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from './Button';
+import { BookDemoButton } from './BookDemoButton';
 
 export const Header: React.FC = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -47,16 +48,7 @@ export const Header: React.FC = () => {
                 </nav>
 
                 {/* Book a Demo Button */}
-                <Link
-                    href="https://tidycal.com/gluckjamin/free-gatherup-consultation"
-                    target="_blank"
-                    className="hidden md:flex bg-[#a6ff48] text-[#053d3d] font-bold py-2.5 px-6 rounded-full hover:bg-white transition-colors duration-300 items-center gap-2 text-sm ml-auto"
-                >
-                    Book a Demo
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-4 h-4 ml-[10px] mr-[10px]">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                    </svg>
-                </Link>
+                <BookDemoButton className="hidden md:flex ml-auto" />
 
                 {/* Mobile Menu Button - Hidden on desktop, visible on mobile */}
                 {/* Note: The previous button was outside the div, moving it inside or adjusting layout if needed. 
@@ -111,14 +103,10 @@ export const Header: React.FC = () => {
                         >
                             About us
                         </Link>
-                        <Link
-                            href="https://tidycal.com/gluckjamin/free-gatherup-consultation"
-                            target="_blank"
-                            className="bg-[#a6ff48] text-[#053d3d] font-bold py-3 px-6 rounded-full hover:bg-white transition-colors duration-300 text-center mt-2"
+                        <BookDemoButton 
+                            className="text-center mt-2"
                             onClick={() => setMobileMenuOpen(false)}
-                        >
-                            Book a Demo
-                        </Link>
+                        />
                     </div>
                 </nav>
             )}

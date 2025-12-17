@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from './Button';
 import Image from 'next/image';
+import { BookDemoButton } from './BookDemoButton';
 
 export const Hero: React.FC = () => {
     return (
@@ -40,17 +41,7 @@ export const Hero: React.FC = () => {
                     </div>
 
                     <div className="pt-4">
-                        <a 
-                            href="https://tidycal.com/gluckjamin/free-gatherup-consultation"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="bg-[#a6ff48] text-[#053d3d] font-bold py-2.5 px-6 rounded-full hover:bg-white transition-colors duration-300 inline-flex items-center gap-2 text-sm"
-                        >
-                            Book a Demo
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-4 h-4">
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                            </svg>
-                        </a>
+                        <BookDemoButton />
                     </div>
                 </div>
             </div>
