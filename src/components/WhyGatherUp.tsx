@@ -39,7 +39,7 @@ export const WhyGatherUp: React.FC = () => {
                             <h3 className="text-2xl md:text-3xl font-bold text-[#053d3d] font-display">
                                 Why do you need GatherUp?
                             </h3>
-                            <div className="space-y-4 text-gray-700 leading-relaxed">
+                            <div className="text-md md:text-lg space-y-4 text-gray-700 leading-relaxed">
                                 <p>
                                     Most property teams know that well-being matters but few have the time, data, or expertise to turn it into a measurable strategy. <span className="italic">That's where we come in.</span>
                                 </p>
