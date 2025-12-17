@@ -3,7 +3,7 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { FounderBio } from '@/components/FounderBio';
 import { WhomWeServe } from '@/components/WhomWeServe';
-import { AboutUsMission } from '@/components/AboutUsMission';
+import { OurMission } from '@/components/OurMission';
 
 export default function AboutUs() {
     return (
@@ -11,7 +11,7 @@ export default function AboutUs() {
             <Header />
             <FounderBio />
             <WhomWeServe />
-            <AboutUsMission />
+            <OurMission/>
             <Footer />
         </main>
     );

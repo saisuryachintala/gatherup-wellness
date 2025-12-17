@@ -7,6 +7,7 @@ import { PowerOfTenant } from "@/components/PowerOfTenant";
 import { ThrivingWorkplace } from "@/components/ThrivingWorkplace";
 import { Footer } from "@/components/Footer";
 import { Testimonial } from "@/components/Testimonial";
+import { ScrollingLogos } from "@/components/ScrollingLogos";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <Hero />
       <WhyGatherUp />
       <OurMission />
+      <ScrollingLogos />
       <WhyChoose />
       <PowerOfTenant />
       <ThrivingWorkplace />
