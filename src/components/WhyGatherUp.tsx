@@ -20,10 +20,10 @@ export const WhyGatherUp: React.FC = () => {
         <section className="w-full">
             {/* Header Section */}
             <div className="bg-[#053d3d] py-12 text-center px-4">
-                <h2 className="text-3xl md:text-5xl font-bold text-white font-display">
+                <h1 className="text-3xl md:text-5xl font-bold text-white font-display">
                     Happier Tenants, <br />
                     <span className="text-[#a6ff48]">Better Business Outcomes</span>
-                </h2>
+                </h1>
             </div>
 
             {/* Content Section */}
