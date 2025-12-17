@@ -149,3 +149,4 @@ export const CaseStudy: React.FC = () => {
         </section>
     );
 };
+

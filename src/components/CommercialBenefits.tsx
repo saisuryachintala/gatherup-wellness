@@ -53,3 +53,4 @@ export const CommercialBenefits: React.FC = () => {
         </section>
     );
 };
+
