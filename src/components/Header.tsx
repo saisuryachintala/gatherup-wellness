@@ -14,16 +14,18 @@ export const Header: React.FC = () => {
     const isActive = (path: string) => pathname === path;
 
     return (
-        <header className="fixed top-0 left-0 right-0 z-50 bg-[#053d3d] shadow-md transition-all duration-300" style={{ height: '92px' }}>
-            <div className="container mx-auto max-w-14xl px-4 h-full flex items-center justify-center">
-                <div className="w-full md:w-[65%] flex items-center justify-between gap-4 lg:gap-6">
+        // <header className="fixed top-0 left-0 right-0 z-50 bg-[#053d3d] shadow-md transition-all duration-300" style={{ height: '92px' }}>
+        //     <div className="container mx-auto max-w-14xl px-4 h-full flex items-center justify-center">
+        <header className="fixed top-0 left-0 right-0 z-50 bg-[#053d3d] shadow-md transition-all duration-300 h-28">
+            <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-full flex justify-between items-center gap-2 lg:gap-4">
+                <div className="w-full md:w-[65%] flex items-center justify-between gap-4 lg:gap-6 h-full">
                     {/* Logo */}
-                    <Link href="/" className="relative w-[96px] h-[96px] sm:w-[72px] sm:h-[72px] md:w-[84px] md:h-[84px] lg:w-[96px] lg:h-[96px] flex-shrink-0">
+                    <Link href="/" className="relative w-20 h-20 sm:w-20 sm:h-20 md:w-20 md:h-20 lg:w-20 lg:h-20 flex-shrink-0">
                         <Image
                             src="/assets/GatherUp-Lockups/PNG/Lockups_Symbol_Fresh_Green_Transparent_Background_v2.png"
                             alt="GatherUp Wellness"
                             fill
-                            sizes="(max-width: 640px) 96px, (max-width: 768px) 72px, (max-width: 1024px) 84px, 96px"
+                            sizes="80px"
                             className="object-contain"
                             priority
                         />
@@ -75,20 +77,6 @@ export const Header: React.FC = () => {
                         </Link>
                     </nav>
 
-                    {/* Book a Demo Button */}
-                    <Link
-                        href="https://tidycal.com/gluckjamin/free-gatherup-consultation"
-                        target="_blank"
-                        className="hidden md:flex bg-[#a6ff48] text-[#053d3d] font-bold py-4 px-5 rounded-full hover:bg-white transition-all duration-300 items-center gap-2 text-sm whitespace-nowrap flex-shrink-0 group"
-                    >
-                        <span className="button-text-lift">
-                            Book a Demo
-                        </span>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3.5} stroke="currentColor" className="w-4 h-4 transition-transform duration-300">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                        </svg>
-                    </Link>
-
                     {/* Mobile Menu Button */}
                     <button
                         className="md:hidden text-white ml-auto"
@@ -105,6 +93,11 @@ export const Header: React.FC = () => {
                             </svg>
                         )}
                     </button>
+                </div>
+
+                {/* Book a Demo Button - Outside constrained container */}
+                <div className="hidden md:flex pr-4 lg:pr-8">
+                    <BookDemoButton />
                 </div>
             </div>
             <div className="border-t border-[#a6ff48] w-full" />
