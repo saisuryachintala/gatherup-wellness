@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Button } from './Button';
+import { BookDemoButton } from './BookDemoButton';
 
 export const Header: React.FC = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -160,14 +161,10 @@ export const Header: React.FC = () => {
                         >
                             About us
                         </Link>
-                        <Link
-                            href="https://tidycal.com/gluckjamin/free-gatherup-consultation"
-                            target="_blank"
-                            className="bg-[#a6ff48] text-[#053d3d] font-bold py-3 px-6 rounded-full hover:bg-white transition-colors duration-300 text-center mt-2"
+                        <BookDemoButton 
+                            className="justify-center mt-2"
                             onClick={() => setMobileMenuOpen(false)}
-                        >
-                            Book a Demo
-                        </Link>
+                        />
                     </div>
                 </nav>
             )}

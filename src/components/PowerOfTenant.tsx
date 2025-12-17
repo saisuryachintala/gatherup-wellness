@@ -7,15 +7,15 @@ export const PowerOfTenant: React.FC = () => {
         <section className="w-full bg-[#F5FAF5]">
             {/* Header Section */}
             <div className="py-6 md:py-8 lg:py-12 text-center px-4">
-                <p className="text-[#053d3d] font-bold text-lg mb-2 font-display">
+                <h3 className="text-[#053d3d] font-bold text-lg mb-2 font-display">
                     Unleash the
-                </p>
-                <h2 className="text-4xl md:text-6xl font-bold text-[#053d3d] mb-2 font-display">
+                </h3>
+                <h1 className="text-4xl md:text-6xl font-bold text-[#053d3d] mb-2 font-display">
                     Power of Tenant Well-Being
-                </h2>
-                <p className="text-[#053d3d] font-bold text-xl font-display">
+                </h1>
+                <h3 className="text-[#053d3d] font-bold text-xl font-display">
                     for Business Growth
-                </p>
+                </h3>
             </div>
 
             {/* Image Section */}

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from './Button';
 import Image from 'next/image';
+import { BookDemoButton } from './BookDemoButton';
 
 export const Hero: React.FC = () => {
     return (
