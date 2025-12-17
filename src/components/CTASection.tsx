@@ -1,4 +1,5 @@
 import React from 'react';
+import { BookDemoButton } from './BookDemoButton';
 
 interface CTASectionProps {
     title?: string;
@@ -22,14 +23,7 @@ export const CTASection: React.FC<CTASectionProps> = ({
                 <p className="text-xl text-[#053d3d] mb-10">
                     {subtitle}
                 </p>
-                <a
-                    href={buttonLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block bg-[#a6ff48] text-[#053d3d] font-bold py-4 px-8 rounded-full hover:bg-white transition-colors duration-300"
-                >
-                    {buttonText}
-                </a>
+                <BookDemoButton />
             </div>
         </section>
     );
