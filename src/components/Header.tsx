@@ -37,8 +37,8 @@ export const Header: React.FC = () => {
                             href="/our-solutions" 
                             className={`transition-all duration-500 ease-in-out ${
                                 isActive('/our-solutions')
-                                    ? 'text-[#a6ff48] drop-shadow-[0_2px_4px_rgba(166,255,72,0.3)]'
-                                    : 'text-white hover:text-[#a6ff48] font-normal'
+                                ? 'text-[#a6ff48] font-bold'
+                                : 'text-white hover:text-[#a6ff48] font-normal'
                             }`}
                             style={{
                                 fontSize: '1.05rem',
@@ -51,7 +51,7 @@ export const Header: React.FC = () => {
                             href="/why-it-matters" 
                             className={`transition-all duration-500 ease-in-out ${
                                 isActive('/why-it-matters')
-                                    ? 'text-[#a6ff48] drop-shadow-[0_2px_4px_rgba(166,255,72,0.3)]'
+                                    ? 'text-[#a6ff48] font-bold'
                                     : 'text-white hover:text-[#a6ff48] font-normal'
                             }`}
                             style={{
@@ -65,8 +65,8 @@ export const Header: React.FC = () => {
                             href="/about-us" 
                             className={`transition-all duration-500 ease-in-out ${
                                 isActive('/about-us')
-                                    ? 'text-[#a6ff48] drop-shadow-[0_2px_4px_rgba(166,255,72,0.3)]'
-                                    : 'text-white hover:text-[#a6ff48] font-normal'
+                                ? 'text-[#a6ff48] font-bold'
+                                : 'text-white hover:text-[#a6ff48] font-normal'
                             }`}
                             style={{
                                 fontSize: '1.05rem',
