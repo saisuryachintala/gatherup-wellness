@@ -15,7 +15,7 @@ export const CommercialHero: React.FC = () => {
                 <div className="absolute inset-0 bg-[#053d3d]/10"></div>
             </div>
 
-            <div className="container mx-auto px-4 md:px-8 max-w-6xl relative z-10 text-center">
+            <div className="py-20 container mx-auto px-4 md:px-8 max-w-6xl relative z-10 text-center">
                 <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 text-[#a6ff48]">
                     Commercial Properties<br />
                     & Workplace Campuses

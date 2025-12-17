@@ -1,35 +1,146 @@
-import React from 'react';
+'use client';
+
+import React, { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 export const CaseStudy: React.FC = () => {
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [touchStart, setTouchStart] = useState<number | null>(null);
+    const [touchEnd, setTouchEnd] = useState<number | null>(null);
+    const carouselRef = useRef<HTMLDivElement>(null);
+
+    const images = [
+        {
+            src: "/assets/images/IMG_1064.jpg",
+            alt: "American Volunteer"
+        },
+        {
+            src: "/assets/images/IMG_1040.jpg",
+            alt: "Flowers"
+        },
+        {
+            src: "/assets/images/IMG_1221.jpg",
+            alt: "Yellow Door"
+        }
+    ];
+
+    // Minimum swipe distance (in pixels)
+    const minSwipeDistance = 50;
+
+    const handleTouchStart = (e: React.TouchEvent) => {
+        setTouchEnd(null);
+        setTouchStart(e.targetTouches[0].clientX);
+    };
+
+    const handleTouchMove = (e: React.TouchEvent) => {
+        setTouchEnd(e.targetTouches[0].clientX);
+    };
+
+    const handleTouchEnd = () => {
+        if (!touchStart || !touchEnd) return;
+        
+        const distance = touchStart - touchEnd;
+        const isLeftSwipe = distance > minSwipeDistance;
+        const isRightSwipe = distance < -minSwipeDistance;
+
+        if (isLeftSwipe) {
+            goToNext();
+        }
+        if (isRightSwipe) {
+            goToPrevious();
+        }
+    };
+
+    const goToPrevious = () => {
+        setCurrentIndex((prevIndex) => 
+            prevIndex === 0 ? images.length - 1 : prevIndex - 1
+        );
+    };
+
+    const goToNext = () => {
+        setCurrentIndex((prevIndex) => 
+            prevIndex === images.length - 1 ? 0 : prevIndex + 1
+        );
+    };
+
+    const goToSlide = (index: number) => {
+        setCurrentIndex(index);
+    };
+
+    // Auto-play functionality (optional - uncomment if desired)
+    useEffect(() => {
+        const interval = setInterval(() => {
+            goToNext();
+        }, 3000);
+        return () => clearInterval(interval);
+    }, [currentIndex]);
+
     return (
         <section className="py-16 md:py-20 bg-[#F5FAF5]">
-            {/* Hero Images */}
+            {/* Hero Images Carousel */}
             <div className="container mx-auto px-4 md:px-8 max-w-6xl mb-16">
-                <div className="grid md:grid-cols-3 gap-6">
-                    <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
-                        <Image
-                            src="/assets/images/gatherup-illustration.png"
-                            alt="American Volunteer"
-                            fill
-                            className="object-cover"
-                        />
+                <div className="relative">
+                    {/* Carousel Container */}
+                    <div
+                        ref={carouselRef}
+                        className="relative overflow-hidden rounded-lg"
+                        onTouchStart={handleTouchStart}
+                        onTouchMove={handleTouchMove}
+                        onTouchEnd={handleTouchEnd}
+                    >
+                        {/* Images Container */}
+                        <div 
+                            className="flex transition-transform duration-500 ease-in-out"
+                            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+                        >
+                            {images.map((image, index) => (
+                                <div
+                                    key={index}
+                                    className="min-w-full relative h-64 md:h-80 lg:h-96"
+                                >
+                                    <Image
+                                        src={image.src}
+                                        alt={image.alt}
+                                        fill
+                                        className="object-cover"
+                                        priority={index === 0}
+                                    />
+                                </div>
+                            ))}
+                        </div>
+
+                        {/* Navigation Buttons */}
+                        <button
+                            onClick={goToPrevious}
+                            className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-[#053d3d] p-2 rounded-full shadow-lg transition-all duration-200 z-10 focus:outline-none focus:ring-2 focus:ring-[#a6ff48]"
+                            aria-label="Previous image"
+                        >
+                            <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
+                        </button>
+                        <button
+                            onClick={goToNext}
+                            className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-[#053d3d] p-2 rounded-full shadow-lg transition-all duration-200 z-10 focus:outline-none focus:ring-2 focus:ring-[#a6ff48]"
+                            aria-label="Next image"
+                        >
+                            <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />
+                        </button>
                     </div>
-                    <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
-                        <Image
-                            src="/assets/images/gatherup-illustration.png"
-                            alt="Flowers"
-                            fill
-                            className="object-cover"
-                        />
-                    </div>
-                    <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
-                        <Image
-                            src="/assets/images/gatherup-illustration.png"
-                            alt="Yellow Door"
-                            fill
-                            className="object-cover"
-                        />
+
+                    {/* Dots Indicator */}
+                    <div className="flex justify-center gap-2 mt-4">
+                        {images.map((_, index) => (
+                            <button
+                                key={index}
+                                onClick={() => goToSlide(index)}
+                                className={`transition-all duration-300 rounded-full ${
+                                    index === currentIndex
+                                        ? 'bg-[#053d3d] w-8 h-2'
+                                        : 'bg-gray-300 w-2 h-2 hover:bg-gray-400'
+                                }`}
+                                aria-label={`Go to slide ${index + 1}`}
+                            />
+                        ))}
                     </div>
                 </div>
             </div>

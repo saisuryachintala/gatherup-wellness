@@ -102,13 +102,25 @@ export const Testimonial: React.FC<TestimonialProps> = ({
     if (items.length === 0) return null;
 
     return (
-        <section className="relative py-16 md:py-20 overflow-hidden">
-            {/* Full-width background behind testimonials */}
-            <div className="absolute inset-0 -z-10 bg-[url('/assets/images/IMG_1221.jpg')] bg-cover bg-center">
-                <div className="absolute inset-0 bg-[#053d3d]/70" />
+        <section className="relative py-16 md:py-20 overflow-hidden min-h-[600px] bg-[#f8fcfc]">
+            {/* Split background: top half color, bottom half image */}
+            <div className="absolute inset-0 z-0 pointer-events-none">
+                {/* Top half - background color - ensure it covers the top */}
+                <div className="absolute inset-x-0 top-0 h-1/2 w-full bg-[#f8fcfc] z-[1]"></div>
+                {/* Bottom half - background image using Next.js Image */}
+                <div className="absolute inset-x-0 bottom-0 h-1/2 w-full overflow-hidden z-[1]">
+                    <Image
+                        src="/assets/images/IMG_1221.JPG"
+                        alt="Background"
+                        fill
+                        className="object-cover"
+                        style={{ objectPosition: 'bottom' }}
+                        priority
+                    />
+                </div>
             </div>
 
-            <div className="container mx-auto px-4 md:px-8 max-w-6xl relative z-10">
+            <div className="container mx-auto px-4 md:px-8 max-w-6xl relative" style={{ zIndex: 10 }}>
                 <h2 className="text-3xl md:text-4xl font-bold text-black mb-6 md:mb-8 text-left">
                     {title}
                 </h2>
