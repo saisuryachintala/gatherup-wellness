@@ -102,20 +102,49 @@ export const Testimonial: React.FC<TestimonialProps> = ({
     if (items.length === 0) return null;
 
     return (
-        <section className="relative py-16 md:py-20 overflow-hidden min-h-[600px] bg-[#f8fcfc]">
+        <section 
+            className="relative py-16 md:py-20 overflow-hidden min-h-[600px] w-full" 
+            style={{ 
+                backgroundColor: '#f8fcfc',
+                isolation: 'isolate',
+                position: 'relative'
+            }}
+        >
+            {/* Background wrapper to ensure color is visible */}
+            <div 
+                className="absolute inset-0 w-full" 
+                style={{ 
+                    backgroundColor: '#f8fcfc',
+                    zIndex: 0
+                }}
+            ></div>
+            
             {/* Split background: top half color, bottom half image */}
-            <div className="absolute inset-0 z-0 pointer-events-none">
-                {/* Top half - background color - ensure it covers the top */}
-                <div className="absolute inset-x-0 top-0 h-1/2 w-full bg-[#f8fcfc] z-[1]"></div>
+            <div className="absolute inset-0 w-full" style={{ zIndex: 1, pointerEvents: 'none' }}>
+                {/* Top half - background color overlay to ensure visibility */}
+                <div 
+                    className="absolute inset-x-0 top-0 h-1/2 w-full" 
+                    style={{ 
+                        backgroundColor: '#f8fcfc',
+                        zIndex: 1
+                    }}
+                ></div>
                 {/* Bottom half - background image using Next.js Image */}
-                <div className="absolute inset-x-0 bottom-0 h-1/2 w-full overflow-hidden z-[1]">
+                <div 
+                    className="absolute inset-x-0 bottom-0 h-1/2 w-full overflow-hidden" 
+                    style={{ zIndex: 1 }}
+                >
                     <Image
                         src="/assets/images/IMG_1221.JPG"
                         alt="Background"
                         fill
                         className="object-cover"
-                        style={{ objectPosition: 'bottom' }}
+                        style={{ 
+                            objectPosition: 'bottom center',
+                            objectFit: 'cover'
+                        }}
                         priority
+                        sizes="100vw"
                     />
                 </div>
             </div>
