@@ -23,18 +23,41 @@ interface TestimonialProps {
 export const Testimonial: React.FC<TestimonialProps> = ({
     title = "What Our Clients Say",
     testimonials,
-    autoPlayInterval = 5000,
+    autoPlayInterval = 4000,
     // Legacy props
     quote,
     author,
     authorTitle
 }) => {
-    // Support both array of testimonials and single testimonial (legacy)
-    const items: TestimonialItem[] = testimonials || (quote && author && authorTitle ? [{
-        quote,
-        author,
-        authorTitle
-    }] : []);
+    const defaultItems: TestimonialItem[] = [
+        {
+            quote: "We used to treat our amenity floor like a line item. GatherUp turned it into something our tenants actually talk about in their recruiting and retention meetings. When renewals came up this year, we heard far fewer questions about ‘what else are we getting for this rent.’",
+            author: "Sarah M.",
+            authorTitle: "Senior Property Manager, 1.1M SF Office Portfolio",
+        },
+        {
+            quote: "Before GatherUp, our amenities looked great in photos but felt empty in real life. Now, residents actually plan their week around what’s happening in the building. We’ve seen fewer “I’m just shopping around” responses at renewal and more people saying, “We don’t want to lose this community.”",
+            author: "Elena R.",
+            authorTitle: "Regional Manager, 900-Unit Urban Portfolio",
+        },
+        {
+            quote: "The impact was immediate. Our tenants started using the amenity spaces we invested in, and the feedback during lease renewals completely changed. GatherUp made wellness a competitive advantage for our property.",
+            author: "Jennifer L.",
+            authorTitle: "VP Operations, Commercial Real Estate",
+        },
+    ];
+
+    const items: TestimonialItem[] =
+        testimonials ||
+        (quote && author && authorTitle
+            ? [
+                  {
+                      quote,
+                      author,
+                      authorTitle,
+                  },
+              ]
+            : defaultItems);
 
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isAutoPlaying, setIsAutoPlaying] = useState(true);
@@ -43,19 +66,25 @@ export const Testimonial: React.FC<TestimonialProps> = ({
         setCurrentIndex((prevIndex) => 
             prevIndex === items.length - 1 ? 0 : prevIndex + 1
         );
-    }, [items.length]);
+        pauseAndResumeAutoplay();
+    }, [items.length, autoPlayInterval]);
 
     const prevSlide = useCallback(() => {
         setCurrentIndex((prevIndex) => 
             prevIndex === 0 ? items.length - 1 : prevIndex - 1
         );
-    }, [items.length]);
+        pauseAndResumeAutoplay();
+    }, [items.length, autoPlayInterval]);
+
+    const pauseAndResumeAutoplay = () => {
+        // Pause on interaction and resume after the configured interval
+        setIsAutoPlaying(false);
+        setTimeout(() => setIsAutoPlaying(true), autoPlayInterval);
+    };
 
     const goToSlide = (index: number) => {
         setCurrentIndex(index);
-        setIsAutoPlaying(false);
-        // Resume auto-play after 10 seconds
-        setTimeout(() => setIsAutoPlaying(true), 10000);
+        pauseAndResumeAutoplay();
     };
 
     // Auto-play functionality
@@ -72,19 +101,15 @@ export const Testimonial: React.FC<TestimonialProps> = ({
 
     if (items.length === 0) return null;
 
-    const currentTestimonial = items[currentIndex];
-
     return (
         <section className="relative py-16 md:py-20 overflow-hidden">
-            {/* Grass texture background on sides */}
-            <div className="absolute inset-0 z-0">
-                <div className="absolute inset-y-0 left-0 w-1/4 bg-[url('/assets/images/grass-texture.jpg')] bg-cover bg-center opacity-80"></div>
-                <div className="absolute inset-y-0 right-0 w-1/4 bg-[url('/assets/images/grass-texture.jpg')] bg-cover bg-center opacity-80"></div>
-                <div className="absolute inset-0 bg-[#F5FAF5]"></div>
+            {/* Full-width background behind testimonials */}
+            <div className="absolute inset-0 -z-10 bg-[url('/assets/images/IMG_1221.jpg')] bg-cover bg-center">
+                <div className="absolute inset-0 bg-[#053d3d]/70" />
             </div>
 
             <div className="container mx-auto px-4 md:px-8 max-w-6xl relative z-10">
-                <h2 className="text-3xl md:text-4xl font-bold text-[#053d3d] mb-12 text-center">
+                <h2 className="text-3xl md:text-4xl font-bold text-black mb-6 md:mb-8 text-left">
                     {title}
                 </h2>
 
@@ -93,40 +118,51 @@ export const Testimonial: React.FC<TestimonialProps> = ({
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}
                 >
-                    {/* Main Carousel Card */}
+                    {/* Main Carousel Card with smooth slide transition */}
                     <div className="bg-[#053d3d] rounded-lg shadow-xl overflow-hidden">
-                        <div className="flex flex-col md:flex-row items-center gap-8 p-8 md:p-12 lg:p-16">
-                            {/* Profile Image */}
-                            <div className="flex-shrink-0">
-                                <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden bg-white">
-                                    {currentTestimonial.image ? (
-                                        <Image
-                                            src={currentTestimonial.image}
-                                            alt={currentTestimonial.author}
-                                            fill
-                                            className="object-cover"
-                                        />
-                                    ) : (
-                                        <div className="w-full h-full flex items-center justify-center bg-gray-200">
-                                            <span className="text-4xl text-gray-500">
-                                                {currentTestimonial.author.charAt(0)}
-                                            </span>
-                                        </div>
-                                    )}
-                                </div>
-                            </div>
+                        <div className="overflow-hidden">
+                            <div
+                                className="flex transition-transform duration-1000 ease-in-out"
+                                style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+                            >
+                                {items.map((testimonial, index) => (
+                                    <div key={index} className="w-full shrink-0">
+                                        <div className="flex flex-col md:flex-row items-center gap-8 p-8 md:p-12 lg:p-16">
+                                            {/* Profile Image */}
+                                            <div className="flex-shrink-0">
+                                                <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden bg-white">
+                                                    {testimonial.image ? (
+                                                        <Image
+                                                            src={testimonial.image}
+                                                            alt={testimonial.author}
+                                                            fill
+                                                            className="object-cover"
+                                                        />
+                                                    ) : (
+                                                        <div className="w-full h-full flex items-center justify-center bg-gray-200">
+                                                            <span className="text-4xl text-gray-500">
+                                                                {testimonial.author.charAt(0)}
+                                                            </span>
+                                                        </div>
+                                                    )}
+                                                </div>
+                                            </div>
 
-                            {/* Content */}
-                            <div className="flex-1 text-center md:text-left">
-                                <h3 className="text-2xl md:text-3xl font-bold text-[#a6ff48] mb-2">
-                                    {currentTestimonial.author}
-                                </h3>
-                                <p className="text-[#a6ff48] text-lg mb-6">
-                                    {currentTestimonial.authorTitle}
-                                </p>
-                                <blockquote className="text-white text-lg md:text-xl leading-relaxed italic">
-                                    "{currentTestimonial.quote}"
-                                </blockquote>
+                                            {/* Content */}
+                                            <div className="flex-1 text-center md:text-left">
+                                                <h3 className="text-2xl md:text-3xl font-bold text-[#a6ff48] mb-2">
+                                                    {testimonial.author}
+                                                </h3>
+                                                <p className="text-[#a6ff48] text-lg mb-6">
+                                                    {testimonial.authorTitle}
+                                                </p>
+                                                <blockquote className="text-white text-lg md:text-xl leading-relaxed italic">
+                                                    "{testimonial.quote}"
+                                                </blockquote>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
                             </div>
                         </div>
 
@@ -149,45 +185,45 @@ export const Testimonial: React.FC<TestimonialProps> = ({
                         )}
                     </div>
 
-                    {/* Navigation Arrows */}
+                    {/* Navigation Arrows - simple inline chevrons on the card */}
                     {items.length > 1 && (
                         <>
                             <button
                                 onClick={prevSlide}
-                                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 lg:-translate-x-16 w-12 h-12 flex items-center justify-center bg-white/90 hover:bg-white rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-20"
+                                className="absolute left-6 top-1/2 -translate-y-1/2 text-[#a6ff48] hover:text-white transition-colors duration-200 z-20"
                                 aria-label="Previous testimonial"
                             >
-                                <svg 
-                                    className="w-6 h-6 text-[#053d3d]" 
-                                    fill="none" 
-                                    stroke="currentColor" 
+                                <svg
+                                    className="w-7 h-7"
+                                    fill="none"
+                                    stroke="currentColor"
                                     viewBox="0 0 24 24"
                                 >
-                                    <path 
-                                        strokeLinecap="round" 
-                                        strokeLinejoin="round" 
-                                        strokeWidth={2} 
-                                        d="M15 19l-7-7 7-7" 
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth={2}
+                                        d="M15 19l-7-7 7-7"
                                     />
                                 </svg>
                             </button>
 
                             <button
                                 onClick={nextSlide}
-                                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 lg:translate-x-16 w-12 h-12 flex items-center justify-center bg-white/90 hover:bg-white rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-20"
+                                className="absolute right-6 top-1/2 -translate-y-1/2 text-[#a6ff48] hover:text-white transition-colors duration-200 z-20"
                                 aria-label="Next testimonial"
                             >
-                                <svg 
-                                    className="w-6 h-6 text-[#053d3d]" 
-                                    fill="none" 
-                                    stroke="currentColor" 
+                                <svg
+                                    className="w-7 h-7"
+                                    fill="none"
+                                    stroke="currentColor"
                                     viewBox="0 0 24 24"
                                 >
-                                    <path 
-                                        strokeLinecap="round" 
-                                        strokeLinejoin="round" 
-                                        strokeWidth={2} 
-                                        d="M9 5l7 7-7 7" 
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth={2}
+                                        d="M9 5l7 7-7 7"
                                     />
                                 </svg>
                             </button>
