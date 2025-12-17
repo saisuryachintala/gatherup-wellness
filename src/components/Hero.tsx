@@ -28,7 +28,7 @@ export const Hero: React.FC = () => {
                 <div className="absolute inset-0 bg-black/20"></div>
             </div>
 
-            <div className="container mx-auto max-w-7xl px-4 md:px-8 relative z-10 pt-28 pb-12 md:pb-20 ml-0 md:ml-40 lg:ml-60 font-light">
+            <div className="container mx-auto max-w-7xl px-4 md:px-8 relative z-10 pt-32 md:pt-40 pb-12 md:pb-20 ml-0 md:ml-40 lg:ml-60 font-light">
                 <div className="max-w-full md:max-w-2xl lg:max-w-[55%] space-y-4 md:space-y-6 animate-fade-in-up">
                     <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight drop-shadow-lg" style={{ fontFamily: 'Montserrat', fontSize: '50px', fontWeight: '700', lineHeight: '1.1em', letterSpacing: '0em', }}>
                         Well being that transforms Businesses.
