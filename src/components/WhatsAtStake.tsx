@@ -17,7 +17,7 @@ export const WhatsAtStake: React.FC = () => {
     ];
 
     return (
-        <section className="py-20 bg-[#053d3d]">
+        <section className="py-8 md:py-12 bg-[#053d3d]">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-12">
                     <h2 className="text-3xl font-bold text-[#a6ff48] font-display mb-4">What's at Stake?</h2>

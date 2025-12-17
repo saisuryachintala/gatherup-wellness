@@ -91,7 +91,7 @@ export const BusinessImpact: React.FC = () => {
     ];
 
     return (
-        <section className="py-20 bg-[#053d3d] text-white">
+        <section className="py-8 md:py-12 bg-[#053d3d] text-white">
             <div className="container mx-auto px-4">
                 <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 font-display">
                     The Impact on Business
