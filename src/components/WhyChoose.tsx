@@ -5,25 +5,25 @@ export const WhyChoose: React.FC = () => {
     const features = [
         {
             icon: "/assets/icons/Vector-2.png",
-            iconSize: "w-12 h-12 md:w-16 md:h-16",
+            iconSize: "w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-14 lg:h-14",
             title: "Tailored Solutions",
             description: "We create connection-centered, strategic well-being programs tailored to your unique culture, values, and goals. Our approach enhances employee well-being while strengthening community and driving meaningful results."
         },
         {
             icon: "/assets/icons/Vector-1.png",
-            iconSize: "w-12 h-12 md:w-16 md:h-16",
+            iconSize: "w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-14 lg:h-14",
             title: "Efficiency",
             description: "Our streamlined approach saves you time and effort while maximizing impact. We handle everything from program design to execution, allowing you to focus on your core business responsibilities."
         },
         {
             icon: "/assets/icons/Vector.png",
-            iconSize: "w-24 h-24 md:w-16 md:h-16",
+            iconSize: "w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-14 lg:h-14",
             title: "True Partnership",
             description: "We're committed to your long-term success. Think of us as an extension of your team, helping you build a vibrant, valuable culture and employee community."
         },
         {
             icon: "/assets/icons/Frame 17.png",
-            iconSize: "w-12 h-12 md:w-16 md:h-16",
+            iconSize: "w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-14 lg:h-14",
             title: "Clear Communication",
             description: "We keep you informed every step of the way, so you always know how programs are performing and the positive impacts they are making on your business goals."
         }
@@ -43,7 +43,7 @@ export const WhyChoose: React.FC = () => {
                 </div>
 
                 {/* Cards Grid */}
-                <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-3">
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-3">
                     {features.map((feature, index) => (
                         <div key={index} className="bg-[#3d6e6e]/30 border border-[#a6ff48]/30 rounded-2xl p-8 flex flex-col items-center text-center hover:bg-[#3d6e6e]/50 transition-colors duration-300">
                             <div className={`relative mb-6 ${feature.iconSize}`}>

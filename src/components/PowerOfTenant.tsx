@@ -65,9 +65,9 @@ export const PowerOfTenant: React.FC = () => {
 
                         {/* <p className="text-[#a6ff48] font-bold text-lg mb-8 font-display">
                             Belonging. Well-Being. Business Impact.
-                        </p> */}
+                        </p>
 
-                        {/* <Button variant="accent">
+                        <Button variant="accent">
                             Book a Demo
                         </Button> */}
                     </div>
