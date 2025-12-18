@@ -90,7 +90,7 @@ export const BusinessImpact: React.FC = () => {
     ];
 
     return (
-        <section className="py-8 md:py-12 bg-[#053d3d] text-white">
+        <section className="px-2 md:px-4 pt-2 md:pt-4 pb-8 md:pb-12 bg-[#053d3d] text-white">
             <div className="container mx-auto px-4">
                 <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 font-display">
                     The Impact on Business
@@ -98,7 +98,7 @@ export const BusinessImpact: React.FC = () => {
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
                     {impactMetrics.map((item, index) => (
-                        <div key={index} className="bg-[#3a5f5f]/60 p-8 rounded-3xl backdrop-blur-sm hover:bg-[#3a5f5f]/80 transition-colors text-center">
+                        <div key={index} className="bg-[#3d6e6e]/30 border border-[#a6ff48]/30 rounded-2xl p-8 flex flex-col items-center text-center">
                             <div className="text-[#a6ff48]">
                                 {item.icon}
                             </div>

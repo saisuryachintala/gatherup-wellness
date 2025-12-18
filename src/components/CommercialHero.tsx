@@ -7,7 +7,7 @@ export const CommercialHero: React.FC = () => {
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
                 <Image
-                    src="/assets/images/IMG_1221.jpg"
+                    src="/assets/images/IMG_1221.JPG"
                     alt="Commercial Property"
                     fill
                     className="object-cover opacity-30"

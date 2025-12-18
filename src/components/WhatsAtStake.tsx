@@ -17,15 +17,15 @@ export const WhatsAtStake: React.FC = () => {
     ];
 
     return (
-        <section className="py-8 md:py-12 bg-[#053d3d]">
+        <section className="px-2 md:px-4 py-8 md:py-12 bg-[#053d3d]">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-12">
                     <h2 className="text-3xl font-bold text-[#a6ff48] font-display mb-4">What's at Stake?</h2>
-                    <p className="text-lg text-white max-w-2xl mx-auto mb-8">
+                    <p className="text-md md:text-lg text-white leading-relaxed mb-8">
                         Workplace well-being is the antidote to disengagement, turnover, and culture.
                     </p>
                     {/* White separator line */}
-                    <div className="w-full max-w-5xl mx-auto h-px bg-white/30"></div>
+                    <div className="w-full max-w-xl mx-auto h-px bg-white/100"></div>
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">

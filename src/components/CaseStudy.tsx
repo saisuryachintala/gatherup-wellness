@@ -12,15 +12,15 @@ export const CaseStudy: React.FC = () => {
 
     const images = [
         {
-            src: "/assets/images/IMG_1064.jpg",
+            src: "/assets/images/IMG_1064.JPG",
             alt: "American Volunteer"
         },
         {
-            src: "/assets/images/IMG_1040.jpg",
+            src: "/assets/images/IMG_1040.JPG",
             alt: "Flowers"
         },
         {
-            src: "/assets/images/IMG_1221.jpg",
+            src: "/assets/images/IMG_1221.JPG",
             alt: "Yellow Door"
         }
     ];
