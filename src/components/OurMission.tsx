@@ -4,7 +4,7 @@ import { ScrollingLogos } from './ScrollingLogos';
 
 export const OurMission: React.FC = () => {
     return (
-        <section className="bg-[#E7F9DB] w-full px-2 md:px-2">
+        <section className="bg-[#E7F9DB] w-full px-2 md:px-2 overflow-hidden">
             {/* Mission Section */}
             <div className=" bg-[#E7F9DB] py-20 md:py-24">
                 <div className="mx-auto max-w-7xl px-4 md:px-8">
