@@ -9,9 +9,11 @@ import { BookDemoButton } from './BookDemoButton';
 
 export const Header: React.FC = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [solutionsDropdownOpen, setSolutionsDropdownOpen] = useState(false);
     const pathname = usePathname();
 
     const isActive = (path: string) => pathname === path;
+    const isSolutionsActive = () => pathname === '/our-solutions' || pathname === '/our-solutions/residential';
 
     return (
         // <header className="fixed top-0 left-0 right-0 z-50 bg-[#053d3d] shadow-md transition-all duration-300" style={{ height: '92px' }}>
@@ -33,20 +35,62 @@ export const Header: React.FC = () => {
 
                     {/* Navigation Links */}
                     <nav className="hidden md:flex items-center gap-6 flex-1 justify-left">
-                        <Link 
-                            href="/our-solutions" 
-                            className={`transition-all duration-500 ease-in-out ${
-                                isActive('/our-solutions')
-                                ? 'text-[#a6ff48] font-bold'
-                                : 'text-white hover:text-[#a6ff48] font-normal'
-                            }`}
-                            style={{
-                                fontSize: '1.05rem',
-                                transition: 'color 0.5s ease-in-out, font-size 0.5s ease-in-out, font-weight 0.5s ease-in-out, filter 0.5s ease-in-out'
-                            }}
+                        {/* Our Solutions Dropdown */}
+                        <div 
+                            className="relative"
+                            onMouseEnter={() => setSolutionsDropdownOpen(true)}
+                            onMouseLeave={() => setSolutionsDropdownOpen(false)}
                         >
-                            Our Solutions
-                        </Link>
+                            <button
+                                className={`transition-all duration-500 ease-in-out ${
+                                    isSolutionsActive()
+                                    ? 'text-[#a6ff48] font-bold'
+                                    : 'text-white hover:text-[#a6ff48] font-normal'
+                                }`}
+                                style={{
+                                    fontSize: '1.05rem',
+                                    transition: 'color 0.5s ease-in-out, font-size 0.5s ease-in-out, font-weight 0.5s ease-in-out, filter 0.5s ease-in-out'
+                                }}
+                            >
+                                Our Solutions
+                                <svg 
+                                    className={`inline-block ml-1 w-4 h-4 transition-transform duration-300 ${solutionsDropdownOpen ? 'rotate-180' : ''}`}
+                                    fill="none" 
+                                    stroke="currentColor" 
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                            {solutionsDropdownOpen && (
+                                <div className="absolute top-full left-0 pt-2 w-48 z-50">
+                                    <div className="bg-[#053d3d] border border-[#a6ff48]/30 rounded-lg shadow-lg">
+                                        <Link
+                                            href="/our-solutions"
+                                            className={`block px-4 py-3 transition-colors ${
+                                                isActive('/our-solutions')
+                                                    ? 'text-[#a6ff48] font-bold bg-[#3d6e6e]/30'
+                                                    : 'text-white hover:text-[#a6ff48] hover:bg-[#3d6e6e]/20'
+                                            }`}
+                                            onClick={() => setSolutionsDropdownOpen(false)}
+                                        >
+                                            Commercial
+                                        </Link>
+                                        <Link
+                                            href="/our-solutions/residential"
+                                            className={`block px-4 py-3 transition-colors rounded-b-lg ${
+                                                isActive('/our-solutions/residential')
+                                                    ? 'text-[#a6ff48] font-bold bg-[#3d6e6e]/30'
+                                                    : 'text-white hover:text-[#a6ff48] hover:bg-[#3d6e6e]/20'
+                                            }`}
+                                            onClick={() => setSolutionsDropdownOpen(false)}
+                                        >
+                                            Residential
+                                        </Link>
+                                    </div>
+                                </div>
+                            )}
+                        </div>
                         <Link 
                             href="/why-it-matters" 
                             className={`transition-all duration-500 ease-in-out ${
@@ -59,7 +103,7 @@ export const Header: React.FC = () => {
                                 transition: 'color 1s ease-in-out, font-size 1s ease-in-out, font-weight 1s ease-in-out, filter 1s ease-in-out'
                             }}
                         >
-                            Why it matters
+                            Why it Matters
                         </Link>
                         <Link 
                             href="/about-us" 
@@ -106,22 +150,73 @@ export const Header: React.FC = () => {
             {mobileMenuOpen && (
                 <nav className="md:hidden bg-[#053d3d] border-t border-[#a6ff48]/30">
                     <div className="container mx-auto max-w-7xl px-6 py-4 flex flex-col gap-4">
-                        <Link
-                            href="/our-solutions"
-                            className={`py-2 ${
-                                isActive('/our-solutions')
-                                    ? 'text-[#a6ff48] drop-shadow-[0_2px_4px_rgba(166,255,72,0.3)]'
-                                    : 'text-white hover:text-[#a6ff48] font-normal'
-                            }`}
-                            style={{
-                                fontSize: isActive('/our-solutions') ? '1.125rem' : '1.125rem',
-                                fontWeight: isActive('/our-solutions') ? '600' : '400',
-                                transition: 'color 0.5s ease-in-out, font-weight 0.5s ease-in-out, filter 0.5s ease-in-out'
-                            }}
-                            onClick={() => setMobileMenuOpen(false)}
-                        >
-                            Our Solutions
-                        </Link>
+                        <div>
+                            <button
+                                className={`w-full text-left py-2 flex items-center justify-between ${
+                                    isSolutionsActive()
+                                        ? 'text-[#a6ff48] drop-shadow-[0_2px_4px_rgba(166,255,72,0.3)]'
+                                        : 'text-white hover:text-[#a6ff48] font-normal'
+                                }`}
+                                style={{
+                                    fontSize: '1.125rem',
+                                    fontWeight: isSolutionsActive() ? '600' : '400',
+                                    transition: 'color 0.5s ease-in-out, font-weight 0.5s ease-in-out, filter 0.5s ease-in-out'
+                                }}
+                                onClick={() => setSolutionsDropdownOpen(!solutionsDropdownOpen)}
+                            >
+                                Our Solutions
+                                <svg 
+                                    className={`w-4 h-4 transition-transform duration-300 ${solutionsDropdownOpen ? 'rotate-180' : ''}`}
+                                    fill="none" 
+                                    stroke="currentColor" 
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                            {solutionsDropdownOpen && (
+                                <div className="ml-4 mt-2 flex flex-col gap-2">
+                                    <Link
+                                        href="/our-solutions"
+                                        className={`py-2 ${
+                                            isActive('/our-solutions')
+                                                ? 'text-[#a6ff48] drop-shadow-[0_2px_4px_rgba(166,255,72,0.3)]'
+                                                : 'text-white hover:text-[#a6ff48] font-normal'
+                                        }`}
+                                        style={{
+                                            fontSize: '1rem',
+                                            fontWeight: isActive('/our-solutions') ? '600' : '400',
+                                            transition: 'color 0.5s ease-in-out, font-weight 0.5s ease-in-out, filter 0.5s ease-in-out'
+                                        }}
+                                        onClick={() => {
+                                            setMobileMenuOpen(false);
+                                            setSolutionsDropdownOpen(false);
+                                        }}
+                                    >
+                                        Commercial
+                                    </Link>
+                                    <Link
+                                        href="/our-solutions/residential"
+                                        className={`py-2 ${
+                                            isActive('/our-solutions/residential')
+                                                ? 'text-[#a6ff48] drop-shadow-[0_2px_4px_rgba(166,255,72,0.3)]'
+                                                : 'text-white hover:text-[#a6ff48] font-normal'
+                                        }`}
+                                        style={{
+                                            fontSize: '1rem',
+                                            fontWeight: isActive('/our-solutions/residential') ? '600' : '400',
+                                            transition: 'color 0.5s ease-in-out, font-weight 0.5s ease-in-out, filter 0.5s ease-in-out'
+                                        }}
+                                        onClick={() => {
+                                            setMobileMenuOpen(false);
+                                            setSolutionsDropdownOpen(false);
+                                        }}
+                                    >
+                                        Residential
+                                    </Link>
+                                </div>
+                            )}
+                        </div>
                         <Link
                             href="/why-it-matters"
                             className={`py-2 ${

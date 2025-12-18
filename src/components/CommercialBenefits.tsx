@@ -2,10 +2,16 @@ import React from 'react';
 
 export const CommercialBenefits: React.FC = () => {
     return (
-        <section className="py-16 md:py-20 bg-[#053d3d] text-white">
-            <div className="container mx-auto px-4 md:px-8 max-w-6xl">
+        <section className="bg-[#053d3d] text-white">
+            <div className="container mx-auto px-4 md:px-8 max-w-6xl ">
                 {/* Key Benefits Grid with Icons */}
+                <p className="text-lg md:text-xl text-center leading-relaxed max-w-4xl mx-auto text-white pt-10 pb-10">
+                        Turn your asset into a place teams actually want to come to,<br />
+                        not just have to. GatherUp partners with owners, asset managers, and<br />
+                        property teams to design wellness-driven tenant experiences that support:
+                </p>
                 <div className="grid md:grid-cols-3 gap-8 md:gap-12">
+                    
                     {/* Leasing & renewals */}
                     <div className="text-center">
                         <div className="flex justify-center mb-6">

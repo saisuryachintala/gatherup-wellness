@@ -18,19 +18,19 @@ export const OurMission: React.FC = () => {
                                 GatherUp partners with property leaders to <span className="text-[#053D3D] font-bold">turn wellness and community engagement into measurable business results.</span>
                             </p>
                             <p className="text-[#053D3D] text-base md:text-lg leading-relaxed">
-                                Through evidence-based strategy and holistic programming, we help elevate tenant experience, strengthen loyalty, and drive long-term property performance.
+                                Through evidence-based strategies and holistic programming, we help elevate the tenant experience, strengthen loyalty, and drive long-term property performance.
                             </p>
                         </div>
 
                         {/* Right Column: Illustration */}
                         <div className="flex justify-center md:justify-end items-end overflow-visible">
-                            <div className="relative flex items-end overflow-visible">
+                            <div className="relative flex items-end overflow-visible w-full md:w-auto">
                                 <Image
                                     src="/assets/images/gatherup-illustration.png"
                                     alt="GatherUp Illustration"
                                     width={900}
                                     height={1000}
-                                    className="-mb-24 w-[1200px] h-auto object-contain scale-115 origin-bottom"
+                                    className="ml-12 -mb-24 w-full max-w-[90vw] sm:max-w-[500px] md:max-w-[550px] lg:max-w-[650px] xl:max-w-[750px] 2xl:max-w-[850px] h-auto object-contain md:scale-110 lg:scale-115 origin-bottom"
                                 />
                             </div>
                         </div>
