@@ -38,7 +38,7 @@ export const AtGatherUp: React.FC = () => {
                     <div className="relative">
                         <div className="relative w-full h-[400px] md:h-[450px] rounded-2xl overflow-hidden border-4 border-[#a6ff48]">
                             <Image
-                                src="/assets/images/IMG_1064.jpg"
+                                src="/assets/images/IMG_1064.JPG"
                                 alt="GatherUp Team"
                                 fill
                                 className="object-cover"
