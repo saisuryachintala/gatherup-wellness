@@ -156,7 +156,7 @@ export const Testimonial: React.FC<TestimonialProps> = ({
                 <div 
                     className="absolute inset-x-0 top-0 h-1/2 w-full" 
                     style={{ 
-                        backgroundColor: '#f8fcfc',
+                        backgroundColor: '#F5FAF5',
                         zIndex: 1
                     }}
                 ></div>
@@ -180,13 +180,13 @@ export const Testimonial: React.FC<TestimonialProps> = ({
                 </div>
             </div>
 
-            <div className="container mx-auto px-4 md:px-8 max-w-6xl relative" style={{ zIndex: 10 }}>
-                <h2 className="text-3xl md:text-4xl font-bold text-[#053d3d] mb-6 md:mb-8 text-left pl-8 md:pl-12 lg:pl-16">
+            <div className="container mx-auto px-4 md:px-8 max-w-6xl relative -mt-16" style={{ zIndex: 10 }}>
+                <h2 className="text-3xl md:text-4xl font-bold text-[#053d3d] mb-6 md:mb-8 text-center">
                     {title}
                 </h2>
 
                 <div 
-                    className="relative"
+                    className="relative -mt-4"
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}
                 >
