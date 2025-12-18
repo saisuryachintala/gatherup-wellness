@@ -4,7 +4,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
-export const CaseStudy: React.FC = () => {
+export const ResidentialCaseStudy: React.FC = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [touchStart, setTouchStart] = useState<number | null>(null);
     const [touchEnd, setTouchEnd] = useState<number | null>(null);
@@ -151,10 +151,10 @@ export const CaseStudy: React.FC = () => {
                     {/* Left Column */}
                     <div>
                         <div className="border-b border-gray-300 mb-6">
-                            <span className="inline-block bg-[#a6ff48] text-[#053d3d] font-bold text-xl text-sm">
+                            <span className="inline-block bg-[#a6ff48] text-[#053d3d] font-bold text-xl ml-2 text-sm">
                                 Case Study
                             </span>
-                            <span className="text-[#053d3d] font-bold text-xl">Class A Office Tower</span>
+                            <span className="text-[#053d3d] font-bold text-xl ml-2">Class A Office Tower</span>
                             <p className="text-[#053d3d] text-lg mb-8">
                                 "From Quiet Amenities to a Tenant Magnet"
                             </p>
@@ -252,4 +252,3 @@ export const CaseStudy: React.FC = () => {
         </section>
     );
 };
-

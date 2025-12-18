@@ -35,12 +35,12 @@ export const Hero: React.FC = () => {
                     </h1>
 
                 <div>
-                    <div className="block md:inline-block px-1 shadow-xl bg-white">
+                    <div className="inline-block px-1 shadow-xl bg-white">
                         <p className="text-base md:text-lg lg:text-xl font-bold text-[#053d3d] leading-snug">
                             Turning wellness into a driver of 
                         </p>
                     </div>   
-                    <div className="block md:inline-block px-1 shadow-xl bg-white mt-1 md:mt-1">
+                    <div className="inline-block px-1 shadow-xl bg-white mt-1 md:mt-1">
                         <p className="text-base md:text-lg lg:text-xl font-bold text-[#053d3d] leading-snug">
                             engagement, culture, and outcomes
                         </p>
