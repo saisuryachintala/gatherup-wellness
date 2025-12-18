@@ -23,7 +23,7 @@ interface TestimonialProps {
 export const Testimonial: React.FC<TestimonialProps> = ({
     title = "What Our Clients Say",
     testimonials,
-    autoPlayInterval = 4000,
+    autoPlayInterval = 2500,
     // Legacy props
     quote,
     author,
@@ -61,18 +61,48 @@ export const Testimonial: React.FC<TestimonialProps> = ({
 
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+    const [isTransitioning, setIsTransitioning] = useState(true);
+    
+    // Duplicate items for infinite scroll
+    const duplicatedItems = [...items, ...items];
 
     const nextSlide = useCallback(() => {
-        setCurrentIndex((prevIndex) => 
-            prevIndex === items.length - 1 ? 0 : prevIndex + 1
-        );
+        setCurrentIndex((prevIndex) => {
+            const nextIndex = prevIndex + 1;
+            // When we reach the duplicate first item (items.length), show it seamlessly
+            if (nextIndex === items.length) {
+                // After transition completes, reset to 0 without animation
+                setTimeout(() => {
+                    setIsTransitioning(false);
+                    setCurrentIndex(0);
+                    setTimeout(() => setIsTransitioning(true), 50);
+                }, 1000);
+                return items.length; // Show duplicate first item (seamless from last original)
+            }
+            // Normal progression
+            if (nextIndex < items.length) {
+                return nextIndex;
+            }
+            // Shouldn't reach here, but safety fallback
+            return prevIndex;
+        });
         pauseAndResumeAutoplay();
     }, [items.length, autoPlayInterval]);
 
     const prevSlide = useCallback(() => {
-        setCurrentIndex((prevIndex) => 
-            prevIndex === 0 ? items.length - 1 : prevIndex - 1
-        );
+        setCurrentIndex((prevIndex) => {
+            if (prevIndex === 0) {
+                // Jump to duplicate last item (without animation)
+                setIsTransitioning(false);
+                const newIndex = items.length * 2 - 1;
+                setTimeout(() => {
+                    setCurrentIndex(newIndex);
+                    setTimeout(() => setIsTransitioning(true), 50);
+                }, 50);
+                return newIndex;
+            }
+            return prevIndex - 1;
+        });
         pauseAndResumeAutoplay();
     }, [items.length, autoPlayInterval]);
 
@@ -83,6 +113,7 @@ export const Testimonial: React.FC<TestimonialProps> = ({
     };
 
     const goToSlide = (index: number) => {
+        // Ensure we're using the original items index (not duplicated)
         setCurrentIndex(index);
         pauseAndResumeAutoplay();
     };
@@ -150,7 +181,7 @@ export const Testimonial: React.FC<TestimonialProps> = ({
             </div>
 
             <div className="container mx-auto px-4 md:px-8 max-w-6xl relative" style={{ zIndex: 10 }}>
-                <h2 className="text-3xl md:text-4xl font-bold text-black mb-6 md:mb-8 text-left">
+                <h2 className="text-3xl md:text-4xl font-bold text-[#053d3d] mb-6 md:mb-8 text-left pl-8 md:pl-12 lg:pl-16">
                     {title}
                 </h2>
 
@@ -163,10 +194,10 @@ export const Testimonial: React.FC<TestimonialProps> = ({
                     <div className="bg-[#053d3d] rounded-lg shadow-xl overflow-hidden">
                         <div className="overflow-hidden">
                             <div
-                                className="flex transition-transform duration-1000 ease-in-out"
+                                className={`flex ${isTransitioning ? 'transition-transform duration-1000 ease-in-out' : ''}`}
                                 style={{ transform: `translateX(-${currentIndex * 100}%)` }}
                             >
-                                {items.map((testimonial, index) => (
+                                {duplicatedItems.map((testimonial, index) => (
                                     <div key={index} className="w-full shrink-0">
                                         <div className="flex flex-col md:flex-row items-center gap-8 p-8 md:p-12 lg:p-16">
                                             {/* Profile Image */}
@@ -215,7 +246,7 @@ export const Testimonial: React.FC<TestimonialProps> = ({
                                         key={index}
                                         onClick={() => goToSlide(index)}
                                         className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                                            index === currentIndex 
+                                            (currentIndex % items.length) === index 
                                                 ? 'bg-[#a6ff48] w-8' 
                                                 : 'bg-white/40 hover:bg-white/60'
                                         }`}
