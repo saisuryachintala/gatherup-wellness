@@ -7,25 +7,25 @@ export const WhyChoose: React.FC = () => {
             icon: "/assets/icons/Vector-2.png",
             iconSize: "w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-14 lg:h-14",
             title: "Tailored Solutions",
-            description: "We create connection-centered, strategic well-being programs tailored to your unique culture, values, and goals. Our approach enhances employee well-being while strengthening community and driving meaningful results."
+            description: "GatherUp builds connection-centered wellness programs designed for your property’s tenants, culture, and goals. Every activation is shaped around the people who live or work in your building. Our approach improves tenant well-being and engagement while strengthening community bonds that drive renewals and long-term occupancy."
         },
         {
             icon: "/assets/icons/Vector-1.png",
             iconSize: "w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-14 lg:h-14",
             title: "Efficiency",
-            description: "Our streamlined approach saves you time and effort while maximizing impact. We handle everything from program design to execution, allowing you to focus on your core business responsibilities."
+            description: "We streamline everything so your onsite and leasing teams save time while your property sees meaningful results. From concept to execution, we run the full program — scheduling, communication, staffing, and measurement — so you can stay focused on operating the building while still delivering a standout tenant experience."
         },
         {
             icon: "/assets/icons/Vector.png",
             iconSize: "w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-14 lg:h-14",
             title: "True Partnership",
-            description: "We're committed to your long-term success. Think of us as an extension of your team, helping you build a vibrant, valuable culture and employee community."
+            description: "Think of us as an extension of your property team. We support your leasing, marketing, and management teams with consistent programming that builds a vibrant tenant community and supports retention. Our goal is long-term success: stronger relationships, higher satisfaction, and better property performance."
         },
         {
             icon: "/assets/icons/Frame 17.png",
             iconSize: "w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-14 lg:h-14",
             title: "Clear Communication",
-            description: "We keep you informed every step of the way, so you always know how programs are performing and the positive impacts they are making on your business goals."
+            description: "You’ll always know how programs are performing and the positive impact they’re having on your tenants and your property’s goals. We keep you updated every step of the way with simple reporting that shows engagement, outcomes, and how the experience is influencing satisfaction and renewals."
         }
     ];
 
