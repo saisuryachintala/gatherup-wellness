@@ -23,14 +23,14 @@ export const OurMission: React.FC = () => {
                         </div>
 
                         {/* Right Column: Illustration */}
-                        <div className="flex justify-center md:justify-end items-end">
-                            <div className="relative w-full max-w-lg flex items-end">
+                        <div className="flex justify-center md:justify-end items-end overflow-visible">
+                            <div className="relative flex items-end overflow-visible">
                                 <Image
                                     src="/assets/images/gatherup-illustration.png"
                                     alt="GatherUp Illustration"
-                                    width={800}
-                                    height={900}
-                                    className="-mb-24 h-[390px] w-[460px]"
+                                    width={900}
+                                    height={1000}
+                                    className="-mb-24 w-[1200px] h-auto object-contain scale-115 origin-bottom"
                                 />
                             </div>
                         </div>
