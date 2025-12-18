@@ -18,7 +18,7 @@ export const Footer: React.FC = () => {
                                     className="object-contain"
                                 />
                             </div>
-                            <p className="text-gray-300 max-w-sm mb-6">
+                            <p className="text-white text-lg max-w-md mb-6">
                                 GatherUp partners with property leaders to turn wellness and community engagement into measurable business results. Through evidence-based strategy and holistic programming, we help elevate tenant experience, strengthen loyalty, and drive long-term property performance.
                             </p>
 
@@ -42,13 +42,12 @@ export const Footer: React.FC = () => {
                             </div>
                         </div>
 
-                        <div>
-                            <h4 className="font-bold text-lg mb-4 text-accent">Company</h4>
-                            <ul className="space-y-2 text-gray-300">
-                                <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
-                                <li><Link href="/our-solutions" className="hover:text-white transition-colors">Our Solutions</Link></li>
-                                <li><Link href="/why-it-matters" className="hover:text-white transition-colors">Why it matters</Link></li>
-                                <li><Link href="/about-us" className="hover:text-white transition-colors">About Us</Link></li>
+                        <div className="flex flex-col justify-center text-lg">
+                            <ul className="space-y-2 text-white">
+                                <li><Link href="/" className="hover:text-[#a6ff48] transition-colors">Home</Link></li>
+                                <li><Link href="/our-solutions" className="hover:text-[#a6ff48] transition-colors">Our Solutions</Link></li>
+                                <li><Link href="/why-it-matters" className="hover:text-[#a6ff48] transition-colors">Why it matters</Link></li>
+                                <li><Link href="/about-us" className="hover:text-[#a6ff48] transition-colors">About Us</Link></li>
                             </ul>
                         </div>
                     </div>
