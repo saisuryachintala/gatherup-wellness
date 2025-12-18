@@ -5,12 +5,12 @@ export const ResidentialServices: React.FC = () => {
         <section className="py-16 md:py-20 bg-[#053d3d]">
             <div className="container mx-auto px-4 md:px-8 max-w-6xl">
                 <p className="text-lg md:text-xl text-white mb-12 leading-relaxed text-center max-w-5xl mx-auto">
-                    You bring the building and the tenants. We bring a plug-in wellness and community engine that makes the most of what you've already built. Our commercial solutions typically blend
-                </p>
+                To achieveHappier residents → Stronger community → More renewals → Healthier NOI; without burning out your onsite staff, our residential solutions usually combine:
+                                </p>
 
                 {/* Feature Cards */}
-                <div className="grid md:grid-cols-3 gap-3">
-                    {/* Amenity activation & calendars */}
+                <div className="px-2 md:px-4 grid md:grid-cols-3 gap-3">
+                    {/* On-site wellness activations */}
                     <div className="bg-[#3d6e6e]/30 border border-[#a6ff48]/30 rounded-2xl p-8 flex flex-col items-center text-center transition-all duration-300">
                         <div className="flex justify-center mb-6">
                             <svg className="w-16 h-16" viewBox="0 0 64 64" fill="none" stroke="#a6ff48" strokeWidth="2">
@@ -22,13 +22,13 @@ export const ResidentialServices: React.FC = () => {
                                 <path d="M20 40 C20 38 22 36 24 36 L40 36 C42 36 44 38 44 40" strokeLinecap="round"/>
                             </svg>
                         </div>
-                        <h3 className="text-[#a6ff48] font-bold text-xl mb-4 font-display">Amenity activation<br />& calendars</h3>
+                        <h3 className="text-[#a6ff48] font-bold text-xl mb-4 font-display">On-site wellness<br />activations</h3>
                         <p className="text-white/90 text-sm leading-relaxed">
-                            Weekly or monthly wellness, social, and community touchpoints in spaces you already have.
+                            Light-touch movement, mindfulness, and social wellness events suited to your resident profile.
                         </p>
                     </div>
 
-                    {/* Workplace wellbeing sessions */}
+                    {/* Community and connection series */}
                     <div className="bg-[#3d6e6e]/30 border border-[#a6ff48]/30 rounded-2xl p-8 flex flex-col items-center text-center transition-all duration-300">
                         <div className="flex justify-center mb-6">
                             <svg className="w-16 h-16" viewBox="0 0 64 64" fill="none" stroke="#a6ff48" strokeWidth="2">
@@ -40,13 +40,13 @@ export const ResidentialServices: React.FC = () => {
                                 <circle cx="36" cy="38" r="1" fill="#a6ff48"/>
                             </svg>
                         </div>
-                        <h3 className="text-[#a6ff48] font-bold text-xl mb-4 font-display">Workplace<br />wellbeing sessions</h3>
+                        <h3 className="text-[#a6ff48] font-bold text-xl mb-4 font-display">Community and<br />connection series</h3>
                         <p className="text-white/90 text-sm leading-relaxed">
-                            Short, practical sessions that support focus, mental health, and energy for tenant teams.
+                            Monthly themes that make it easier for residents to meet each other and build friendships in the building.
                         </p>
                     </div>
 
-                    {/* Experience strategy & measurement */}
+                    {/* Program design & comms support */}
                     <div className="bg-[#3d6e6e]/30 border border-[#a6ff48]/30 rounded-2xl p-8 flex flex-col items-center text-center transition-all duration-300">
                         <div className="flex justify-center mb-6">
                             <svg className="w-16 h-16" viewBox="0 0 64 64" fill="none" stroke="#a6ff48" strokeWidth="2">
@@ -61,9 +61,9 @@ export const ResidentialServices: React.FC = () => {
                                 <path d="M44 27 L44 38" strokeLinecap="round"/>
                             </svg>
                         </div>
-                        <h3 className="text-[#a6ff48] font-bold text-xl mb-4 font-display">Experience strategy<br />& measurement</h3>
+                        <h3 className="text-[#a6ff48] font-bold text-xl mb-4 font-display">Program design<br />& comms support</h3>
                         <p className="text-white/90 text-sm leading-relaxed">
-                            Simple frameworks for communications, feedback, and a small set of KPIs tied back to retention and NOI.
+                            Templates, calendars, and messaging so your team isn't planning events on the side of their day job.
                         </p>
                     </div>
                 </div>
