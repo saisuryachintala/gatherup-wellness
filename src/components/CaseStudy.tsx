@@ -151,7 +151,7 @@ export const CaseStudy: React.FC = () => {
                     {/* Left Column */}
                     <div>
                         <div className="border-b border-gray-300 mb-6">
-                            <span className="inline-block bg-[#a6ff48] text-[#053d3d] font-bold text-xl text-sm">
+                            <span className="inline-block bg-[#a6ff48] text-[#053d3d] font-bold text-xl">
                                 Case Study
                             </span>
                             <span className="text-[#053d3d] font-bold text-xl"> Class A Office Tower</span>
@@ -160,18 +160,18 @@ export const CaseStudy: React.FC = () => {
                             </p>
                         </div>
 
-                        <div className="border-gray-300 pb-2 mb-2">
-                            <h3 className="text-[#053d3d] font-bold mb-2">Property</h3>
+                        <div className="border-gray-300 pb-2 mb-2 text-center md:text-left">
+                            <h3 className="text-[#053d3d] font-bold">Property</h3>
                             <p className="text-[#053d3d] text-base">500,000 SF Class A office, multi-tenant</p>
                         </div>
 
-                        <div className="pb-2 mb-2">
-                            <h3 className="text-[#053d3d] font-bold mb-2">Location</h3>
+                        <div className="pb-2 mb-2 text-center md:text-left">
+                            <h3 className="text-[#053d3d] font-bold">Location</h3>
                             <p className="text-[#053d3d] text-base">Major Sunbelt city</p>
                         </div>
 
-                        <div>
-                            <h3 className="text-[#053d3d] font-bold mb-2">Challenge</h3>
+                        <div className="pb-2 mb-2 text-center md:text-left">
+                            <h3 className="text-[#053d3d] font-bold">Challenge</h3>
                             <p className="text-[#053d3d] text-base">
                                 Beautiful amenity floor, low usage, and a renewal cycle coming up for three key tenants.
                             </p>
@@ -183,7 +183,7 @@ export const CaseStudy: React.FC = () => {
                         <div className="hidden md:block absolute left-0 top-0 bottom-0 w-px bg-gray-300 -ml-6"></div>
                         
                         {/* Right Column */}
-                        <div className="border-b border-gray-300 mb-6">
+                        <div className="border-b border-gray-300 mb-6 text-center md:text-left">
                             <span className="text-[#053d3d] font-bold text-xl ml-2">4 major implementations</span>
                             <p className="text-[#053d3d] text-lg mb-8">
                                 in a 6-month pilot
