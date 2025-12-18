@@ -45,7 +45,7 @@ export const WhyChoose: React.FC = () => {
                 {/* Cards Grid */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-3">
                     {features.map((feature, index) => (
-                        <div key={index} className="bg-[#3d6e6e]/30 border-b-2 border-b-[#a6ff48] rounded-2xl p-8 flex flex-col items-center text-center hover:bg-[#3d6e6e]/50 hover:shadow-[0_4px_15px_rgba(166,255,72,0.3)] transition-all duration-300">
+                        <div key={index} className="bg-[#3d6e6e]/30 border border-[#a6ff48]/30 rounded-2xl p-8 flex flex-col items-center text-center transition-all duration-300">
                             <div className={`relative mb-6 ${feature.iconSize}`}>
                                 <Image
                                     src={feature.icon}

@@ -52,9 +52,9 @@ export const WhyGatherUp: React.FC = () => {
                         {/* Right Column: Cards */}
                         <div className="space-y-6">
                             {features.map((feature, index) => (
-                                <div key={index} className="bg-[#053d3d] rounded-xl p-6 flex items-start gap-4 shadow-lg text-white">
+                                <div key={index} className="bg-[#053d3d] rounded-xl p-6 flex items-center gap-4 shadow-lg text-white">
                                     {/* Icon */}
-                                    <div className="flex-shrink-0 w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 bg-white/10 rounded-lg flex items-center justify-center p-2 md:p-3">
+                                    <div className="flex-shrink-0 w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 bg-white/10 rounded-lg flex items-center justify-center p-2 md:p-3 ">
                                         <Image
                                             src={feature.icon}
                                             alt={feature.title}
@@ -68,7 +68,7 @@ export const WhyGatherUp: React.FC = () => {
                                         <h4 className="text-[#a6ff48] font-bold text-lg mb-2 font-display">
                                             {feature.title}
                                         </h4>
-                                        <p className="text-white/90 text-sm leading-relaxed">
+                                        <p className="text-white/90 text-sm leading-relaxed -mt-2">
                                             {feature.description}
                                         </p>
                                     </div>

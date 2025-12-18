@@ -17,7 +17,7 @@ export const ScrollingLogos: React.FC = () => {
             <div className="flex w-max animate-scroll">
                 {duplicatedPartners.map((partner, index) => (
                     <div key={index} className="flex-shrink-0 mx-0 md:mx-1 lg:mx-0">
-                        <div className=" relative w-64 h-32 sm:w-40 sm:h-20 md:w-96 md:h-48 lg:w-56 lg:h-28">
+                        <div className={`relative scale-120 w-64 h-32 sm:w-40 sm:h-20 md:w-96 md:h-48 lg:w-56 lg:h-28 ${partner.name === "Amazon" ? "mt-[5px]" : ""}`}>
                             <Image
                                 src={partner.logo}
                                 alt={partner.name}
