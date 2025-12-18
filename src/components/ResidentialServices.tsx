@@ -9,7 +9,7 @@ export const ResidentialServices: React.FC = () => {
                                 </p>
 
                 {/* Feature Cards */}
-                <div className="grid md:grid-cols-3 gap-3">
+                <div className="px-2 md:px-4 grid md:grid-cols-3 gap-3">
                     {/* On-site wellness activations */}
                     <div className="bg-[#3d6e6e]/30 border border-[#a6ff48]/30 rounded-2xl p-8 flex flex-col items-center text-center transition-all duration-300">
                         <div className="flex justify-center mb-6">

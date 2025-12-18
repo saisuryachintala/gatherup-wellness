@@ -17,7 +17,7 @@ export const ResidentialCTASection: React.FC<ResidentialCTASectionProps> = ({
     return (
         <section className="px-2 md:px-4 py-8 md:py-12 bg-[#f5faf5] text-center">
             <div className="container mx-auto px-4">
-                <h3 className="text-3xl md:text-4xl  font-bold text-[#053d3d] mb-4 font-display">
+                <h3 className="text-3xl md:text-4xl font-bold text-[#053d3d] mb-4 font-display">
                     {title}
                 </h3>
                 <p className="text-xl text-[#053d3d] mb-6">

@@ -80,7 +80,7 @@ export const ResidentialCaseStudy: React.FC = () => {
         <section className="py-16 md:py-20 bg-[#F5FAF5]">
             {/* Hero Images Carousel */}
             <div className="container mx-auto px-4 md:px-8 max-w-6xl mb-16">
-                <div className="relative">
+                <div className="px-2 md:px-4 relative">
                     {/* Carousel Container */}
                     <div
                         ref={carouselRef}
@@ -147,31 +147,35 @@ export const ResidentialCaseStudy: React.FC = () => {
 
             {/* Main Content */}
             <div className="container mx-auto px-4 md:px-8 max-w-6xl">
-                <div className="grid md:grid-cols-2 gap-12 mb-16">
+                <div className="px-2 md:px-4 grid md:grid-cols-2 gap-12 mb-16">
                     {/* Left Column */}
                     <div>
-                        <div className="border-b border-gray-300 mb-6">
-                            <span className="inline-block bg-[#a6ff48] text-[#053d3d] font-bold text-xl ml-2 text-sm">
-                                CASE STUDY
-                            </span>
-                            <span className="text-[#053d3d] font-bold text-xl ml-2">320-Unit Urban Mid-Rise</span>
+                        <div className="border-b border-gray-300 mb-6 text-center md:text-left">
+                            <div className="mb-2">
+                                <span className="inline-block bg-[#a6ff48] text-[#053d3d] font-bold text-2xl md:text-xl">
+                                    Case Study
+                                </span>
+                            </div>
+                            <div className="mb-2">
+                                <span className="text-[#053d3d] font-bold text-2xl md:text-xl">320-Unit Urban Mid-Rise</span>
+                            </div>
                             <p className="text-[#053d3d] text-lg mb-8">
                                 "From Transient to Connected"
                             </p>
                         </div>
 
-                        <div className="border-gray-300 pb-2 mb-2">
-                            <h3 className="text-[#053d3d] font-bold mb-2">Property</h3>
+                        <div className="border-gray-300 pb-2 mb-2 text-center md:text-left">
+                            <span className="inline-block text-[#053d3d] font-bold text-2xl md:text-xl">Property</span>
                             <p className="text-[#053d3d] text-base">320-unit mid-rise, high percentage of young professionals</p>
                         </div>
 
-                        <div className="pb-2 mb-2">
-                            <h3 className="text-[#053d3d] font-bold mb-2">Location</h3>
+                        <div className="pb-2 mb-2 text-center md:text-left">
+                            <span className="inline-block text-[#053d3d] font-bold text-2xl md:text-xl">Location</span>
                             <p className="text-[#053d3d] text-base">Growing metro near a central business district</p>
                         </div>
 
-                        <div>
-                            <h3 className="text-[#053d3d] font-bold mb-2">Challenge</h3>
+                        <div className="pb-2 mb-2 text-center md:text-left">
+                            <span className="inline-block text-[#053d3d] font-bold text-2xl md:text-xl">Challenge</span>
                             <p className="text-[#053d3d] text-base">
                                 Medium turnover in 12–18 months, and reviews stuck around 3.4 stars.
                             </p>
@@ -183,8 +187,8 @@ export const ResidentialCaseStudy: React.FC = () => {
                         <div className="hidden md:block absolute left-0 top-0 bottom-0 w-px bg-gray-300 -ml-6"></div>
                         
                         {/* Right Column */}
-                        <div className="border-b border-gray-300 mb-6">
-                            <span className="text-[#053d3d] font-bold text-xl ml-2">What we implemented</span>
+                        <div className="border-b border-gray-300 mb-6 text-center md:text-left">
+                            <span className="text-[#053d3d] font-bold text-2xl md:text-xl">What we implemented</span>
                             <p className="text-[#053d3d] text-lg mb-8">
                                 (9-month program)
                             </p>
@@ -218,27 +222,33 @@ export const ResidentialCaseStudy: React.FC = () => {
 
                 {/* Results Section */}
                 <div>
-                    <h3 className="text-[#053d3d] font-bold text-2xl md:text-3xl mb-12 text-center">
+                    <h3 className="px-2 md:px-4 text-[#053d3d] font-bold text-2xl md:text-3xl mb-12 text-center">
                         Modeled results after 9 months
                     </h3>
 
-                    <div className="grid md:grid-cols-3 gap-8 mb-8">
-                        <div className="text-center">
-                            <p className="text-[#053d3d] text-base mb-2">Increase in resident <br /> satisfaction scores by</p>
-                            <div className="text-5xl md:text-6xl font-bold text-[#053d3d] mb-2">~12</div>
-                            <p className="text-base">points<br />(internal survey)</p>
+                    <div className="px-2 md:px-4 grid md:grid-cols-3 gap-8 mb-8">
+                        <div className="text-center border-b border-gray-300 pb-8 md:border-0 md:pb-0">
+                            <div>
+                                <p className="text-[#053d3d] text-base mb-2">Increase in resident <br /> satisfaction scores by</p>
+                                <div className="text-5xl md:text-6xl font-bold text-[#053d3d] mb-2">~12</div>
+                                <p className="text-base">points<br />(internal survey)</p>
+                            </div>
+                        </div>
+
+                        <div className="text-center border-b border-gray-300 pb-8 md:border-0 md:pb-0">
+                            <div>
+                                <p className="text-[#053d3d] text-base mb-2">Increase in renewal rate <br /> for expiring leases by </p>
+                                <div className="text-5xl md:text-6xl font-bold text-[#053d3d] mb-2">8%</div>
+                                <p className="text-base">in the last quarter<br />of the program</p>
+                            </div>
                         </div>
 
                         <div className="text-center">
-                            <p className="text-[#053d3d] text-base mb-2">Increase in renewal rate <br /> for expiring leases by </p>
-                            <div className="text-5xl md:text-6xl font-bold text-[#053d3d] mb-2">8%</div>
-                            <p className="text-base">in the last quarter<br />of the program</p>
-                        </div>
-
-                        <div className="text-center">
-                            <p className="text-[#053d3d] text-base mb-2">Average online rating<br />improved to</p>
-                            <div className="text-5xl md:text-6xl font-bold text-[#053d3d] mb-2">4.2 / 5</div>
-                            <p className="text-base">from 3.4 across major<br />review platforms</p>
+                            <div>
+                                <p className="text-[#053d3d] text-base mb-2">Average online rating<br />improved to</p>
+                                <div className="text-5xl md:text-6xl font-bold text-[#053d3d] mb-2">4.2 / 5</div>
+                                <p className="text-base">from 3.4 across major<br />review platforms</p>
+                            </div>
                         </div>
                     </div>
 

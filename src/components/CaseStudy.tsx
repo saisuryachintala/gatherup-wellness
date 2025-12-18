@@ -150,11 +150,15 @@ export const CaseStudy: React.FC = () => {
                 <div className="px-2 md:px-4 grid md:grid-cols-2 gap-12 mb-16">
                     {/* Left Column */}
                     <div>
-                        <div className="border-b border-gray-300 mb-6">
-                            <span className="inline-block bg-[#a6ff48] text-[#053d3d] font-bold text-2xl md:text-xl">
-                                Case Study
-                            </span>
-                            <span className="text-[#053d3d] font-bold text-2xl md:text-xl"> Class A Office Tower</span>
+                        <div className="border-b border-gray-300 mb-6 text-center md:text-left">
+                            <div className="mb-2">
+                                <span className="inline-block bg-[#a6ff48] text-[#053d3d] font-bold text-2xl md:text-xl">
+                                    Case Study
+                                </span>
+                            </div>
+                            <div className="mb-2">
+                                <span className="text-[#053d3d] font-bold text-2xl md:text-xl">Class A Office Tower</span>
+                            </div>
                             <p className="text-[#053d3d] text-lg mb-8">
                                 "From Quiet Amenities to a Tenant Magnet"
                             </p>
