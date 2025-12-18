@@ -9,7 +9,7 @@ export const AtGatherUp: React.FC = () => {
     ];
 
     return (
-        <section className="py-20 bg-[#053d3d]">
+        <section className="px-2 md:px-4 py-8 md:py-12 bg-[#053d3d]">
             <div className="container mx-auto px-4 max-w-6xl">
                 <div className="grid md:grid-cols-2 gap-12 items-center">
                     {/* Left Column - Text Content */}
@@ -38,7 +38,7 @@ export const AtGatherUp: React.FC = () => {
                     <div className="relative">
                         <div className="relative w-full h-[400px] md:h-[450px] rounded-2xl overflow-hidden border-4 border-[#a6ff48]">
                             <Image
-                                src="/assets/images/IMG_1064.JPG"
+                                src="/assets/images/gatherup-illustration.png"
                                 alt="GatherUp Team"
                                 fill
                                 className="object-cover"
