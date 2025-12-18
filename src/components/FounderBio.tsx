@@ -52,7 +52,7 @@ export const FounderBio: React.FC = () => {
 
                                 {/* Social Media Icons */}
                                 <div className="flex gap-4">
-                                    <a href="https://www.facebook.com/benjamin.gluck" target="_blank" className="text-gray-300 hover:text-[#a6ff48] transition-colors" aria-label="Facebook">
+                                    {/* <a href="https://www.facebook.com/benjamin.gluck" target="_blank" className="text-gray-300 hover:text-[#a6ff48] transition-colors" aria-label="Facebook">
                                         <FaFacebook className="w-6 h-6" />
                                     </a>
                                     <a href="https://x.com/thejamingluck" target="_blank" className="text-gray-300 hover:text-[#a6ff48] transition-colors" aria-label="Twitter">
@@ -60,7 +60,7 @@ export const FounderBio: React.FC = () => {
                                     </a>
                                     <a href="https://www.instagram.com/jamingluck" target="_blank" className="text-gray-300 hover:text-[#a6ff48] transition-colors" aria-label="Instagram">
                                         <FaInstagram className="w-6 h-6" />
-                                    </a>
+                                    </a> */}
                                     <a href="https://www.linkedin.com/in/jamin-gluck" target="_blank" className="text-gray-300 hover:text-[#a6ff48] transition-colors" aria-label="LinkedIn">
                                         <FaLinkedin className="w-6 h-6" />
                                     </a>
