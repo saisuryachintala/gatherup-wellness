@@ -24,7 +24,7 @@ export const FounderBio: React.FC = () => {
                             </div>
 
                             {/* Bio Text */}
-                            <div className="bg-[#446E6E] p-8 md:p-12 flex flex-col justify-center space-y-6 text-white">
+                            <div className="bg-[#255656] p-8 md:p-12 flex flex-col justify-center space-y-6 text-white">
                                 <h3 className="text-3xl md:text-4xl font-bold font-display">
                                     About <span className="text-[#a6ff48]">Jamin Gluck</span>, Our Founder
                                 </h3>
