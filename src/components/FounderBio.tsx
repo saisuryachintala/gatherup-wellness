@@ -4,7 +4,7 @@ import { FaLinkedin, FaInstagram, FaFacebook, FaXTwitter } from 'react-icons/fa6
 
 export const FounderBio: React.FC = () => {
     return (
-        <section className="py-40 bg-[#053d3d]">
+        <section className="pt-40 pb-12 md:pb-16 lg:pb-20 bg-[#053d3d]">
             <div className="container mx-auto px-4 md:px-8">
                 <div className="max-w-6xl mx-auto">
                     <div className="bg-[#053d3d] rounded-3xl overflow-hidden">
