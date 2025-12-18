@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { Button } from './Button';
+import { BookDemoButton } from './BookDemoButton';
 
 export const PowerOfTenant: React.FC = () => {
     return (
@@ -40,38 +41,37 @@ export const PowerOfTenant: React.FC = () => {
                 <div className="absolute inset-0 bg-black/20"></div>
 
                 {/* Overlay Content */}
-                <div className="absolute inset-0 flex items-center justify-center md:justify-end md:pr-32">
-                    {/* <div className="bg-black/40 backdrop-blur-sm p-8 rounded-2xl text-center max-w-xl mx-4"> */}
-                    {/* <div className="bg-black/40 backdrop-blur-sm p-8 text-center"> */}
-                        <div className="flex items-center justify-center gap-3 mb-4">
-                            <div className="w-150 h-30 relative">
-                                {/* <Image
-                                    src="/assets/GatherUp-Lockups/SVG/Lockups_Symbol_Fresh Green Transparent Background.svg"
-                                    alt="GatherUp Symbol"
-                                    fill
-                                    className="object-contain"
-                                /> */}
-                                {/* <Image
-                                    src="/assets/GatherUp-Lockups/SVG/Lockups_Full_Logo_Slogan_FullBrandColor.svg"
-                                    alt="GatherUp Symbol"
-                                    fill
-                                    className="object-contain"
-                                /> */}
-                            </div>
-                            {/* <span className="text-white font-bold text-xl font-display">
-                                Tenant Wellness that Works.
-                            </span> */}
+                <div className="absolute top-16 md:top-24 left-0 right-0 flex justify-center md:justify-end md:pr-32 -translate-x-[150px]">
+                    <div className="flex flex-col md:flex-row items-start gap-2 md:gap-3 text-center md:text-left">
+                    {/* Logo */}
+                        <div className="w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 relative flex-shrink-0 -mr-8 -mt-6">
+                            <Image
+                                src="/assets/icons/Lockups_Symbol_Fresh Green Transparent Background.png"
+                                alt="GatherUp Symbol"
+                                fill
+                                className="object-contain"
+                            />
                         </div>
 
-                        {/* <p className="text-[#a6ff48] font-bold text-lg mb-8 font-display">
-                            Belonging. Well-Being. Business Impact.
-                        </p>
+                        {/* Text and Button Column - next to logo */}
+                        <div className="flex flex-col items-center md:items-start gap-3">
+                        {/* Heading */}
+                        <p className="text-2xl md:text-2xl lg:text-3xl font-bold text-white font-display leading-[1.05]">
+                        Tenant Wellness that Works.
+                            </p>
 
-                        <Button variant="accent">
-                            Book a Demo
-                        </Button> */}
+                            {/* Subtitle */}
+                            <p className="text-[#a6ff48] font-bold text-base md:text-lg font-display -mt-4">
+                                Belonging. Well-Being. Business Impact.
+                            </p>
+
+                            {/* Book a Demo Button - below texts, aligned with texts */}
+                            <div className="flex justify-center md:justify-star mt-2">
+                                <BookDemoButton />
+                            </div>
+                        </div>
                     </div>
-                {/* </div> */}
+                </div>
             </div>
         </section>
     );
