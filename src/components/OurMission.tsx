@@ -6,11 +6,11 @@ export const OurMission: React.FC = () => {
     return (
         <section className="bg-[#E7F9DB] w-full px-2 md:px-2">
             {/* Mission Section */}
-            <div className="py-20 md:py-12">
-                <div className="container mx-auto max-w-7xl px-4 md:px-8">
-                    <div className="grid md:grid-cols-2 gap-12">
+            <div className=" bg-[#E7F9DB] py-20 md:py-24">
+                <div className="md:w-[65%] container mx-auto max-w-7xl px-4 md:px-8">
+                    <div className="grid md:grid-cols-2 gap-4 items-end -mt-12">
                         {/* Left Column: Text */}
-                        <div className="space-y-6 flex flex-col justify-center">
+                        <div className="space-y-6 flex flex-col justify-center ">
                             <h3 className="text-[#053D3D] font-bold text-xl md:text-2xl font-display tracking-wide">
                                 Our Mission
                             </h3>
@@ -22,14 +22,15 @@ export const OurMission: React.FC = () => {
                             </p>
                         </div>
 
-                        {/* Right Column: Logo */}
-                        <div className="flex justify-center md:justify-end items-end self-stretch">
-                            <div className="relative w-full max-w-lg h-64 md:h-80 lg:h-96">
+                        {/* Right Column: Illustration */}
+                        <div className="flex justify-center md:justify-end items-end">
+                            <div className="relative w-full max-w-lg flex items-end">
                                 <Image
                                     src="/assets/images/gatherup-illustration.png"
-                                    alt="GatherUp Logo"
-                                    fill
-                                    className="object-contain"
+                                    alt="GatherUp Illustration"
+                                    width={800}
+                                    height={900}
+                                    className="-mb-24 h-[390px] w-[460px]"
                                 />
                             </div>
                         </div>

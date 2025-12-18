@@ -14,11 +14,9 @@ export const Header: React.FC = () => {
     const isActive = (path: string) => pathname === path;
 
     return (
-        // <header className="fixed top-0 left-0 right-0 z-50 bg-[#053d3d] shadow-md transition-all duration-300" style={{ height: '92px' }}>
-        //     <div className="container mx-auto max-w-14xl px-4 h-full flex items-center justify-center">
-        <header className="fixed top-0 left-0 right-0 z-50 bg-[#053d3d] shadow-md transition-all duration-300 h-28">
-            <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-full flex justify-between items-center gap-2 lg:gap-4">
-                <div className="w-full md:w-[65%] flex items-center justify-between gap-4 lg:gap-6 h-full">
+        <header className="fixed top-0 left-0 right-0 z-50 bg-[#053d3d] shadow-md transition-all duration-300" style={{ height: '92px' }}>
+            <div className="container mx-auto max-w-14xl px-4 h-full flex items-center justify-center">
+                <div className="w-full md:w-[65%] flex items-center justify-between gap-4 lg:gap-6">
                     {/* Logo */}
                     <Link href="/" className="relative w-20 h-20 sm:w-20 sm:h-20 md:w-20 md:h-20 lg:w-20 lg:h-20 flex-shrink-0">
                         <Image
@@ -77,6 +75,11 @@ export const Header: React.FC = () => {
                         </Link>
                     </nav>
 
+                    {/* Book a Demo Button */}
+                    <div className="hidden md:flex">
+                        <BookDemoButton />
+                    </div>
+
                     {/* Mobile Menu Button */}
                     <button
                         className="md:hidden text-white ml-auto"
@@ -93,11 +96,6 @@ export const Header: React.FC = () => {
                             </svg>
                         )}
                     </button>
-                </div>
-
-                {/* Book a Demo Button - Outside constrained container */}
-                <div className="hidden md:flex pr-4 lg:pr-8">
-                    <BookDemoButton />
                 </div>
             </div>
             <div className="border-t border-[#a6ff48] w-full" />

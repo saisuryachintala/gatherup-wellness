@@ -13,8 +13,8 @@ export const BookDemoButton: React.FC<BookDemoButtonProps> = ({
     showIcon = true,
     onClick
 }) => {
-    const baseClasses = "items-center gap-2 bg-[#a6ff48] text-[#053d3d] font-bold rounded-full hover:bg-white transition-colors duration-300";
-    const variantClasses = variant === 'large' ? 'py-4 px-6 text-base' : 'py-3 px-6 text-sm';
+    const baseClasses = "items-center gap-2 bg-[#a6ff48] text-[#053d3d] rounded-full hover:bg-white transition-colors duration-300";
+    const variantClasses = variant === 'large' ? 'py-4 px-6' : 'py-3 px-6';
     const displayClasses = className.includes('hidden') || className.includes('flex') ? '' : 'inline-flex';
     
     return (
@@ -23,6 +23,12 @@ export const BookDemoButton: React.FC<BookDemoButtonProps> = ({
             target="_blank"
             rel="noopener noreferrer"
             className={`${displayClasses} ${baseClasses} ${variantClasses} ${className}`}
+            style={{
+                fontFamily: 'Montserrat, sans-serif',
+                fontSize: '16px',
+                fontStyle: 'normal',
+                fontWeight: '700'
+            }}
             onClick={onClick}
         >
             Book a Demo
@@ -31,11 +37,12 @@ export const BookDemoButton: React.FC<BookDemoButtonProps> = ({
                     xmlns="http://www.w3.org/2000/svg" 
                     fill="none" 
                     viewBox="0 0 24 24" 
-                    strokeWidth={2.5} 
+                    strokeWidth={4} 
                     stroke="currentColor" 
                     className="w-4 h-4"
                 >
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                    
+                    <path  d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                 </svg>
             )}
         </a>
