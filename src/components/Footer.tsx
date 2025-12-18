@@ -32,10 +32,10 @@ export const Footer: React.FC = () => {
                                     <a href="#" className="text-gray-300 hover:text-[#a6ff48] transition-colors" aria-label="Twitter">
                                         <FaXTwitter className="w-6 h-6" />
                                     </a>
-                                    <a href="#" className="text-gray-300 hover:text-[#a6ff48] transition-colors" aria-label="Instagram">
+                                    <a href="https://www.instagram.com/gatherupwellness" target="_blank" className="text-gray-300 hover:text-[#a6ff48] transition-colors" aria-label="Instagram">
                                         <FaInstagram className="w-6 h-6" />
                                     </a>
-                                    <a href="#" className="text-gray-300 hover:text-[#a6ff48] transition-colors" aria-label="LinkedIn">
+                                    <a href="https://www.linkedin.com/company/gatherupwellness/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-[#a6ff48] transition-colors" aria-label="LinkedIn">
                                         <FaLinkedin className="w-6 h-6" />
                                     </a>
                                 </div>
