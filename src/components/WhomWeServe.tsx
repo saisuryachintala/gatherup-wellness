@@ -38,7 +38,7 @@ export const WhomWeServe: React.FC = () => {
     ];
 
     return (
-        <section className="py-20 bg-[#F5FAF5] text-[#053D3D]">
+        <section className="px-2 md:px-2 py-12 md:pb-16 lg:pb-20 bg-[#F5FAF5] text-[#053D3D]">
             <div className="container mx-auto px-4">
                 <div className="max-w-6xl mx-auto">
                     <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 font-display">
@@ -47,7 +47,11 @@ export const WhomWeServe: React.FC = () => {
                     <p className="text-center text-lg mb-4">
                         GatherUp partners with property leaders committed to building healthier, more connected communities.
                     </p>
-                    <p className="text-center text-base mb-12">
+                    {/* Line separator - matches text width, responsive */}
+                    <div className="flex justify-center mb-4">
+                        <div className="h-px bg-[#053D3D]/30" style={{ width: 'min(80vw, 100ch)' }}></div>
+                    </div>
+                    <p className="text-center text-lg mb-4">
                         Our strategic wellness programs are designed for a wide range of environments, including:
                     </p>
 

@@ -2,9 +2,9 @@ import React from 'react';
 
 export const BeyondPerks: React.FC = () => {
     return (
-        <section className="py-8 md:py-12 bg-[#f5f5f0]">
+        <section className="px-2 md:px-4 py-4 md:py-8 bg-[#f5faf5]">
             <div className="container mx-auto px-4 max-w-4xl text-center">
-                <h3 className="text-3xl md:text-4xl font-bold text-[#053d3d] mb-8 font-display">
+                <h3 className="text-3xl md:text-4xl font-bold text-[#053d3d] mb-4 font-display">
                     Beyond Perks, This Is <span className="bg-[#a6ff48] text-[#053d3d] px-3 py-1 inline-block">Strategy</span>
                 </h3>
                 <p className="text-md md:text-lg text-[#053d3d] leading-relaxed mb-6">

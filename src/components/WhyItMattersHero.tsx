@@ -3,18 +3,27 @@ import Image from 'next/image';
 
 export const WhyItMattersHero: React.FC = () => {
     return (
-        <section className="relative min-h-[600px] md:min-h-[650px] flex items-center overflow-hidden">
+        <section className="relative min-h-[600px] md:min-h-[650px] flex items-center overflow-hidden bg-[#A6FF48]">
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
+                {/* Portrait image for mobile devices */}
                 <Image
                     src="/assets/images/High Five after Workout_edited.png"
                     alt="Employee Well-Being"
                     fill
-                    className="object-cover object-center"
+                    className="object-cover object-center opacity-72 md:hidden"
+                    priority
+                />
+                {/* Landscape image for tablet and desktop */}
+                <Image
+                    src="/assets/images/High Five after Workout_edited.png"
+                    alt="Employee Well-Being"
+                    fill
+                    className="hidden md:block object-cover object-center opacity-72"
                     priority
                 />
                 {/* Overlay to ensure text readability */}
-                <div className="absolute inset-0 bg-white/60"></div>
+                {/* <div className="absolute inset-0 bg-white/60"></div> */}
             </div>
 
             {/* Content */}
