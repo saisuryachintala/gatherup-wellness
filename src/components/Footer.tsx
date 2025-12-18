@@ -26,12 +26,12 @@ export const Footer: React.FC = () => {
                             <div>
                                 <h4 className="font-bold text-lg mb-3 text-accent">Follow Us</h4>
                                 <div className="flex gap-4">
-                                    <a href="#" className="text-gray-300 hover:text-[#a6ff48] transition-colors" aria-label="Facebook">
+                                    {/* <a href="#" className="text-gray-300 hover:text-[#a6ff48] transition-colors" aria-label="Facebook">
                                         <FaFacebook className="w-6 h-6" />
                                     </a>
                                     <a href="#" className="text-gray-300 hover:text-[#a6ff48] transition-colors" aria-label="Twitter">
                                         <FaXTwitter className="w-6 h-6" />
-                                    </a>
+                                    </a> */}
                                     <a href="https://www.instagram.com/gatherupwellness" target="_blank" className="text-gray-300 hover:text-[#a6ff48] transition-colors" aria-label="Instagram">
                                         <FaInstagram className="w-6 h-6" />
                                     </a>
