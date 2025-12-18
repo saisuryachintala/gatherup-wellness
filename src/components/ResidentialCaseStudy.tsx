@@ -152,28 +152,28 @@ export const ResidentialCaseStudy: React.FC = () => {
                     <div>
                         <div className="border-b border-gray-300 mb-6">
                             <span className="inline-block bg-[#a6ff48] text-[#053d3d] font-bold text-xl ml-2 text-sm">
-                                Case Study
+                                CASE STUDY
                             </span>
-                            <span className="text-[#053d3d] font-bold text-xl ml-2">Class A Office Tower</span>
+                            <span className="text-[#053d3d] font-bold text-xl ml-2">320-Unit Urban Mid-Rise</span>
                             <p className="text-[#053d3d] text-lg mb-8">
-                                "From Quiet Amenities to a Tenant Magnet"
+                                "From Transient to Connected"
                             </p>
                         </div>
 
                         <div className="border-gray-300 pb-2 mb-2">
                             <h3 className="text-[#053d3d] font-bold mb-2">Property</h3>
-                            <p className="text-[#053d3d] text-base">500,000 SF Class A office, multi-tenant</p>
+                            <p className="text-[#053d3d] text-base">320-unit mid-rise, high percentage of young professionals</p>
                         </div>
 
                         <div className="pb-2 mb-2">
                             <h3 className="text-[#053d3d] font-bold mb-2">Location</h3>
-                            <p className="text-[#053d3d] text-base">Major Sunbelt city</p>
+                            <p className="text-[#053d3d] text-base">Growing metro near a central business district</p>
                         </div>
 
                         <div>
                             <h3 className="text-[#053d3d] font-bold mb-2">Challenge</h3>
                             <p className="text-[#053d3d] text-base">
-                                Beautiful amenity floor, low usage, and a renewal cycle coming up for three key tenants.
+                                Medium turnover in 12–18 months, and reviews stuck around 3.4 stars.
                             </p>
                         </div>
                     </div>
@@ -184,9 +184,9 @@ export const ResidentialCaseStudy: React.FC = () => {
                         
                         {/* Right Column */}
                         <div className="border-b border-gray-300 mb-6">
-                            <span className="text-[#053d3d] font-bold text-xl ml-2">4 major implementations</span>
+                            <span className="text-[#053d3d] font-bold text-xl ml-2">What we implemented</span>
                             <p className="text-[#053d3d] text-lg mb-8">
-                                in a 6-month pilot
+                                (9-month program)
                             </p>
                         </div>
 
@@ -194,22 +194,22 @@ export const ResidentialCaseStudy: React.FC = () => {
                             <div className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-6 items-start">
                                 <span className="text-4xl text-[#053d3d] leading-tight text-center align-top">01</span>
                                 <p className="text-[#053d3d] text-base pt-1">
-                                    Weekly micro-activations (15–30 minutes) on the amenity floor
+                                    Two community events per month (one wellness-focused, one social)
                                 </p>
 
                                 <span className="text-4xl text-[#053d3d] leading-tight text-center align-top">02</span>
                                 <p className="text-[#053d3d] text-base pt-1">
-                                    One marquee wellness or community event per month
+                                    "New resident welcome" touchpoints with simple digital onboarding and one in-person mixer each quarter
                                 </p>
 
                                 <span className="text-4xl text-[#053d3d] leading-tight text-center align-top">03</span>
                                 <p className="text-[#053d3d] text-base pt-1">
-                                    Light tenant comms toolkit for property management and tenant admins
+                                    Communications plan across email, SMS, and lobby screens
                                 </p>
 
                                 <span className="text-4xl text-[#053d3d] leading-tight text-center align-top">04</span>
                                 <p className="text-[#053d3d] text-base pt-1">
-                                    Simple engagement and satisfaction tracking (QR pulse checks + short surveys)
+                                    Feedback loop with short resident surveys and comment boards
                                 </p>
                             </div>
                         </div>
@@ -219,33 +219,32 @@ export const ResidentialCaseStudy: React.FC = () => {
                 {/* Results Section */}
                 <div>
                     <h3 className="text-[#053d3d] font-bold text-2xl md:text-3xl mb-12 text-center">
-                        Modeled results after 6 months pilot
+                        Modeled results after 9 months
                     </h3>
 
                     <div className="grid md:grid-cols-3 gap-8 mb-8">
                         <div className="text-center">
-                            <p className="text-[#053d3d] text-base mb-2">Increase in<br />Amenity usage by</p>
-                            <div className="text-5xl md:text-6xl font-bold text-[#053d3d] mb-2">60%</div>
-                            <p className="text-base">(badge data +<br />event check-ins)</p>
+                            <p className="text-[#053d3d] text-base mb-2">Increase in resident <br /> satisfaction scores by</p>
+                            <div className="text-5xl md:text-6xl font-bold text-[#053d3d] mb-2">~12</div>
+                            <p className="text-base">points<br />(internal survey)</p>
                         </div>
 
                         <div className="text-center">
-                            <p className="text-[#053d3d] text-base mb-2">Increase in Tenant<br />contact satisfaction to</p>
-                            <div className="text-5xl md:text-6xl font-bold text-[#053d3d] mb-2">4.5 / 5</div>
-                            <p className="text-base">from from 3.7 on "overall<br />building experience"</p>
+                            <p className="text-[#053d3d] text-base mb-2">Increase in renewal rate <br /> for expiring leases by </p>
+                            <div className="text-5xl md:text-6xl font-bold text-[#053d3d] mb-2">8%</div>
+                            <p className="text-base">in the last quarter<br />of the program</p>
                         </div>
 
                         <div className="text-center">
-                            <p className="text-[#053d3d] text-base mb-2">Renewal intent<br />increased by</p>
-                            <div className="text-5xl md:text-6xl font-bold text-[#053d3d] mb-2">14%</div>
-                            <p className="text-base">by key decision<br />makers</p>
+                            <p className="text-[#053d3d] text-base mb-2">Average online rating<br />improved to</p>
+                            <div className="text-5xl md:text-6xl font-bold text-[#053d3d] mb-2">4.2 / 5</div>
+                            <p className="text-base">from 3.4 across major<br />review platforms</p>
                         </div>
                     </div>
 
                     <p className="text-[#053d3d] text-base text-center leading-relaxed max-w-4xl mx-auto">
-                        Also amenity activation became a core part of tours and pitch materials for new prospects. 
-                        This is the type of shift we aim for: take what you already have, activate it consistently, and 
-                        use it to support renewals and new leasing conversations.
+                        More residents reporting "I know at least 3 neighbors by name" and "I feel a sense of community here" on follow-up surveys. 
+                        This is the kind of community and retention shift we aim to achieve with a focused, manageable program.
                     </p>
                 </div>
             </div>
