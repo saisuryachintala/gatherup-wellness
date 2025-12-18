@@ -8,16 +8,19 @@ export const FounderBio: React.FC = () => {
             <div className="container mx-auto px-4 md:px-8">
                 <div className="max-w-6xl mx-auto">
                     <div className="bg-[#053d3d] rounded-3xl overflow-hidden">
-                        <div className="grid md:grid-cols-2 gap-0">
+                        <div className="grid md:grid-cols-2 gap-0 md:items-stretch">
                             {/* Founder Image */}
-                            <div className="relative w-full h-full min-h-[500px] md:min-h-[600px]">
+                            <div className="relative w-full aspect-[4/5] md:aspect-auto md:h-full">
                                 <div className="absolute inset-0 rounded-tl-3xl rounded-tr-3xl md:rounded-tr-none md:rounded-br-none md:rounded-bl-3xl overflow-hidden">
                                     <Image
                                         src="/assets/images/about-founder.png"
                                         alt="Jamin Gluck, Founder of GatherUp"
                                         fill
                                         className="object-cover"
-                                        sizes="(max-width: 768px) 100vw, 50vw"
+                                        style={{ 
+                                            objectPosition: 'center center'
+                                        }}
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 45vw, 50vw"
                                         priority
                                     />
                                 </div>
