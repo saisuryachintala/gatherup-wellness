@@ -8,6 +8,7 @@ import { ThrivingWorkplace } from "@/components/ThrivingWorkplace";
 import { Footer } from "@/components/Footer";
 import { Testimonial } from "@/components/Testimonial";
 import { ScrollingLogos } from "@/components/ScrollingLogos";
+import { ImpactCalculator } from "@/components/ImpactCalculator";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <Header />
       <Hero />
       <WhyGatherUp />
+      <ImpactCalculator/>
       <OurMission />
       <ScrollingLogos />
       <WhyChoose />

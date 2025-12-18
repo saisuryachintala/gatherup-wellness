@@ -155,22 +155,22 @@ export const CaseStudy: React.FC = () => {
                                 Case Study
                             </span>
                             <span className="text-[#053d3d] font-bold text-2xl md:text-xl"> Class A Office Tower</span>
-                            <p className="text-[#053d3d] text-lg mb-8">
+                            <p className="text-[#053d3d] text-lg mb-4">
                                 "From Quiet Amenities to a Tenant Magnet"
                             </p>
                         </div>
 
-                        <div className="border-gray-300 pb-2 mb-2 text-center md:text-left">
+                        <div className="border-gray-300 pb-2 mb-4 text-center md:text-left">
                             <span className="inline-block text-[#053d3d] font-bold text-2xl md:text-xl">Property</span>
                             <p className="text-[#053d3d] text-base">500,000 SF Class A office, multi-tenant</p>
                         </div>
 
-                        <div className="pb-2 mb-2 text-center md:text-left">
+                        <div className="pb-2 mb-4 text-center md:text-left">
                             <span className="inline-block text-[#053d3d] font-bold text-2xl md:text-xl">Location</span>
                             <p className="text-[#053d3d] text-base">Major Sunbelt city</p>
                         </div>
 
-                        <div className="pb-2 mb-2 text-center md:text-left">
+                        <div className="pb-2 mb-4 text-center md:text-left">
                             <span className="inline-block text-[#053d3d] font-bold text-2xl md:text-xl">Challenge</span>
                             <p className="text-[#053d3d] text-base">
                                 Beautiful amenity floor, low usage, and a renewal cycle coming up for three key tenants.
@@ -185,7 +185,7 @@ export const CaseStudy: React.FC = () => {
                         {/* Right Column */}
                         <div className="border-b border-gray-300 mb-6 text-center md:text-left">
                             <span className="text-[#053d3d] font-bold text-2xl md:text-xl">4 major implementations</span>
-                            <p className="text-[#053d3d] text-lg mb-8">
+                            <p className="text-[#053d3d] text-lg mb-4">
                                 in a 6-month pilot
                             </p>
                         </div>
