@@ -32,7 +32,7 @@ export const WhyGatherUp: React.FC = () => {
 
             {/* Content Section */}
             <div className="bg-[#F5FAF5] py-12 md:py-16">
-                <div className="md:w-[65%] container mx-auto max-w-7xl px-4 md:px-8">
+                <div className="mx-auto max-w-7xl px-4 md:px-8">
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         {/* Left Column: Text */}
                         <div className="space-y-6">
