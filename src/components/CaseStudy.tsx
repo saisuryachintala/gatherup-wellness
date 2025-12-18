@@ -151,27 +151,27 @@ export const CaseStudy: React.FC = () => {
                     {/* Left Column */}
                     <div>
                         <div className="border-b border-gray-300 mb-6">
-                            <span className="inline-block bg-[#a6ff48] text-[#053d3d] font-bold text-xl">
+                            <span className="inline-block bg-[#a6ff48] text-[#053d3d] font-bold text-2xl md:text-xl">
                                 Case Study
                             </span>
-                            <span className="text-[#053d3d] font-bold text-xl"> Class A Office Tower</span>
+                            <span className="text-[#053d3d] font-bold text-2xl md:text-xl"> Class A Office Tower</span>
                             <p className="text-[#053d3d] text-lg mb-8">
                                 "From Quiet Amenities to a Tenant Magnet"
                             </p>
                         </div>
 
                         <div className="border-gray-300 pb-2 mb-2 text-center md:text-left">
-                            <h3 className="text-[#053d3d] font-bold">Property</h3>
+                            <span className="inline-block text-[#053d3d] font-bold text-2xl md:text-xl">Property</span>
                             <p className="text-[#053d3d] text-base">500,000 SF Class A office, multi-tenant</p>
                         </div>
 
                         <div className="pb-2 mb-2 text-center md:text-left">
-                            <h3 className="text-[#053d3d] font-bold">Location</h3>
+                            <span className="inline-block text-[#053d3d] font-bold text-2xl md:text-xl">Location</span>
                             <p className="text-[#053d3d] text-base">Major Sunbelt city</p>
                         </div>
 
                         <div className="pb-2 mb-2 text-center md:text-left">
-                            <h3 className="text-[#053d3d] font-bold">Challenge</h3>
+                            <span className="inline-block text-[#053d3d] font-bold text-2xl md:text-xl">Challenge</span>
                             <p className="text-[#053d3d] text-base">
                                 Beautiful amenity floor, low usage, and a renewal cycle coming up for three key tenants.
                             </p>
@@ -184,7 +184,7 @@ export const CaseStudy: React.FC = () => {
                         
                         {/* Right Column */}
                         <div className="border-b border-gray-300 mb-6 text-center md:text-left">
-                            <span className="text-[#053d3d] font-bold text-xl ml-2">4 major implementations</span>
+                            <span className="text-[#053d3d] font-bold text-2xl md:text-xl">4 major implementations</span>
                             <p className="text-[#053d3d] text-lg mb-8">
                                 in a 6-month pilot
                             </p>
@@ -223,22 +223,28 @@ export const CaseStudy: React.FC = () => {
                     </h3>
 
                     <div className="px-2 md:px-4 grid md:grid-cols-3 gap-8 mb-8">
-                        <div className="text-center">
-                            <p className="text-[#053d3d] text-base mb-2">Increase in<br />Amenity usage by</p>
-                            <div className="text-5xl md:text-6xl font-bold text-[#053d3d] mb-2">60%</div>
-                            <p className="text-base">(badge data +<br />event check-ins)</p>
+                        <div className="text-center border-b border-gray-300 pb-8 md:border-0 md:pb-0">
+                            <div>
+                                <p className="text-[#053d3d] text-base mb-2">Increase in<br />Amenity usage by</p>
+                                <div className="text-5xl md:text-6xl font-bold text-[#053d3d] mb-2">60%</div>
+                                <p className="text-base">(badge data +<br />event check-ins)</p>
+                            </div>
+                        </div>
+
+                        <div className="text-center border-b border-gray-300 pb-8 md:border-0 md:pb-0">
+                            <div>
+                                <p className="text-[#053d3d] text-base mb-2">Increase in Tenant<br />contact satisfaction to</p>
+                                <div className="text-5xl md:text-6xl font-bold text-[#053d3d] mb-2">4.5 / 5</div>
+                                <p className="text-base">from from 3.7 on "overall<br />building experience"</p>
+                            </div>
                         </div>
 
                         <div className="text-center">
-                            <p className="text-[#053d3d] text-base mb-2">Increase in Tenant<br />contact satisfaction to</p>
-                            <div className="text-5xl md:text-6xl font-bold text-[#053d3d] mb-2">4.5 / 5</div>
-                            <p className="text-base">from from 3.7 on "overall<br />building experience"</p>
-                        </div>
-
-                        <div className="text-center">
-                            <p className="text-[#053d3d] text-base mb-2">Renewal intent<br />increased by</p>
-                            <div className="text-5xl md:text-6xl font-bold text-[#053d3d] mb-2">14%</div>
-                            <p className="text-base">by key decision<br />makers</p>
+                            <div>
+                                <p className="text-[#053d3d] text-base mb-2">Renewal intent<br />increased by</p>
+                                <div className="text-5xl md:text-6xl font-bold text-[#053d3d] mb-2">14%</div>
+                                <p className="text-base">by key decision<br />makers</p>
+                            </div>
                         </div>
                     </div>
 
