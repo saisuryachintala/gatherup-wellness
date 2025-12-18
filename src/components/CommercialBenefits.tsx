@@ -10,7 +10,7 @@ export const CommercialBenefits: React.FC = () => {
                         not just have to. GatherUp partners with owners, asset managers, and<br />
                         property teams to design wellness-driven tenant experiences that support:
                 </p>
-                <div className="grid md:grid-cols-3 gap-8 md:gap-12">
+                <div className="px-2 md:px-4 grid md:grid-cols-3 gap-8 md:gap-12">
                     
                     {/* Leasing & renewals */}
                     <div className="text-center">

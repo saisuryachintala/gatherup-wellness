@@ -7,44 +7,23 @@ export const CommercialServices: React.FC = () => {
         {
             title: "Amenity activation & calendars",
             stat: "Weekly or monthly wellness, social, and community touchpoints in spaces you already have.",
-            icon: (
-                <div className="w-20 h-20 mx-auto mb-4 relative">
-                    <Image
-                        src="/assets/icons/Heart.png"
-                        alt="Heart"
-                        fill
-                        className="object-contain"
-                    />
-                </div>
-            )
+            iconSrc: "/assets/icons/Heart.png",
+            iconAlt: "Heart",
+            iconSize: "w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20"
         },
         {
             title: "Workplace wellbeing sessions",
             stat: "Short, practical sessions that support focus, mental health, and energy for tenant teams.",
-            icon: (
-                <div className="w-18 h-18 mx-auto mb-4 relative">
-                    <Image
-                        src="/assets/icons/Lotus.png"
-                        alt="Lotus"
-                        fill
-                        className="object-contain"
-                    />
-                </div>
-            )
+            iconSrc: "/assets/icons/Lotus.png",
+            iconAlt: "Lotus",
+            iconSize: "w-11 h-11 md:w-14 md:h-14 lg:w-[72px] lg:h-[72px]"
         },
         {
             title: "Experience strategy & measurement",
             stat: "Simple frameworks for communications, feedback, and a small set of KPIs tied back to retention and NOI.",
-            icon: (
-                <div className="w-20 h-20 mx-auto mb-4 relative">
-                    <Image
-                        src="/assets/icons/Flowers.png"
-                        alt="Flowers"
-                        fill
-                        className="object-contain"
-                    />
-                </div>
-            )
+            iconSrc: "/assets/icons/Flowers.png",
+            iconAlt: "Flowers",
+            iconSize: "w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20"
         }
     ];
 
@@ -56,11 +35,19 @@ export const CommercialServices: React.FC = () => {
                 </p>
 
                 {/* Feature Cards */}
-                <div className="grid md:grid-cols-3 lg:grid-cols-3 md:gap-4 gap-8 max-w-6xl mx-auto">
+                <div className="px-2 md:px-4 grid md:grid-cols-3 lg:grid-cols-3 md:gap-4 gap-8 max-w-6xl mx-auto">
                     {servicesIcons.map((item, index) => (
                         <div key={index} className="bg-[#3d6e6e]/30 border border-[#a6ff48]/30 rounded-2xl p-8 flex flex-col items-center text-center">
-                            <div className="text-[#a6ff48]">
-                                {item.icon}
+                            {/* Fixed-height responsive container for icon alignment */}
+                            <div className="h-16 md:h-20 lg:h-24 flex items-center justify-center mb-4 w-full">
+                                <div className={`relative ${item.iconSize}`}>
+                                    <Image
+                                        src={item.iconSrc}
+                                        alt={item.iconAlt}
+                                        fill
+                                        className="object-contain"
+                                    />
+                                </div>
                             </div>
                             <h3 className="text-[#a6ff48] font-bold text-xl mb-4 font-display">{item.title}</h3>
                             <p className="text-white leading-relaxed text-base">

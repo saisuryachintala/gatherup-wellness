@@ -80,7 +80,7 @@ export const CaseStudy: React.FC = () => {
         <section className="py-16 md:py-20 bg-[#F5FAF5]">
             {/* Hero Images Carousel */}
             <div className="container mx-auto px-4 md:px-8 max-w-6xl mb-16">
-                <div className="relative">
+                <div className="px-2 md:px-4 relative">
                     {/* Carousel Container */}
                     <div
                         ref={carouselRef}
@@ -147,14 +147,14 @@ export const CaseStudy: React.FC = () => {
 
             {/* Main Content */}
             <div className="container mx-auto px-4 md:px-8 max-w-6xl">
-                <div className="grid md:grid-cols-2 gap-12 mb-16">
+                <div className="px-2 md:px-4 grid md:grid-cols-2 gap-12 mb-16">
                     {/* Left Column */}
                     <div>
                         <div className="border-b border-gray-300 mb-6">
                             <span className="inline-block bg-[#a6ff48] text-[#053d3d] font-bold text-xl text-sm">
                                 Case Study
                             </span>
-                            <span className="text-[#053d3d] font-bold text-xl">Class A Office Tower</span>
+                            <span className="text-[#053d3d] font-bold text-xl"> Class A Office Tower</span>
                             <p className="text-[#053d3d] text-lg mb-8">
                                 "From Quiet Amenities to a Tenant Magnet"
                             </p>
@@ -218,11 +218,11 @@ export const CaseStudy: React.FC = () => {
 
                 {/* Results Section */}
                 <div>
-                    <h3 className="text-[#053d3d] font-bold text-2xl md:text-3xl mb-12 text-center">
+                    <h3 className="px-2 md:px-4 text-[#053d3d] font-bold text-2xl md:text-3xl mb-12 text-center">
                         Modeled results after 6 months pilot
                     </h3>
 
-                    <div className="grid md:grid-cols-3 gap-8 mb-8">
+                    <div className="px-2 md:px-4 grid md:grid-cols-3 gap-8 mb-8">
                         <div className="text-center">
                             <p className="text-[#053d3d] text-base mb-2">Increase in<br />Amenity usage by</p>
                             <div className="text-5xl md:text-6xl font-bold text-[#053d3d] mb-2">60%</div>
