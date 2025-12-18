@@ -39,7 +39,7 @@ export const ResidentialCaseStudy: React.FC = () => {
 
     const handleTouchEnd = () => {
         if (!touchStart || !touchEnd) return;
-        
+
         const distance = touchStart - touchEnd;
         const isLeftSwipe = distance > minSwipeDistance;
         const isRightSwipe = distance < -minSwipeDistance;
@@ -53,13 +53,13 @@ export const ResidentialCaseStudy: React.FC = () => {
     };
 
     const goToPrevious = () => {
-        setCurrentIndex((prevIndex) => 
+        setCurrentIndex((prevIndex) =>
             prevIndex === 0 ? images.length - 1 : prevIndex - 1
         );
     };
 
     const goToNext = () => {
-        setCurrentIndex((prevIndex) => 
+        setCurrentIndex((prevIndex) =>
             prevIndex === images.length - 1 ? 0 : prevIndex + 1
         );
     };
@@ -90,7 +90,7 @@ export const ResidentialCaseStudy: React.FC = () => {
                         onTouchEnd={handleTouchEnd}
                     >
                         {/* Images Container */}
-                        <div 
+                        <div
                             className="flex transition-transform duration-500 ease-in-out"
                             style={{ transform: `translateX(-${currentIndex * 100}%)` }}
                         >
@@ -133,11 +133,10 @@ export const ResidentialCaseStudy: React.FC = () => {
                             <button
                                 key={index}
                                 onClick={() => goToSlide(index)}
-                                className={`transition-all duration-300 rounded-full ${
-                                    index === currentIndex
-                                        ? 'bg-[#053d3d] w-8 h-2'
-                                        : 'bg-gray-300 w-2 h-2 hover:bg-gray-400'
-                                }`}
+                                className={`transition-all duration-300 rounded-full ${index === currentIndex
+                                    ? 'bg-[#053d3d] w-8 h-2'
+                                    : 'bg-gray-300 w-2 h-2 hover:bg-gray-400'
+                                    }`}
                                 aria-label={`Go to slide ${index + 1}`}
                             />
                         ))}
@@ -151,15 +150,12 @@ export const ResidentialCaseStudy: React.FC = () => {
                     {/* Left Column */}
                     <div>
                         <div className="border-b border-gray-300 mb-6 text-center md:text-left">
-                            <div className="mb-2">
-                                <span className="inline-block bg-[#a6ff48] text-[#053d3d] font-bold text-2xl md:text-xl">
-                                    Case Study
-                                </span>
-                            </div>
-                            <div className="mb-2">
-                                <span className="text-[#053d3d] font-bold text-2xl md:text-xl">320-Unit Urban Mid-Rise</span>
-                            </div>
-                            <p className="text-[#053d3d] text-lg mb-8">
+                            <span className="inline-block bg-[#a6ff48] text-[#053d3d] font-bold text-2xl md:text-xl">
+                                Case Study
+                            </span>
+                            <br className="md:hidden" />
+                            <span className="md:inline text-[#053d3d] font-bold text-2xl md:text-xl"> 320-Unit Urban Mid-Rise</span>
+                            <p className="text-[#053d3d] text-lg mb-4">
                                 "From Transient to Connected"
                             </p>
                         </div>
@@ -185,11 +181,11 @@ export const ResidentialCaseStudy: React.FC = () => {
                     {/* Vertical Divider */}
                     <div className="relative">
                         <div className="hidden md:block absolute left-0 top-0 bottom-0 w-px bg-gray-300 -ml-6"></div>
-                        
+
                         {/* Right Column */}
                         <div className="border-b border-gray-300 mb-6 text-center md:text-left">
                             <span className="text-[#053d3d] font-bold text-2xl md:text-xl">What we implemented</span>
-                            <p className="text-[#053d3d] text-lg mb-8">
+                            <p className="text-[#053d3d] text-lg mb-4">
                                 (9-month program)
                             </p>
                         </div>
@@ -253,7 +249,7 @@ export const ResidentialCaseStudy: React.FC = () => {
                     </div>
 
                     <p className="text-[#053d3d] text-base text-center leading-relaxed max-w-4xl mx-auto">
-                        More residents reporting "I know at least 3 neighbors by name" and "I feel a sense of community here" on follow-up surveys. 
+                        More residents reporting "I know at least 3 neighbors by name" and "I feel a sense of community here" on follow-up surveys.
                         This is the kind of community and retention shift we aim to achieve with a focused, manageable program.
                     </p>
                 </div>

@@ -134,8 +134,8 @@ export const CaseStudy: React.FC = () => {
                                 key={index}
                                 onClick={() => goToSlide(index)}
                                 className={`transition-all duration-300 rounded-full ${index === currentIndex
-                                        ? 'bg-[#053d3d] w-8 h-2'
-                                        : 'bg-gray-300 w-2 h-2 hover:bg-gray-400'
+                                    ? 'bg-[#053d3d] w-8 h-2'
+                                    : 'bg-gray-300 w-2 h-2 hover:bg-gray-400'
                                     }`}
                                 aria-label={`Go to slide ${index + 1}`}
                             />
@@ -153,10 +153,9 @@ export const CaseStudy: React.FC = () => {
                             <span className="inline-block bg-[#a6ff48] text-[#053d3d] font-bold text-2xl md:text-xl">
                                 Case Study
                             </span>
-                            <div className="mb-2">
-                                <span className="block md:inline text-[#053d3d] font-bold text-2xl md:text-xl"> Class A Office Tower</span>
-                            </div>
-                            <p className="text-[#053d3d] text-lg mb-8">
+                            <br className="md:hidden" />
+                            <span className="md:inline text-[#053d3d] font-bold text-2xl md:text-xl"> Class A Office Tower</span>
+                            <p className="text-[#053d3d] text-lg mb-4">
                                 "From Quiet Amenities to a Tenant Magnet"
                             </p>
                         </div>
