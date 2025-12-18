@@ -15,10 +15,7 @@ export const CommercialBenefits: React.FC = () => {
                     {/* Leasing & renewals */}
                     <div className="text-center">
                         <div className="flex justify-center mb-6">
-                            <svg className="w-20 h-20" viewBox="0 0 100 100" fill="none">
-                                <path d="M20 20 Q30 50 20 80 L40 80 Q50 50 40 20 Z" fill="#a6ff48"/>
-                                <path d="M60 20 Q50 50 60 80 L80 80 Q70 50 80 20 Z" fill="#a6ff48"/>
-                            </svg>
+                            <span className="text-[#a6ff48] -mb-6" style={{ fontFamily: 'Lato', fontWeight: 300, fontSize: '60px' }}>01</span>
                         </div>
                         <h3 className="text-xl md:text-2xl font-bold mb-3 text-[#a6ff48]">Leasing & renewals</h3>
                         <p className="text-base md:text-lg leading-relaxed">
@@ -29,11 +26,7 @@ export const CommercialBenefits: React.FC = () => {
                     {/* Tenant satisfaction */}
                     <div className="text-center">
                         <div className="flex justify-center mb-6">
-                            <svg className="w-20 h-20" viewBox="0 0 100 100" fill="none">
-                                <path d="M50 50 L50 10 A40 40 0 0 1 85 35 L50 50 Z" fill="#a6ff48"/>
-                                <path d="M50 50 L85 35 A40 40 0 0 1 85 65 L50 50 Z" fill="#a6ff48"/>
-                                <path d="M50 50 L85 65 A40 40 0 0 1 50 90 L50 50 Z" fill="#a6ff48"/>
-                            </svg>
+                            <span className="text-[#a6ff48] -mb-6" style={{ fontFamily: 'Lato', fontWeight: 300, fontSize: '60px' }}>02</span>
                         </div>
                         <h3 className="text-xl md:text-2xl font-bold mb-3 text-[#a6ff48]">Tenant satisfaction</h3>
                         <p className="text-base md:text-lg leading-relaxed">
@@ -44,10 +37,7 @@ export const CommercialBenefits: React.FC = () => {
                     {/* Amenity ROI */}
                     <div className="text-center">
                         <div className="flex justify-center mb-6">
-                            <svg className="w-20 h-20" viewBox="0 0 100 100" fill="none">
-                                <path d="M50 50 m-40 0 a40 40 0 0 1 80 0 z" fill="#a6ff48"/>
-                                <circle cx="50" cy="50" r="20" fill="#053d3d"/>
-                            </svg>
+                            <span className="text-[#a6ff48] -mb-6" style={{ fontFamily: 'Lato', fontWeight: 300, fontSize: '60px' }}>03</span>
                         </div>
                         <h3 className="text-xl md:text-2xl font-bold mb-3 text-[#a6ff48]">Amenity ROI</h3>
                         <p className="text-base md:text-lg leading-relaxed">
