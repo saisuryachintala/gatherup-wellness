@@ -23,13 +23,13 @@ export const WhyItMattersHero: React.FC = () => {
                     priority
                 />
                 {/* Overlay to ensure text readability */}
-                {/* <div className="absolute inset-0 bg-white/60"></div> */}
+                {<div className="absolute inset-0 bg-white/20"></div>}
             </div>
 
             {/* Content */}
             <div className="container mx-auto max-w-7xl px-4 md:px-8 relative z-10 py-12 md:py-20">
                 <div className="max-w-4xl mx-auto text-center animate-fade-in-up">
-                    <h1 className="text-7xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-[#053d3d] leading-tight drop-shadow-sm font-display">
+                    <h1 className="mt-20 text-7xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-[#053d3d] leading-tight drop-shadow-sm font-display">
                         Why does Employee<br />
                         Well-Being Matter
                     </h1>

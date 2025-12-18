@@ -39,7 +39,7 @@ export const CaseStudy: React.FC = () => {
 
     const handleTouchEnd = () => {
         if (!touchStart || !touchEnd) return;
-        
+
         const distance = touchStart - touchEnd;
         const isLeftSwipe = distance > minSwipeDistance;
         const isRightSwipe = distance < -minSwipeDistance;
@@ -53,13 +53,13 @@ export const CaseStudy: React.FC = () => {
     };
 
     const goToPrevious = () => {
-        setCurrentIndex((prevIndex) => 
+        setCurrentIndex((prevIndex) =>
             prevIndex === 0 ? images.length - 1 : prevIndex - 1
         );
     };
 
     const goToNext = () => {
-        setCurrentIndex((prevIndex) => 
+        setCurrentIndex((prevIndex) =>
             prevIndex === images.length - 1 ? 0 : prevIndex + 1
         );
     };
@@ -90,7 +90,7 @@ export const CaseStudy: React.FC = () => {
                         onTouchEnd={handleTouchEnd}
                     >
                         {/* Images Container */}
-                        <div 
+                        <div
                             className="flex transition-transform duration-500 ease-in-out"
                             style={{ transform: `translateX(-${currentIndex * 100}%)` }}
                         >
@@ -133,11 +133,10 @@ export const CaseStudy: React.FC = () => {
                             <button
                                 key={index}
                                 onClick={() => goToSlide(index)}
-                                className={`transition-all duration-300 rounded-full ${
-                                    index === currentIndex
+                                className={`transition-all duration-300 rounded-full ${index === currentIndex
                                         ? 'bg-[#053d3d] w-8 h-2'
                                         : 'bg-gray-300 w-2 h-2 hover:bg-gray-400'
-                                }`}
+                                    }`}
                                 aria-label={`Go to slide ${index + 1}`}
                             />
                         ))}
@@ -154,7 +153,7 @@ export const CaseStudy: React.FC = () => {
                             <span className="inline-block bg-[#a6ff48] text-[#053d3d] font-bold text-2xl md:text-xl">
                                 Case Study
                             </span>
-                            <span className="text-[#053d3d] font-bold text-2xl md:text-xl"> Class A Office Tower</span>
+                            <span className="block md:inline text-[#053d3d] font-bold text-2xl md:text-xl"> Class A Office Tower</span>
                             <p className="text-[#053d3d] text-lg mb-4">
                                 "From Quiet Amenities to a Tenant Magnet"
                             </p>
@@ -181,7 +180,7 @@ export const CaseStudy: React.FC = () => {
                     {/* Vertical Divider */}
                     <div className="relative">
                         <div className="hidden md:block absolute left-0 top-0 bottom-0 w-px bg-gray-300 -ml-6"></div>
-                        
+
                         {/* Right Column */}
                         <div className="border-b border-gray-300 mb-6 text-center md:text-left">
                             <span className="text-[#053d3d] font-bold text-2xl md:text-xl">4 major implementations</span>
@@ -249,8 +248,8 @@ export const CaseStudy: React.FC = () => {
                     </div>
 
                     <p className="text-[#053d3d] text-base text-center leading-relaxed max-w-4xl mx-auto">
-                        Also amenity activation became a core part of tours and pitch materials for new prospects. 
-                        This is the type of shift we aim for: take what you already have, activate it consistently, and 
+                        Also amenity activation became a core part of tours and pitch materials for new prospects.
+                        This is the type of shift we aim for: take what you already have, activate it consistently, and
                         use it to support renewals and new leasing conversations.
                     </p>
                 </div>

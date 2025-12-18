@@ -9,8 +9,8 @@ interface ResidentialCTASectionProps {
 }
 
 export const ResidentialCTASection: React.FC<ResidentialCTASectionProps> = ({
-    title = "Ready to Turn Your Culture into a Business Advantage?",
-    subtitle = "Let's make employee well-being your strategy for sustainable success.",
+    title = "Ready to turn your property into a community tenants love?",
+    subtitle = "Let's make your property a place where tenants want to live and stay.",
     buttonText = "Book a Demo",
     buttonLink = "https://tidycal.com/gluckjamin/free-gatherup-consultation"
 }) => {
