@@ -5,17 +5,17 @@ export const WhyGatherUp: React.FC = () => {
     const features = [
         {
             title: "Boost Engagement",
-            description: "Drive participation with interactive programming designed to energize employees, tenants, or members.",
+            description: "Drive participation with interactive programming designed to energize your community.",
             icon: "/assets/icons/Boost.png"
         },
         {
             title: "Increase Retention",
-            description: "Reduce turnover by cultivating a strong sense of community and belonging through custom initiatives.",
+            description: "Reduce turnover by cultivating a strong sense of belonging through custom activations.",
             icon: "/assets/icons/Retention-2.png"
         },
         {
-            title: "Strengthen Culture & Foster belonging",
-            description: "Strengthen team dynamics and reduce turnover with custom community-building initiatives.",
+            title: "Strengthen Culture & Foster Belonging",
+            description: "Strengthen tenant dynamics and reduce turnover with custom community-building initiatives.",
             icon: "/assets/icons/Belonging.png"
         }
     ];
@@ -41,10 +41,14 @@ export const WhyGatherUp: React.FC = () => {
                             </h3>
                             <div className="text-md md:text-lg space-y-4 text-gray-700 leading-relaxed">
                                 <p>
-                                    Most property teams know that well-being matters but few have the time, data, or expertise to turn it into a measurable strategy. <span className="italic">That's where we come in.</span>
+                                    Most property teams know that wellness matters but few have the time, data, or expertise to turn it into a measurable strategy.
+                                </p>
+                                <div className="h-0.5 w-64 bg-[#053d3d]/40 rounded-full mb-6 mx-auto"></div>
+                                <p>
+                                    <span className="italic">That's where we come in.</span>
                                 </p>
                                 <p>
-                                    GatherUp helps you design and deliver well-being and community programs that drive engagement, strengthen retention, and improve performance. We combine strategic insight with hands-on activation to turn wellness from a nice-to-have into a business advantage.
+                                    GatherUp helps design and deliver well-being and community programs that drive engagement, strengthen retention, and improve performance. We combine data-driven insights with hands-on activations to turn wellness from a nice-to-have into a business advantage.
                                 </p>
                             </div>
                         </div>

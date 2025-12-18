@@ -155,24 +155,24 @@ export const CaseStudy: React.FC = () => {
                                 Case Study
                             </span>
                             <span className="text-[#053d3d] font-bold text-xl ml-2">Class A Office Tower</span>
-                            <p className="text-[#053d3d] text-md mb-8">
+                            <p className="text-[#053d3d] text-lg mb-8">
                                 "From Quiet Amenities to a Tenant Magnet"
                             </p>
                         </div>
 
                         <div className="border-gray-300 pb-2 mb-2">
                             <h3 className="text-[#053d3d] font-bold mb-2">Property</h3>
-                            <p className="text-[#053d3d]">500,000 SF Class A office, multi-tenant</p>
+                            <p className="text-[#053d3d] text-base">500,000 SF Class A office, multi-tenant</p>
                         </div>
 
                         <div className="pb-2 mb-2">
                             <h3 className="text-[#053d3d] font-bold mb-2">Location</h3>
-                            <p className="text-[#053d3d]">Major Sunbelt city</p>
+                            <p className="text-[#053d3d] text-base">Major Sunbelt city</p>
                         </div>
 
                         <div>
                             <h3 className="text-[#053d3d] font-bold mb-2">Challenge</h3>
-                            <p className="text-[#053d3d]">
+                            <p className="text-[#053d3d] text-base">
                                 Beautiful amenity floor, low usage, and a renewal cycle coming up for three key tenants.
                             </p>
                         </div>
@@ -185,40 +185,32 @@ export const CaseStudy: React.FC = () => {
                         {/* Right Column */}
                         <div className="border-b border-gray-300 mb-6">
                             <span className="text-[#053d3d] font-bold text-xl ml-2">4 major implementations</span>
-                            <p className="text-[#053d3d] text-md mb-8">
+                            <p className="text-[#053d3d] text-lg mb-8">
                                 in a 6-month pilot
                             </p>
                         </div>
 
                         <div>
-                            <div className="space-y-6">
-                                <div className="flex gap-4">
-                                    <span className="text-4xl text-[#053d3d]">01</span>
-                                    <p className="text-[#053d3d] pt-2">
-                                        Weekly micro-activations (15–30 minutes) on the amenity floor
-                                    </p>
-                                </div>
+                            <div className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-6 items-start">
+                                <span className="text-4xl text-[#053d3d] leading-tight">01</span>
+                                <p className="text-[#053d3d] text-base pt-1">
+                                    Weekly micro-activations (15–30 minutes) on the amenity floor
+                                </p>
 
-                                <div className="flex gap-4">
-                                    <span className="text-4xl text-[#053d3d]">02</span>
-                                    <p className="text-[#053d3d] pt-2">
-                                        One marquee wellness or community event per month
-                                    </p>
-                                </div>
+                                <span className="text-4xl text-[#053d3d] leading-tight">02</span>
+                                <p className="text-[#053d3d] text-base pt-1">
+                                    One marquee wellness or community event per month
+                                </p>
 
-                                <div className="flex gap-4">
-                                    <span className="text-4xl text-[#053d3d]">03</span>
-                                    <p className="text-[#053d3d] pt-2">
-                                        Light tenant comms toolkit for property management and tenant admins
-                                    </p>
-                                </div>
+                                <span className="text-4xl text-[#053d3d] leading-tight">03</span>
+                                <p className="text-[#053d3d] text-base pt-1">
+                                    Light tenant comms toolkit for property management and tenant admins
+                                </p>
 
-                                <div className="flex gap-4">
-                                    <span className="text-4xl text-[#053d3d]">04</span>
-                                    <p className="text-[#053d3d] pt-2">
-                                        Simple engagement and satisfaction tracking (QR pulse checks + short surveys)
-                                    </p>
-                                </div>
+                                <span className="text-4xl text-[#053d3d] leading-tight">04</span>
+                                <p className="text-[#053d3d] text-base pt-1">
+                                    Simple engagement and satisfaction tracking (QR pulse checks + short surveys)
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -232,25 +224,25 @@ export const CaseStudy: React.FC = () => {
 
                     <div className="grid md:grid-cols-3 gap-8 mb-8">
                         <div className="text-center">
-                            <p className="text-[#053d3d] text-sm mb-2">Increase in<br />Amenity usage by</p>
+                            <p className="text-[#053d3d] text-base mb-2">Increase in<br />Amenity usage by</p>
                             <div className="text-5xl md:text-6xl font-bold text-[#053d3d] mb-2">60%</div>
-                            <p className="text-sm">(badge data +<br />event check-ins)</p>
+                            <p className="text-base">(badge data +<br />event check-ins)</p>
                         </div>
 
                         <div className="text-center">
-                            <p className="text-[#053d3d] text-sm mb-2">Increase in Tenant<br />contact satisfaction to</p>
+                            <p className="text-[#053d3d] text-base mb-2">Increase in Tenant<br />contact satisfaction to</p>
                             <div className="text-5xl md:text-6xl font-bold text-[#053d3d] mb-2">4.5 / 5</div>
-                            <p className="text-sm">from from 3.7 on "overall<br />building experience"</p>
+                            <p className="text-base">from from 3.7 on "overall<br />building experience"</p>
                         </div>
 
                         <div className="text-center">
-                            <p className="text-[#053d3d] text-sm mb-2">Renewal intent<br />increased by</p>
+                            <p className="text-[#053d3d] text-base mb-2">Renewal intent<br />increased by</p>
                             <div className="text-5xl md:text-6xl font-bold text-[#053d3d] mb-2">14%</div>
-                            <p className="text-sm">by key decision<br />makers</p>
+                            <p className="text-base">by key decision<br />makers</p>
                         </div>
                     </div>
 
-                    <p className="text-[#053d3d] text-center leading-relaxed max-w-4xl mx-auto">
+                    <p className="text-[#053d3d] text-base text-center leading-relaxed max-w-4xl mx-auto">
                         Also amenity activation became a core part of tours and pitch materials for new prospects. 
                         This is the type of shift we aim for: take what you already have, activate it consistently, and 
                         use it to support renewals and new leasing conversations.

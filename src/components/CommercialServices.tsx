@@ -9,9 +9,9 @@ export const CommercialServices: React.FC = () => {
                 </p>
 
                 {/* Feature Cards */}
-                <div className="grid md:grid-cols-3 gap-8">
+                <div className="grid md:grid-cols-3 gap-3">
                     {/* Amenity activation & calendars */}
-                    <div className="bg-[#3a5f5f]/60 p-8 rounded-3xl text-center hover:bg-[#3a5f5f]/80 transition-colors">
+                    <div className="bg-[#3d6e6e]/30 border border-[#a6ff48]/30 rounded-2xl p-8 flex flex-col items-center text-center transition-all duration-300">
                         <div className="flex justify-center mb-6">
                             <svg className="w-16 h-16" viewBox="0 0 64 64" fill="none" stroke="#a6ff48" strokeWidth="2">
                                 <circle cx="32" cy="28" r="12" strokeLinecap="round" strokeLinejoin="round"/>
@@ -22,14 +22,14 @@ export const CommercialServices: React.FC = () => {
                                 <path d="M20 40 C20 38 22 36 24 36 L40 36 C42 36 44 38 44 40" strokeLinecap="round"/>
                             </svg>
                         </div>
-                        <h3 className="text-xl font-bold text-[#a6ff48] mb-4 font-display">Amenity activation<br />& calendars</h3>
-                        <p className="text-white leading-relaxed">
+                        <h3 className="text-[#a6ff48] font-bold text-xl mb-4 font-display">Amenity activation<br />& calendars</h3>
+                        <p className="text-white/90 text-sm leading-relaxed">
                             Weekly or monthly wellness, social, and community touchpoints in spaces you already have.
                         </p>
                     </div>
 
                     {/* Workplace wellbeing sessions */}
-                    <div className="bg-[#3a5f5f]/60 p-8 rounded-3xl text-center hover:bg-[#3a5f5f]/80 transition-colors">
+                    <div className="bg-[#3d6e6e]/30 border border-[#a6ff48]/30 rounded-2xl p-8 flex flex-col items-center text-center transition-all duration-300">
                         <div className="flex justify-center mb-6">
                             <svg className="w-16 h-16" viewBox="0 0 64 64" fill="none" stroke="#a6ff48" strokeWidth="2">
                                 <path d="M32 20 C32 16 28 12 24 12 C20 12 16 16 16 20 C16 24 20 28 24 28" strokeLinecap="round" strokeLinejoin="round"/>
@@ -40,14 +40,14 @@ export const CommercialServices: React.FC = () => {
                                 <circle cx="36" cy="38" r="1" fill="#a6ff48"/>
                             </svg>
                         </div>
-                        <h3 className="text-xl font-bold text-[#a6ff48] mb-4 font-display">Workplace<br />wellbeing sessions</h3>
-                        <p className="text-white leading-relaxed">
+                        <h3 className="text-[#a6ff48] font-bold text-xl mb-4 font-display">Workplace<br />wellbeing sessions</h3>
+                        <p className="text-white/90 text-sm leading-relaxed">
                             Short, practical sessions that support focus, mental health, and energy for tenant teams.
                         </p>
                     </div>
 
                     {/* Experience strategy & measurement */}
-                    <div className="bg-[#3a5f5f]/60 p-8 rounded-3xl text-center hover:bg-[#3a5f5f]/80 transition-colors">
+                    <div className="bg-[#3d6e6e]/30 border border-[#a6ff48]/30 rounded-2xl p-8 flex flex-col items-center text-center transition-all duration-300">
                         <div className="flex justify-center mb-6">
                             <svg className="w-16 h-16" viewBox="0 0 64 64" fill="none" stroke="#a6ff48" strokeWidth="2">
                                 <path d="M24 48 L24 36 C24 34 26 32 28 32 L36 32 C38 32 40 34 40 36 L40 48" strokeLinecap="round" strokeLinejoin="round"/>
@@ -61,8 +61,8 @@ export const CommercialServices: React.FC = () => {
                                 <path d="M44 27 L44 38" strokeLinecap="round"/>
                             </svg>
                         </div>
-                        <h3 className="text-xl font-bold text-[#a6ff48] mb-4 font-display">Experience strategy<br />& measurement</h3>
-                        <p className="text-white leading-relaxed">
+                        <h3 className="text-[#a6ff48] font-bold text-xl mb-4 font-display">Experience strategy<br />& measurement</h3>
+                        <p className="text-white/90 text-sm leading-relaxed">
                             Simple frameworks for communications, feedback, and a small set of KPIs tied back to retention and NOI.
                         </p>
                     </div>

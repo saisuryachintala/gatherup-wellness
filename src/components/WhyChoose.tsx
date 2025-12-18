@@ -38,7 +38,7 @@ export const WhyChoose: React.FC = () => {
                         Why Choose GatherUp?
                     </h2>
                     <p className="text-white text-lg md:text-lg leading-relaxed -mb-12 -mt-4">
-                        At GatherUp, we are more than just a service. We are your partner in building a connected, thriving workforce that promotes long-term business success.
+                        At GatherUp, we are more than just a service. We are your partner in building a connected, thriving property that promotes long-term business success.
                     </p>
                 </div>
 
