@@ -4,7 +4,7 @@ import { FaLinkedin, FaInstagram, FaFacebook, FaXTwitter } from 'react-icons/fa6
 
 export const FounderBio: React.FC = () => {
     return (
-        <section className="pt-40 pb-12 md:pb-16 lg:pb-20 bg-[#053d3d]">
+        <section className="pt-40 px-2 md:px-2 pb-12 md:pb-16 lg:pb-20 bg-[#053d3d]">
             <div className="container mx-auto px-4 md:px-8">
                 <div className="max-w-6xl mx-auto">
                     <div className="bg-[#053d3d] rounded-3xl overflow-hidden">
@@ -29,7 +29,7 @@ export const FounderBio: React.FC = () => {
                                     About <span className="text-[#a6ff48]">Jamin Gluck</span>, Our Founder
                                 </h3>
                                 
-                                <div className="space-y-4 text-white leading-relaxed">
+                                <div className="space-y-4 text-white text-lg mb-4">
                                     <p>
                                         Jamin Gluck is the founder of GatherUp and a Wellness Program Architect dedicated to helping organizations design healthier, more connected workplaces and communities. Before starting GatherUp, he spent a decade at Amazon and MongoDB, leading teams and large-scale initiatives in fast-paced, high-performance cultures. While he learned a lot about growth and execution, he also saw the hidden costs: burnout, disconnection, and a culture that prized output over well-being.
                                     </p>

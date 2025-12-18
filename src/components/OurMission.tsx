@@ -4,9 +4,9 @@ import { ScrollingLogos } from './ScrollingLogos';
 
 export const OurMission: React.FC = () => {
     return (
-        <section className="w-full">
+        <section className="bg-[#E7F9DB] w-full px-2 md:px-2">
             {/* Mission Section */}
-            <div className="bg-[#E7F9DB] py-20 md:py-12">
+            <div className="py-20 md:py-12">
                 <div className="container mx-auto max-w-7xl px-4 md:px-8">
                     <div className="grid md:grid-cols-2 gap-12">
                         {/* Left Column: Text */}
