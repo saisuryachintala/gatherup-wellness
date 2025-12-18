@@ -7,7 +7,7 @@ export const OurMission: React.FC = () => {
         <section className="bg-[#E7F9DB] w-full px-2 md:px-2">
             {/* Mission Section */}
             <div className=" bg-[#E7F9DB] py-20 md:py-24">
-                <div className="md:w-[65%] container mx-auto max-w-7xl px-4 md:px-8">
+                <div className="mx-auto max-w-7xl px-4 md:px-8">
                     <div className="grid md:grid-cols-2 gap-4 items-end -mt-12">
                         {/* Left Column: Text */}
                         <div className="space-y-6 flex flex-col justify-center ">
