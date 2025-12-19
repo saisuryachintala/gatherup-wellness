@@ -16,8 +16,6 @@ export const Header: React.FC = () => {
     const isSolutionsActive = () => pathname === '/our-solutions' || pathname === '/our-solutions/residential';
 
     return (
-        // <header className="fixed top-0 left-0 right-0 z-50 bg-[#053d3d] shadow-md transition-all duration-300" style={{ height: '92px' }}>
-        //     <div className="container mx-auto max-w-14xl px-4 h-full flex items-center justify-center">
         <header className="fixed top-0 left-0 right-0 z-50 bg-[#053d3d] shadow-md transition-all duration-300 h-28">
             <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-full flex justify-between items-center gap-2 lg:gap-4">
                 <div className="w-full md:w-[65%] flex items-center justify-between gap-4 lg:gap-6 h-full">
@@ -36,27 +34,26 @@ export const Header: React.FC = () => {
                     {/* Navigation Links */}
                     <nav className="hidden md:flex items-center gap-6 flex-1 justify-left">
                         {/* Our Solutions Dropdown */}
-                        <div 
+                        <div
                             className="relative"
                             onMouseEnter={() => setSolutionsDropdownOpen(true)}
                             onMouseLeave={() => setSolutionsDropdownOpen(false)}
                         >
                             <button
-                                className={`transition-all duration-500 ease-in-out ${
-                                    isSolutionsActive()
+                                className={`transition-all duration-500 ease-in-out ${isSolutionsActive()
                                     ? 'text-[#a6ff48] font-bold'
                                     : 'text-white hover:text-[#a6ff48] font-normal'
-                                }`}
+                                    }`}
                                 style={{
                                     fontSize: '1.05rem',
                                     transition: 'color 0.5s ease-in-out, font-size 0.5s ease-in-out, font-weight 0.5s ease-in-out, filter 0.5s ease-in-out'
                                 }}
                             >
                                 Our Solutions
-                                <svg 
+                                <svg
                                     className={`inline-block ml-1 w-4 h-4 transition-transform duration-300 ${solutionsDropdownOpen ? 'rotate-180' : ''}`}
-                                    fill="none" 
-                                    stroke="currentColor" 
+                                    fill="none"
+                                    stroke="currentColor"
                                     viewBox="0 0 24 24"
                                 >
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -67,22 +64,20 @@ export const Header: React.FC = () => {
                                     <div className="bg-[#053d3d] border border-[#a6ff48]/30 rounded-lg shadow-lg">
                                         <Link
                                             href="/our-solutions"
-                                            className={`block px-4 py-3 transition-colors ${
-                                                isActive('/our-solutions')
-                                                    ? 'text-[#a6ff48] font-bold bg-[#3d6e6e]/30'
-                                                    : 'text-white hover:text-[#a6ff48] hover:bg-[#3d6e6e]/20'
-                                            }`}
+                                            className={`block px-4 py-3 transition-colors ${isActive('/our-solutions')
+                                                ? 'text-[#a6ff48] font-bold bg-[#3d6e6e]/30'
+                                                : 'text-white hover:text-[#a6ff48] hover:bg-[#3d6e6e]/20'
+                                                }`}
                                             onClick={() => setSolutionsDropdownOpen(false)}
                                         >
                                             Commercial
                                         </Link>
                                         <Link
                                             href="/our-solutions/residential"
-                                            className={`block px-4 py-3 transition-colors rounded-b-lg ${
-                                                isActive('/our-solutions/residential')
-                                                    ? 'text-[#a6ff48] font-bold bg-[#3d6e6e]/30'
-                                                    : 'text-white hover:text-[#a6ff48] hover:bg-[#3d6e6e]/20'
-                                            }`}
+                                            className={`block px-4 py-3 transition-colors rounded-b-lg ${isActive('/our-solutions/residential')
+                                                ? 'text-[#a6ff48] font-bold bg-[#3d6e6e]/30'
+                                                : 'text-white hover:text-[#a6ff48] hover:bg-[#3d6e6e]/20'
+                                                }`}
                                             onClick={() => setSolutionsDropdownOpen(false)}
                                         >
                                             Residential
@@ -91,13 +86,12 @@ export const Header: React.FC = () => {
                                 </div>
                             )}
                         </div>
-                        <Link 
-                            href="/why-it-matters" 
-                            className={`transition-all duration-500 ease-in-out ${
-                                isActive('/why-it-matters')
-                                    ? 'text-[#a6ff48] font-bold'
-                                    : 'text-white hover:text-[#a6ff48] font-normal'
-                            }`}
+                        <Link
+                            href="/why-it-matters"
+                            className={`transition-all duration-500 ease-in-out ${isActive('/why-it-matters')
+                                ? 'text-[#a6ff48] font-bold'
+                                : 'text-white hover:text-[#a6ff48] font-normal'
+                                }`}
                             style={{
                                 fontSize: '1.05rem',
                                 transition: 'color 1s ease-in-out, font-size 1s ease-in-out, font-weight 1s ease-in-out, filter 1s ease-in-out'
@@ -105,13 +99,12 @@ export const Header: React.FC = () => {
                         >
                             Why it Matters
                         </Link>
-                        <Link 
-                            href="/about-us" 
-                            className={`transition-all duration-500 ease-in-out ${
-                                isActive('/about-us')
+                        <Link
+                            href="/about-us"
+                            className={`transition-all duration-500 ease-in-out ${isActive('/about-us')
                                 ? 'text-[#a6ff48] font-bold'
                                 : 'text-white hover:text-[#a6ff48] font-normal'
-                            }`}
+                                }`}
                             style={{
                                 fontSize: '1.05rem',
                                 transition: 'color 0.5s ease-in-out, font-size 0.5s ease-in-out, font-weight 0.5s ease-in-out, filter 0.5s ease-in-out'
@@ -152,11 +145,10 @@ export const Header: React.FC = () => {
                     <div className="container mx-auto max-w-7xl px-6 py-4 flex flex-col gap-4">
                         <div>
                             <button
-                                className={`w-full text-left py-2 flex items-center justify-between ${
-                                    isSolutionsActive()
-                                        ? 'text-[#a6ff48] drop-shadow-[0_2px_4px_rgba(166,255,72,0.3)]'
-                                        : 'text-white hover:text-[#a6ff48] font-normal'
-                                }`}
+                                className={`w-full text-left py-2 flex items-center justify-between ${isSolutionsActive()
+                                    ? 'text-[#a6ff48] '
+                                    : 'text-white hover:text-[#a6ff48] font-normal'
+                                    }`}
                                 style={{
                                     fontSize: '1.125rem',
                                     fontWeight: isSolutionsActive() ? '600' : '400',
@@ -165,10 +157,10 @@ export const Header: React.FC = () => {
                                 onClick={() => setSolutionsDropdownOpen(!solutionsDropdownOpen)}
                             >
                                 Our Solutions
-                                <svg 
+                                <svg
                                     className={`w-4 h-4 transition-transform duration-300 ${solutionsDropdownOpen ? 'rotate-180' : ''}`}
-                                    fill="none" 
-                                    stroke="currentColor" 
+                                    fill="none"
+                                    stroke="currentColor"
                                     viewBox="0 0 24 24"
                                 >
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -178,11 +170,10 @@ export const Header: React.FC = () => {
                                 <div className="ml-4 mt-2 flex flex-col gap-2">
                                     <Link
                                         href="/our-solutions"
-                                        className={`py-2 ${
-                                            isActive('/our-solutions')
-                                                ? 'text-[#a6ff48] drop-shadow-[0_2px_4px_rgba(166,255,72,0.3)]'
-                                                : 'text-white hover:text-[#a6ff48] font-normal'
-                                        }`}
+                                        className={`py-2 ${isActive('/our-solutions')
+                                            ? 'text-[#a6ff48] '
+                                            : 'text-white hover:text-[#a6ff48] font-normal'
+                                            }`}
                                         style={{
                                             fontSize: '1rem',
                                             fontWeight: isActive('/our-solutions') ? '600' : '400',
@@ -197,11 +188,10 @@ export const Header: React.FC = () => {
                                     </Link>
                                     <Link
                                         href="/our-solutions/residential"
-                                        className={`py-2 ${
-                                            isActive('/our-solutions/residential')
-                                                ? 'text-[#a6ff48] drop-shadow-[0_2px_4px_rgba(166,255,72,0.3)]'
-                                                : 'text-white hover:text-[#a6ff48] font-normal'
-                                        }`}
+                                        className={`py-2 ${isActive('/our-solutions/residential')
+                                            ? 'text-[#a6ff48] '
+                                            : 'text-white hover:text-[#a6ff48] font-normal'
+                                            }`}
                                         style={{
                                             fontSize: '1rem',
                                             fontWeight: isActive('/our-solutions/residential') ? '600' : '400',
@@ -219,11 +209,10 @@ export const Header: React.FC = () => {
                         </div>
                         <Link
                             href="/why-it-matters"
-                            className={`py-2 ${
-                                isActive('/why-it-matters')
-                                    ? 'text-[#a6ff48] drop-shadow-[0_2px_4px_rgba(166,255,72,0.3)]'
-                                    : 'text-white hover:text-[#a6ff48] font-normal'
-                            }`}
+                            className={`py-2 ${isActive('/why-it-matters')
+                                ? 'text-[#a6ff48] '
+                                : 'text-white hover:text-[#a6ff48] font-normal'
+                                }`}
                             style={{
                                 fontSize: isActive('/why-it-matters') ? '1.125rem' : '1.125rem',
                                 fontWeight: isActive('/why-it-matters') ? '600' : '400',
@@ -235,11 +224,10 @@ export const Header: React.FC = () => {
                         </Link>
                         <Link
                             href="/about-us"
-                            className={`py-2 ${
-                                isActive('/about-us')
-                                    ? 'text-[#a6ff48] drop-shadow-[0_2px_4px_rgba(166,255,72,0.3)]'
-                                    : 'text-white hover:text-[#a6ff48] font-normal'
-                            }`}
+                            className={`py-2 ${isActive('/about-us')
+                                ? 'text-[#a6ff48] '
+                                : 'text-white hover:text-[#a6ff48] font-normal'
+                                }`}
                             style={{
                                 fontSize: isActive('/about-us') ? '1.125rem' : '1.125rem',
                                 fontWeight: isActive('/about-us') ? '600' : '400',
@@ -249,7 +237,7 @@ export const Header: React.FC = () => {
                         >
                             About us
                         </Link>
-                        <BookDemoButton 
+                        <BookDemoButton
                             className="justify-center mt-2"
                             onClick={() => setMobileMenuOpen(false)}
                         />
