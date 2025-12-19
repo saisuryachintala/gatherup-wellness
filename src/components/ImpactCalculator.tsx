@@ -298,7 +298,7 @@ export const ImpactCalculator: React.FC = () => {
                                     className="text-base font-semibold mb-2 break-words"
                                     style={{ color: colors.text }}
                                 >
-                                    Annual Rent Uplift (Elite)
+                                    Annual Rent Uplift (Gather Up)
                                 </h3>
                                 <div
                                     className="text-3xl md:text-4xl lg:text-5xl font-bold mb-2 break-words overflow-wrap-anywhere"
