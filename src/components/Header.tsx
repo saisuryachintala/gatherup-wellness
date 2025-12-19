@@ -33,6 +33,29 @@ export const Header: React.FC = () => {
         return () => window.removeEventListener('resize', updateHeaderHeight);
     }, []);
 
+    // Prevent body scrolling when mobile menu is open
+    useEffect(() => {
+        if (mobileMenuOpen) {
+            // Save the current scroll position
+            const scrollY = window.scrollY;
+            // Apply styles to prevent scrolling
+            document.body.style.position = 'fixed';
+            document.body.style.top = `-${scrollY}px`;
+            document.body.style.width = '100%';
+            document.body.style.overflow = 'hidden';
+
+            return () => {
+                // Restore scrolling when menu closes
+                document.body.style.position = '';
+                document.body.style.top = '';
+                document.body.style.width = '';
+                document.body.style.overflow = '';
+                // Restore scroll position
+                window.scrollTo(0, scrollY);
+            };
+        }
+    }, [mobileMenuOpen]);
+
     return (
         <header ref={headerRef} className="fixed top-0 left-0 right-0 z-50 bg-[#053d3d] shadow-md transition-all duration-300 h-28">
             <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-full flex justify-between items-center gap-2 lg:gap-4">
