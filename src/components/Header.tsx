@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -10,13 +10,31 @@ import { BookDemoButton } from './BookDemoButton';
 export const Header: React.FC = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [solutionsDropdownOpen, setSolutionsDropdownOpen] = useState(false);
+    const [headerHeight, setHeaderHeight] = useState(112); // Default to h-28 (7rem = 112px)
+    const headerRef = useRef<HTMLElement>(null);
     const pathname = usePathname();
 
     const isActive = (path: string) => pathname === path;
     const isSolutionsActive = () => pathname === '/our-solutions' || pathname === '/our-solutions/residential';
 
+    // Measure header height dynamically
+    useEffect(() => {
+        const updateHeaderHeight = () => {
+            if (headerRef.current) {
+                setHeaderHeight(headerRef.current.offsetHeight);
+            }
+        };
+
+        // Initial measurement
+        updateHeaderHeight();
+
+        // Update on window resize
+        window.addEventListener('resize', updateHeaderHeight);
+        return () => window.removeEventListener('resize', updateHeaderHeight);
+    }, []);
+
     return (
-        <header className="fixed top-0 left-0 right-0 z-50 bg-[#053d3d] shadow-md transition-all duration-300 h-28">
+        <header ref={headerRef} className="fixed top-0 left-0 right-0 z-50 bg-[#053d3d] shadow-md transition-all duration-300 h-28">
             <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-full flex justify-between items-center gap-2 lg:gap-4">
                 <div className="w-full md:w-[65%] flex items-center justify-between gap-4 lg:gap-6 h-full">
                     {/* Logo */}
@@ -139,110 +157,120 @@ export const Header: React.FC = () => {
             </div>
             <div className="border-t border-[#a6ff48] w-full" />
 
-            {/* Mobile Menu */}
+            {/* Mobile Menu Overlay and Menu */}
             {mobileMenuOpen && (
-                <nav className="md:hidden bg-[#053d3d] border-t border-[#a6ff48]/30">
-                    <div className="container mx-auto max-w-7xl px-6 py-4 flex flex-col gap-4">
-                        <div>
-                            <button
-                                className={`w-full text-left py-2 flex items-center justify-between ${isSolutionsActive()
+                <>
+                    {/* Overlay Backdrop */}
+                    <div
+                        className="fixed inset-x-0 bottom-0 bg-black/70 z-40 md:hidden"
+                        style={{ top: `${headerHeight}px` }}
+                        onClick={() => setMobileMenuOpen(false)}
+                        aria-hidden="true"
+                    />
+                    {/* Mobile Menu */}
+                    <nav className="md:hidden bg-[#053d3d] border-t border-[#a6ff48]/30 relative z-50">
+                        <div className="container mx-auto max-w-7xl px-6 py-4 flex flex-col gap-4">
+                            <div>
+                                <button
+                                    className={`w-full text-left py-2 flex items-center justify-between ${isSolutionsActive()
+                                        ? 'text-[#a6ff48] '
+                                        : 'text-white hover:text-[#a6ff48] font-normal'
+                                        }`}
+                                    style={{
+                                        fontSize: '1.125rem',
+                                        fontWeight: isSolutionsActive() ? '600' : '400',
+                                        transition: 'color 0.5s ease-in-out, font-weight 0.5s ease-in-out, filter 0.5s ease-in-out'
+                                    }}
+                                    onClick={() => setSolutionsDropdownOpen(!solutionsDropdownOpen)}
+                                >
+                                    Our Solutions
+                                    <svg
+                                        className={`w-4 h-4 transition-transform duration-300 ${solutionsDropdownOpen ? 'rotate-180' : ''}`}
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </button>
+                                {solutionsDropdownOpen && (
+                                    <div className="ml-4 mt-2 flex flex-col gap-2">
+                                        <Link
+                                            href="/our-solutions"
+                                            className={`py-2 ${isActive('/our-solutions')
+                                                ? 'text-[#a6ff48] '
+                                                : 'text-white hover:text-[#a6ff48] font-normal'
+                                                }`}
+                                            style={{
+                                                fontSize: '1rem',
+                                                fontWeight: isActive('/our-solutions') ? '600' : '400',
+                                                transition: 'color 0.5s ease-in-out, font-weight 0.5s ease-in-out, filter 0.5s ease-in-out'
+                                            }}
+                                            onClick={() => {
+                                                setMobileMenuOpen(false);
+                                                setSolutionsDropdownOpen(false);
+                                            }}
+                                        >
+                                            Commercial
+                                        </Link>
+                                        <Link
+                                            href="/our-solutions/residential"
+                                            className={`py-2 ${isActive('/our-solutions/residential')
+                                                ? 'text-[#a6ff48] '
+                                                : 'text-white hover:text-[#a6ff48] font-normal'
+                                                }`}
+                                            style={{
+                                                fontSize: '1rem',
+                                                fontWeight: isActive('/our-solutions/residential') ? '600' : '400',
+                                                transition: 'color 0.5s ease-in-out, font-weight 0.5s ease-in-out, filter 0.5s ease-in-out'
+                                            }}
+                                            onClick={() => {
+                                                setMobileMenuOpen(false);
+                                                setSolutionsDropdownOpen(false);
+                                            }}
+                                        >
+                                            Residential
+                                        </Link>
+                                    </div>
+                                )}
+                            </div>
+                            <Link
+                                href="/why-it-matters"
+                                className={`py-2 ${isActive('/why-it-matters')
                                     ? 'text-[#a6ff48] '
                                     : 'text-white hover:text-[#a6ff48] font-normal'
                                     }`}
                                 style={{
-                                    fontSize: '1.125rem',
-                                    fontWeight: isSolutionsActive() ? '600' : '400',
+                                    fontSize: isActive('/why-it-matters') ? '1.125rem' : '1.125rem',
+                                    fontWeight: isActive('/why-it-matters') ? '600' : '400',
                                     transition: 'color 0.5s ease-in-out, font-weight 0.5s ease-in-out, filter 0.5s ease-in-out'
                                 }}
-                                onClick={() => setSolutionsDropdownOpen(!solutionsDropdownOpen)}
+                                onClick={() => setMobileMenuOpen(false)}
                             >
-                                Our Solutions
-                                <svg
-                                    className={`w-4 h-4 transition-transform duration-300 ${solutionsDropdownOpen ? 'rotate-180' : ''}`}
-                                    fill="none"
-                                    stroke="currentColor"
-                                    viewBox="0 0 24 24"
-                                >
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                                </svg>
-                            </button>
-                            {solutionsDropdownOpen && (
-                                <div className="ml-4 mt-2 flex flex-col gap-2">
-                                    <Link
-                                        href="/our-solutions"
-                                        className={`py-2 ${isActive('/our-solutions')
-                                            ? 'text-[#a6ff48] '
-                                            : 'text-white hover:text-[#a6ff48] font-normal'
-                                            }`}
-                                        style={{
-                                            fontSize: '1rem',
-                                            fontWeight: isActive('/our-solutions') ? '600' : '400',
-                                            transition: 'color 0.5s ease-in-out, font-weight 0.5s ease-in-out, filter 0.5s ease-in-out'
-                                        }}
-                                        onClick={() => {
-                                            setMobileMenuOpen(false);
-                                            setSolutionsDropdownOpen(false);
-                                        }}
-                                    >
-                                        Commercial
-                                    </Link>
-                                    <Link
-                                        href="/our-solutions/residential"
-                                        className={`py-2 ${isActive('/our-solutions/residential')
-                                            ? 'text-[#a6ff48] '
-                                            : 'text-white hover:text-[#a6ff48] font-normal'
-                                            }`}
-                                        style={{
-                                            fontSize: '1rem',
-                                            fontWeight: isActive('/our-solutions/residential') ? '600' : '400',
-                                            transition: 'color 0.5s ease-in-out, font-weight 0.5s ease-in-out, filter 0.5s ease-in-out'
-                                        }}
-                                        onClick={() => {
-                                            setMobileMenuOpen(false);
-                                            setSolutionsDropdownOpen(false);
-                                        }}
-                                    >
-                                        Residential
-                                    </Link>
-                                </div>
-                            )}
+                                Why it matters
+                            </Link>
+                            <Link
+                                href="/about-us"
+                                className={`py-2 ${isActive('/about-us')
+                                    ? 'text-[#a6ff48] '
+                                    : 'text-white hover:text-[#a6ff48] font-normal'
+                                    }`}
+                                style={{
+                                    fontSize: isActive('/about-us') ? '1.125rem' : '1.125rem',
+                                    fontWeight: isActive('/about-us') ? '600' : '400',
+                                    transition: 'color 0.5s ease-in-out, font-weight 0.5s ease-in-out, filter 0.5s ease-in-out'
+                                }}
+                                onClick={() => setMobileMenuOpen(false)}
+                            >
+                                About us
+                            </Link>
+                            <BookDemoButton
+                                className="justify-center mt-2"
+                                onClick={() => setMobileMenuOpen(false)}
+                            />
                         </div>
-                        <Link
-                            href="/why-it-matters"
-                            className={`py-2 ${isActive('/why-it-matters')
-                                ? 'text-[#a6ff48] '
-                                : 'text-white hover:text-[#a6ff48] font-normal'
-                                }`}
-                            style={{
-                                fontSize: isActive('/why-it-matters') ? '1.125rem' : '1.125rem',
-                                fontWeight: isActive('/why-it-matters') ? '600' : '400',
-                                transition: 'color 0.5s ease-in-out, font-weight 0.5s ease-in-out, filter 0.5s ease-in-out'
-                            }}
-                            onClick={() => setMobileMenuOpen(false)}
-                        >
-                            Why it matters
-                        </Link>
-                        <Link
-                            href="/about-us"
-                            className={`py-2 ${isActive('/about-us')
-                                ? 'text-[#a6ff48] '
-                                : 'text-white hover:text-[#a6ff48] font-normal'
-                                }`}
-                            style={{
-                                fontSize: isActive('/about-us') ? '1.125rem' : '1.125rem',
-                                fontWeight: isActive('/about-us') ? '600' : '400',
-                                transition: 'color 0.5s ease-in-out, font-weight 0.5s ease-in-out, filter 0.5s ease-in-out'
-                            }}
-                            onClick={() => setMobileMenuOpen(false)}
-                        >
-                            About us
-                        </Link>
-                        <BookDemoButton
-                            className="justify-center mt-2"
-                            onClick={() => setMobileMenuOpen(false)}
-                        />
-                    </div>
-                </nav>
+                    </nav>
+                </>
             )}
         </header>
     );
