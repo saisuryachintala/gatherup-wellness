@@ -16,6 +16,16 @@ export const GatherUp5DApproach: React.FC = () => {
             number: "03",
             keyword: "Design",
             description: "Strategy first. Activities second. We create a focused activation roadmap that connects early momentum (quick wins) with a longer-term plan that can run with current staffing and scale across the property or portfolio."
+        },
+        {
+            number: "04",
+            keyword: "Deliver",
+            description: "No random acts of wellness. We run or support the rollout of targeted activations, workshops, and experiences that align with the property’s brand, the people who use it, and its overall positioning."
+        },
+        {
+            number: "05",
+            keyword: "Demonstrate",
+            description: "You shouldn’t have to “hope” wellness works — you should see it. We track a simple, property- friendly set of metrics — engagement, satisfaction, renewal intent, and reputation or leasing story inputs — so you can report real outcomes, not just attendance."
         }
     ];
 
@@ -26,7 +36,7 @@ export const GatherUp5DApproach: React.FC = () => {
                     <h2 className="text-3xl md:text-4xl font-bold text-[#a6ff48] mb-6 font-display">
                         The GatherUp 5D Approach
                     </h2>
-                    <p className="text-md md:text-lg text-white leading-relaxed">
+                    <p className="text-md text-lg md:text-lg text-white leading-relaxed">
                         We don't throw events at the wall and hope they work. Every engagement runs through the GatherUp 5D Approach so wellness and community initiatives support retention, reputation, and performance.
                     </p>
                 </div>
@@ -39,7 +49,7 @@ export const GatherUp5DApproach: React.FC = () => {
                         >
                             <div className="flex flex-col md:flex-row gap-6 md:gap-8">
                                 {/* Left Side - Number and Keyword */}
-                                <div className="flex-shrink-0 w-24 md:w-32">
+                                <div className="flex-shrink-0 w-24 md:w-32 mx-auto md:mx-0">
                                     <div className="text-center text-4xl md:text-5xl font-bold text-[#a6ff48] mb-2 font-display">
                                         {step.number}
                                     </div>
@@ -50,7 +60,7 @@ export const GatherUp5DApproach: React.FC = () => {
 
                                 {/* Right Side - Description */}
                                 <div className="flex-1 flex items-center">
-                                    <p className="text-base md:text-lg text-white leading-relaxed">
+                                    <p className="text-center md:text-left text-base md:text-lg text-white leading-relaxed">
                                         {step.description}
                                     </p>
                                 </div>
