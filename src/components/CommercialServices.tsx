@@ -19,7 +19,7 @@ export const CommercialServices: React.FC = () => {
             iconSize: "w-11 h-11 md:w-14 md:h-14 lg:w-[72px] lg:h-[72px]"
         },
         {
-            title: "Experience strategy & measurement",
+            title: "Strategy & measurement",
             stat: "Simple frameworks for communications, feedback, and a small set of KPIs tied back to retention and NOI.",
             iconSrc: "/assets/icons/Flowers.png",
             iconAlt: "Flowers",
@@ -31,7 +31,7 @@ export const CommercialServices: React.FC = () => {
         <section className="py-16 md:py-20 bg-[#053d3d]">
             <div className="container mx-auto px-4 md:px-8 max-w-6xl">
                 <p className="text-lg md:text-xl text-white mb-12 leading-relaxed text-center max-w-5xl mx-auto">
-                    You bring the building and the tenants. We bring a plug-in wellness and community engine that makes the most of what you've already built. Our commercial solutions typically blend
+                    You bring the building and the tenants. We bring a plug-in wellness and community engine that makes the most of what you've already built.
                 </p>
 
                 {/* Feature Cards */}

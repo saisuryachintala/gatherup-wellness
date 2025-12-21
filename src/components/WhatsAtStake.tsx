@@ -2,18 +2,19 @@ import React from 'react';
 
 export const WhatsAtStake: React.FC = () => {
     const negativeStakes = [
-        "Decreased morale",
-        "Low retention",
-        "Quiet quitting",
-        "Leadership burnout",
-        "Team fragmentation"
+        "Low engagement with amenities",
+        "Weak sense of community",
+        "Higher turnover and shorter stays",
+        "Renewal resistance",
+        "Undifferentiated buildings competing on price alone"
     ];
 
     const positiveStakes = [
-        "Thriving teams",
-        "Energized leaders",
-        "Deep loyalty",
-        "Culture as a competitive edge"
+        "Stronger tenant satisfaction",
+        "Longer stays and higher renewal rates",
+        "More active, visible amenities",
+        "Better online reputation and word-of-mouth",
+        "A clear competitive edge in leasing"
     ];
 
     return (
@@ -32,7 +33,7 @@ export const WhatsAtStake: React.FC = () => {
                     {/* Negative Stakes */}
                     <div>
                         <p className="text-base text-[#a6ff48] mb-4 font-medium">
-                            Businesses that ignore employee well-being, witness:
+                            When tenant experience is passive or overlooked, properties experience:
                         </p>
                         <ul className="space-y-0">
                             {negativeStakes.map((item, i) => (
@@ -51,7 +52,7 @@ export const WhatsAtStake: React.FC = () => {
                     {/* Positive Stakes */}
                     <div>
                         <p className="text-base text-[#a6ff48] mb-4 font-medium">
-                            Businesses that prioritize employee well-being, witness:
+                            When the tenant experience is intentionally activated, properties see:
                         </p>
                         <ul className="space-y-0">
                             {positiveStakes.map((item, i) => (

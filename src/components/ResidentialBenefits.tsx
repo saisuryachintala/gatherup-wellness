@@ -6,11 +6,11 @@ export const ResidentialBenefits: React.FC = () => {
             <div className="container mx-auto px-4 md:px-8 max-w-6xl ">
                 {/* Key Benefits Grid with Icons */}
                 <p className="text-lg md:text-xl text-center leading-relaxed max-w-4xl mx-auto text-white pt-10 pb-10">
-                Residents don’t just renew apartments, they renew how it feels to live in your building.
-                GatherUp works with owners, REITs, and property managers to turn underused amenities into a steady source of connection, wellbeing, and renewal intent:
+                    Residents don’t just renew apartments, they renew how it feels to live in your building.
+                    GatherUp works with owners, REITs, and property managers to turn under-used amenities into a steady source of connection, wellbeing, and renewal intent:
                 </p>
                 <div className="px-2 md:px-4 grid md:grid-cols-3 gap-8 md:gap-12">
-                    
+
                     {/* Higher renewal rates */}
                     <div className="text-center">
                         <div className="flex justify-center mb-6">
@@ -40,7 +40,7 @@ export const ResidentialBenefits: React.FC = () => {
                         </div>
                         <h3 className="text-xl md:text-2xl font-bold mb-3 text-[#a6ff48]">Connected community</h3>
                         <p className="text-base md:text-lg leading-relaxed">
-                            Regular, low-lift touchpoints make your property feel safe, connected, and cared for especially important for urban, young professional, and family communities.
+                            Regular, low-lift touchpoints make your property feel safe, connected, and cared for. This is especially important for urban, young professional, and family communities.
                         </p>
                     </div>
                 </div>

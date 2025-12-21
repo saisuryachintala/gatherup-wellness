@@ -17,7 +17,7 @@ export const FounderBio: React.FC = () => {
                                         alt="Jamin Gluck, Founder of GatherUp"
                                         fill
                                         className="object-cover"
-                                        style={{ 
+                                        style={{
                                             objectPosition: 'center center'
                                         }}
                                         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 45vw, 50vw"
@@ -29,24 +29,28 @@ export const FounderBio: React.FC = () => {
                             {/* Bio Text */}
                             <div className="bg-[#255656] p-8 md:p-12 flex flex-col justify-center space-y-6 text-white">
                                 <h3 className="text-3xl md:text-4xl font-bold font-display">
-                                    About <span className="text-[#a6ff48]">Jamin Gluck</span>, Our Founder
+                                    About <span className="text-[#a6ff48]">Jamin Gluck</span>
                                 </h3>
-                                
+
                                 <div className="space-y-4 text-white text-lg mb-4">
                                     <p>
-                                        Jamin Gluck is the founder of GatherUp and a Wellness Program Architect dedicated to helping organizations design healthier, more connected workplaces and communities. Before starting GatherUp, he spent a decade at Amazon and MongoDB, leading teams and large-scale initiatives in fast-paced, high-performance cultures. While he learned a lot about growth and execution, he also saw the hidden costs: burnout, disconnection, and a culture that prized output over well-being.
+                                        Jamin Gluck is the founder of GatherUp and a tenant experience strategist focused on helping properties create stronger communities, retain tenants longer, and protect long-term value.
                                     </p>
                                     <p>
-                                        There had to be a better way, one where people could thrive and deliver great results. This realization inspired him to pivot.
+                                        Before founding GatherUp, Jamin spent over a decade at Amazon and MongoDB leading large-scale initiatives in fast-moving, performance-driven environments. He saw firsthand what happens when experience is treated as secondary: disengagement, burnout, weak connection, and constant turnover.
                                     </p>
                                     <p>
-                                        He became a certified coach, facilitator, and wellness program designer, and founded GatherUp to help companies and property leaders create the kind of environments he once needed himself, where people feel valued, supported, and connected to something larger than their to-do list.
+                                        The lesson was clear. Performance suffers when people don’t feel connected to the places they spend their time.
                                     </p>
                                     <p>
-                                        Today, GatherUp works with leaders who believe that well-being is not a perk, but a performance strategy. Evidence-based programs and community experiences are designed by GatherUp that improve engagement, retention, and business results.
+                                        That insight led Jamin to shift from traditional growth roles into community and wellbeing strategy. He became a certified coach, facilitator, and experience designer, then founded GatherUp to help property owners and operators create environments that actually support satisfaction, retention, and loyalty.
+                                    </p>
+                                    <p>
+                                        Today, Jamin works with property leaders who understand that tenant wellbeing isn’t a “nice-to-have.” It’s a practical lever for renewals, occupancy, reputation, and NOI.
                                     </p>
                                     <p className="font-medium text-[#a6ff48]">
-                                        Because when people feel well and connected, everything else, from culture to performance to loyalty, rises with them.
+                                        GatherUp designs and delivers on-site experiences that activate amenities, strengthen community, and turn buildings into places people want to stay.
+                                        Because when tenants feel connected to their building and to each other, retention improves, renewals follow, and performance becomes easier to sustain.
                                     </p>
                                 </div>
 
