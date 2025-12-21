@@ -39,7 +39,7 @@ export const GatherUp5DApproach: React.FC = () => {
                         >
                             <div className="flex flex-col md:flex-row gap-6 md:gap-8">
                                 {/* Left Side - Number and Keyword */}
-                                <div className="flex-shrink-0">
+                                <div className="flex-shrink-0 w-24 md:w-32">
                                     <div className="text-center text-4xl md:text-5xl font-bold text-[#a6ff48] mb-2 font-display">
                                         {step.number}
                                     </div>
