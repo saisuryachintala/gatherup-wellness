@@ -155,7 +155,7 @@ export const CaseStudy: React.FC = () => {
                             </span>
                             <br className="md:hidden" />
                             <span className="md:inline text-[#053d3d] font-bold text-2xl md:text-xl"> Class A Office Tower</span>
-                            <p className="text-[#053d3d] text-lg mb-4">
+                            <p className="text-[#053d3d] text-lg md:text-lg mb-4 font-bold">
                                 "From Quiet Amenities to a Tenant Magnet"
                             </p>
                         </div>
