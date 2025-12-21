@@ -16,7 +16,7 @@ export default function Home() {
       <Header />
       <Hero />
       <WhyGatherUp />
-      <ImpactCalculator/>
+      {/* <ImpactCalculator/> */}
       <OurMission />
       <ScrollingLogos />
       <WhyChoose />

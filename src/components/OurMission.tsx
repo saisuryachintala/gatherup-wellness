@@ -15,7 +15,7 @@ export const OurMission: React.FC = () => {
                                 Our Mission
                             </h3>
                             <p className="text-[#053D3D] text-base md:text-lg leading-relaxed">
-                                GatherUp partners with property leaders to <span className="text-[#053D3D] font-bold">turn wellness and community engagement into measurable business results.</span>
+                                GatherUp partners with property leaders to <span className="text-[#053D3D] font-bold">turn wellness and community engagement into measurable business impact.</span>
                             </p>
                             <p className="text-[#053D3D] text-base md:text-lg leading-relaxed">
                                 Through evidence-based strategies and holistic programming, we help elevate the tenant experience, strengthen loyalty, and drive long-term property performance.

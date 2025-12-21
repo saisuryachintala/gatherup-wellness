@@ -11,7 +11,7 @@ export const ThrivingWorkplace: React.FC = () => {
                     Let’s bring your tenant experience to life, together.
                 </h2>
                 <p className="text-[#053d3d] text-xl font-display">
-                    Foster connection, belonging, well-being, and engagement through <br/> tailored wellness programs that drive measurable business impact.
+                    Foster connection, belonging, and engagement through <br /> tailored wellness programs that drive measurable property impact.
                 </p>
             </div>
         </section>

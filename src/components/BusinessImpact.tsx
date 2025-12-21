@@ -5,7 +5,7 @@ export const BusinessImpact: React.FC = () => {
     const impactMetrics = [
         {
             title: "Retention",
-            stat: "Employees are 2.5x more likely to stay at companies that invest in their well-being.",
+            stat: "Tenants who feel connected to their building and community are significantly more likely to renew rather than relocate.",
             icon: (
                 <div className="w-16 h-16 mx-auto mb-4 relative">
                     <Image
@@ -19,7 +19,7 @@ export const BusinessImpact: React.FC = () => {
         },
         {
             title: "Engagement",
-            stat: "Engaged employees are 21% more productive and show higher innovation and creativity.",
+            stat: "Activated amenities and shared experiences turn unused spaces into daily touchpoints that increase satisfaction and loyalty.",
             icon: (
                 <div className="w-16 h-16 mx-auto mb-4 relative">
                     <Image
@@ -32,13 +32,13 @@ export const BusinessImpact: React.FC = () => {
             )
         },
         {
-            title: "Culture",
-            stat: "Well-being-focused cultures have stronger trust, better collaboration, and higher morale.",
+            title: "Community",
+            stat: "Properties with strong community see better tenant relationships, smoother communication, and fewer friction points.",
             icon: (
                 <div className="w-16 h-16 mx-auto mb-4 relative">
                     <Image
                         src="/assets/icons/Culture.png"
-                        alt="Culture"
+                        alt="Community"
                         fill
                         className="object-contain"
                     />
@@ -46,8 +46,8 @@ export const BusinessImpact: React.FC = () => {
             )
         },
         {
-            title: "Profitability",
-            stat: "Organizations with high employee well-being outperform their peers by 10–20% on key metrics like productivity and profit.",
+            title: "Occupancy & Leasing Velocity",
+            stat: "Engaged tenants become advocates — supporting faster lease-ups and easier renewals through social proof and referrals.",
             icon: (
                 <div className="w-16 h-16 mx-auto mb-4 relative">
                     <Image
@@ -60,8 +60,8 @@ export const BusinessImpact: React.FC = () => {
             )
         },
         {
-            title: "Mental Fitness",
-            stat: "Supportive workplaces reduce absenteeism, burnout, and healthcare costs—while increasing energy and focus.",
+            title: "Property Reputation",
+            stat: "Consistent on-site programming improves reviews, tours, and perception — without major capital investments.",
             icon: (
                 <div className="w-16 h-16 mx-auto mb-4 relative">
                     <Image
@@ -75,7 +75,7 @@ export const BusinessImpact: React.FC = () => {
         },
         {
             title: "Performance",
-            stat: "Teams that foster belonging see a 56% increase in job performance and a 50% drop in turnover risk.",
+            stat: "Reduced turnover, improved renewals, and stronger demand directly protect and grow net operating income.",
             icon: (
                 <div className="w-16 h-16 mx-auto mb-4 relative">
                     <Image
@@ -93,7 +93,7 @@ export const BusinessImpact: React.FC = () => {
         <section className="px-2 md:px-4 pt-2 md:pt-4 pb-8 md:pb-12 bg-[#053d3d] text-white">
             <div className="container mx-auto px-4">
                 <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 font-display">
-                    The Impact on Business
+                    The Impact on Property Performance
                 </h2>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">

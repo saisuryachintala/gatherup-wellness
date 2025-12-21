@@ -155,7 +155,7 @@ export const CaseStudy: React.FC = () => {
                             </span>
                             <br className="md:hidden" />
                             <span className="md:inline text-[#053d3d] font-bold text-2xl md:text-xl"> Class A Office Tower</span>
-                            <p className="text-[#053d3d] text-lg mb-4">
+                            <p className="text-[#053d3d] text-lg md:text-lg mb-4 font-bold">
                                 "From Quiet Amenities to a Tenant Magnet"
                             </p>
                         </div>
@@ -167,13 +167,13 @@ export const CaseStudy: React.FC = () => {
 
                         <div className="pb-2 mb-4 text-center md:text-left">
                             <span className="inline-block text-[#053d3d] font-bold text-2xl md:text-xl">Location</span>
-                            <p className="text-[#053d3d] text-base">Major Sunbelt city</p>
+                            <p className="text-[#053d3d] text-base">Atlanta, GA</p>
                         </div>
 
                         <div className="pb-2 mb-4 text-center md:text-left">
                             <span className="inline-block text-[#053d3d] font-bold text-2xl md:text-xl">Challenge</span>
                             <p className="text-[#053d3d] text-base">
-                                Beautiful amenity floor, low usage, and a renewal cycle coming up for three key tenants.
+                                Beautiful modern gym, low usage, and a renewal cycle coming up for three key tenants.
                             </p>
                         </div>
                     </div>
@@ -186,7 +186,7 @@ export const CaseStudy: React.FC = () => {
                         <div className="border-b border-gray-300 mb-6 text-center md:text-left">
                             <span className="text-[#053d3d] font-bold text-2xl md:text-xl">4 major implementations</span>
                             <p className="text-[#053d3d] text-lg mb-4">
-                                in a 6-month pilot
+                                in a 3-month pilot
                             </p>
                         </div>
 
@@ -194,12 +194,12 @@ export const CaseStudy: React.FC = () => {
                             <div className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-6 items-start">
                                 <span className="text-4xl text-[#053d3d] leading-tight text-center align-top">01</span>
                                 <p className="text-[#053d3d] text-base pt-1">
-                                    Weekly micro-activations (15–30 minutes) on the amenity floor
+                                    Weekly micro-activations (15–30 minutes) in the gym
                                 </p>
 
                                 <span className="text-4xl text-[#053d3d] leading-tight text-center align-top">02</span>
                                 <p className="text-[#053d3d] text-base pt-1">
-                                    One marquee wellness or community event per month
+                                    One flagship wellness or community event per month
                                 </p>
 
                                 <span className="text-4xl text-[#053d3d] leading-tight text-center align-top">03</span>
@@ -219,7 +219,7 @@ export const CaseStudy: React.FC = () => {
                 {/* Results Section */}
                 <div>
                     <h3 className="px-2 md:px-4 text-[#053d3d] font-bold text-2xl md:text-3xl mb-12 text-center">
-                        Modeled results after 6 months pilot
+                        Modeled results after 3-month pilot
                     </h3>
 
                     <div className="px-2 md:px-4 grid md:grid-cols-3 gap-8 mb-8">
@@ -234,7 +234,7 @@ export const CaseStudy: React.FC = () => {
                         <div className="text-center border-b border-gray-300 pb-8 md:border-0 md:pb-0">
                             <div>
                                 <p className="text-[#053d3d] text-base mb-2">Increase in Tenant<br />contact satisfaction to</p>
-                                <div className="text-5xl md:text-6xl font-bold text-[#053d3d] mb-2">4.5 / 5</div>
+                                <div className="text-5xl md:text-6xl font-bold text-[#053d3d] mb-2">4.7 / 5</div>
                                 <p className="text-base">from from 3.7 on "overall<br />building experience"</p>
                             </div>
                         </div>
@@ -249,7 +249,7 @@ export const CaseStudy: React.FC = () => {
                     </div>
 
                     <p className="text-[#053d3d] text-base text-center leading-relaxed max-w-4xl mx-auto">
-                        Also amenity activation became a core part of tours and pitch materials for new prospects.
+                        Amenity activation became a core part of tours and pitch materials for new prospects.
                         This is the type of shift we aim for: take what you already have, activate it consistently, and
                         use it to support renewals and new leasing conversations.
                     </p>

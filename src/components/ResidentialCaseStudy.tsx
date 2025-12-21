@@ -186,7 +186,7 @@ export const ResidentialCaseStudy: React.FC = () => {
                         <div className="border-b border-gray-300 mb-6 text-center md:text-left">
                             <span className="text-[#053d3d] font-bold text-2xl md:text-xl">What we implemented</span>
                             <p className="text-[#053d3d] text-lg mb-4">
-                                (9-month program)
+                                (6-month program)
                             </p>
                         </div>
 
@@ -199,7 +199,7 @@ export const ResidentialCaseStudy: React.FC = () => {
 
                                 <span className="text-4xl text-[#053d3d] leading-tight text-center align-top">02</span>
                                 <p className="text-[#053d3d] text-base pt-1">
-                                    "New resident welcome" touchpoints with simple digital onboarding and one in-person mixer each quarter
+                                    Monthly welcome events for new residents and in-person social mixers
                                 </p>
 
                                 <span className="text-4xl text-[#053d3d] leading-tight text-center align-top">03</span>
@@ -219,7 +219,7 @@ export const ResidentialCaseStudy: React.FC = () => {
                 {/* Results Section */}
                 <div>
                     <h3 className="px-2 md:px-4 text-[#053d3d] font-bold text-2xl md:text-3xl mb-12 text-center">
-                        Modeled results after 9 months
+                        Modeled results after 6 months
                     </h3>
 
                     <div className="px-2 md:px-4 grid md:grid-cols-3 gap-8 mb-8">
@@ -249,7 +249,7 @@ export const ResidentialCaseStudy: React.FC = () => {
                     </div>
 
                     <p className="text-[#053d3d] text-base text-center leading-relaxed max-w-4xl mx-auto">
-                        More residents reporting "I know at least 3 neighbors by name" and "I feel a sense of community here" on follow-up surveys.
+                        More residents reported "I know at least 3 neighbors by name" and "I feel a sense of community here" on follow-up surveys.
                         This is the kind of community and retention shift we aim to achieve with a focused, manageable program.
                     </p>
                 </div>

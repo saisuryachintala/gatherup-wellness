@@ -9,8 +9,8 @@ interface CTASectionProps {
 }
 
 export const CTASection: React.FC<CTASectionProps> = ({
-    title = "Ready to turn your culture into a business advantage?",
-    subtitle = "Let's make employee well-being your strategy for sustainable success.",
+    title = "Ready to Turn Tenant Experience Into a Property Advantage?",
+    subtitle = "Let’s activate your spaces — and your results.",
     buttonText = "Book a Demo",
     buttonLink = "https://tidycal.com/gluckjamin/free-gatherup-consultation"
 }) => {

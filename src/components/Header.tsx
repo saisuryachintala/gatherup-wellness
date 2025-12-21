@@ -205,7 +205,7 @@ export const Header: React.FC = () => {
                                     transition: 'color 0.5s ease-in-out, font-size 0.5s ease-in-out, font-weight 0.5s ease-in-out, filter 0.5s ease-in-out'
                                 }}
                             >
-                                About us
+                                About Us
                             </Link>
                         </nav>
 
@@ -341,7 +341,7 @@ export const Header: React.FC = () => {
                                 }}
                                 onClick={() => setMobileMenuOpen(false)}
                             >
-                                About us
+                                About Us
                             </Link>
                             <BookDemoButton
                                 className="justify-center mt-2"

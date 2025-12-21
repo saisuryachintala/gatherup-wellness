@@ -48,7 +48,7 @@ export const WhyGatherUp: React.FC = () => {
                                     <span className="italic">That's where we come in.</span>
                                 </p>
                                 <p>
-                                    GatherUp helps design and deliver well-being and community programs that drive engagement, strengthen retention, and improve performance. We combine data-driven insights with hands-on activations to turn wellness from a nice-to-have into a business advantage.
+                                    GatherUp designs and delivers wellness programming that drives engagement, boosts retention, and improves property performance.
                                 </p>
                             </div>
                         </div>

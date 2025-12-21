@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 
-export const WhomWeServe: React.FC = () => {
+export const WhoWeServe: React.FC = () => {
     const propertyTypes = [
         {
             name: "Corporate\nOffices",
@@ -42,17 +42,17 @@ export const WhomWeServe: React.FC = () => {
             <div className="container mx-auto px-4">
                 <div className="max-w-6xl mx-auto">
                     <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 font-display">
-                        Whom do we Serve?
+                        Who We Serve
                     </h2>
                     <p className="text-center text-lg mb-4">
-                        GatherUp partners with property leaders committed to building healthier, more connected communities.
+                        GatherUp partners with <span className="font-bold">property leaders</span> committed to building healthier, more connected communities.
                     </p>
                     {/* Line separator - matches text width, responsive */}
                     <div className="flex justify-center mb-4">
                         <div className="h-px bg-[#053D3D]/30" style={{ width: 'min(80vw, 100ch)' }}></div>
                     </div>
                     <p className="text-center text-lg mb-4">
-                        Our strategic wellness programs are designed for a wide range of environments, including:
+                        Our wellness-driven activation strategies are designed specifically for:
                     </p>
 
                     {/* Property Types Grid */}
@@ -85,7 +85,7 @@ export const WhomWeServe: React.FC = () => {
                     <p className="text-center text-lg max-w-3xl mx-auto">
                         We partner with <span className="font-bold">properties that value community, connection, and well-being</span>,
                         <br />
-                        helping them foster engagement and drive measurable business results.
+                        helping them foster engagement and drive measurable results.
                     </p>
                 </div>
             </div>

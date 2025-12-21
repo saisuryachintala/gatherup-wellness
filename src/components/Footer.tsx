@@ -18,8 +18,11 @@ export const Footer: React.FC = () => {
                                     className="object-contain"
                                 />
                             </div>
+                            <p className="text-white text-lg max-w-md mb-6 font-bold">
+                                GatherUp partners with property leaders to turn tenant experience into measurable property performance.
+                            </p>
                             <p className="text-white text-lg max-w-md mb-6">
-                                GatherUp partners with property leaders to turn wellness and community engagement into measurable business results. Through evidence-based strategy and holistic programming, we help elevate tenant experience, strengthen loyalty, and drive long-term property performance.
+                                Through strategic amenity activation and community-led wellbeing programming, we help properties increase tenant satisfaction, strengthen retention, and support long-term NOI.
                             </p>
 
                             {/* Follow Us */}
