@@ -3,19 +3,19 @@ import { Variants, Transition } from 'framer-motion';
 // Common transition presets
 export const transitions = {
   gentle: {
-    duration: 0.5,
+    duration: 0.75, // Slowed from 0.5s
     ease: [0.43, 0.13, 0.23, 0.96] as [number, number, number, number], // easeOut
   },
   smooth: {
-    duration: 0.4,
+    duration: 0.6, // Slowed from 0.4s
     ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number], // easeOutQuad
   },
   quick: {
-    duration: 0.3,
+    duration: 0.45, // Slowed from 0.3s
     ease: [0.4, 0.0, 0.2, 1] as [number, number, number, number], // easeOut
   },
   bouncy: {
-    duration: 0.6,
+    duration: 0.9, // Slowed from 0.6s
     ease: [0.34, 1.56, 0.64, 1] as [number, number, number, number], // easeOutBack
   },
 } as const;
@@ -66,7 +66,7 @@ export const imageLoad: Variants = {
     scale: 1,
     transition: {
       ...transitions.gentle,
-      duration: 0.6,
+      duration: 0.9, // Slowed from 0.6s
     },
   },
 };
@@ -113,7 +113,7 @@ export const scrollReveal: Variants = {
     y: 0,
     transition: {
       ...transitions.gentle,
-      duration: 0.5,
+      duration: 0.75, // Slowed from 0.5s
     },
   },
 };
@@ -126,7 +126,7 @@ export const pageLoad: Variants = {
   visible: {
     opacity: 1,
     transition: {
-      duration: 0.4,
+      duration: 0.6, // Slowed from 0.4s
       delay: 0.1,
       ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number],
     },
