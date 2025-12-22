@@ -245,7 +245,7 @@ export const Testimonial: React.FC<TestimonialProps> = ({
                                                 <p className="text-[#a6ff48] text-lg mb-6">
                                                     {testimonial.authorTitle}
                                                 </p>
-                                                <blockquote className="text-white text-lg md:text-xl leading-relaxed italic">
+                                                <blockquote className="text-white text-base md:text-xl leading-relaxed italic">
                                                     "{testimonial.quote}"
                                                 </blockquote>
                                             </div>
@@ -263,8 +263,8 @@ export const Testimonial: React.FC<TestimonialProps> = ({
                                         key={index}
                                         onClick={() => goToSlide(index)}
                                         className={`w-2 h-2 rounded-full transition-all duration-300 ${(currentIndex % items.length) === index
-                                                ? 'bg-[#a6ff48] w-8'
-                                                : 'bg-white/40 hover:bg-white/60'
+                                            ? 'bg-[#a6ff48] w-8'
+                                            : 'bg-white/40 hover:bg-white/60'
                                             }`}
                                         aria-label={`Go to slide ${index + 1}`}
                                     />

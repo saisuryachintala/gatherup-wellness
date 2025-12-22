@@ -25,7 +25,7 @@ export const WhatsAtStake: React.FC = () => {
     ];
 
     return (
-        <section className="px-2 md:px-4 py-8 md:py-12 bg-[#053d3d]">
+        <section className="px-2 md:px-4 py-4 md:py-4 bg-[#053d3d]">
             <div className="container mx-auto px-4">
                 <motion.div
                     ref={sectionRef}
@@ -42,7 +42,7 @@ export const WhatsAtStake: React.FC = () => {
                     </motion.h2>
                     <motion.p
                         variants={scrollReveal}
-                        className="text-md md:text-lg text-white leading-relaxed mb-8"
+                        className="text-lg text-white leading-relaxed mb-8"
                     >
                         Workplace well-being is the antidote to disengagement, turnover, and culture.
                     </motion.p>

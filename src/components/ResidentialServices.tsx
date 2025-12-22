@@ -72,7 +72,7 @@ export const ResidentialServices: React.FC = () => {
                                 >
                                     {/* Mobile/Tablet: Simple card without flip - icon, title, and description */}
                                     <div className="lg:hidden h-full">
-                                        <div className="bg-[#3d6e6e]/30 border border-[#a6ff48]/30 rounded-2xl p-8 flex flex-col items-center text-center h-full">
+                                        <div className="bg-[#3d6e6e]/30 border border-[#a6ff48]/30 rounded-2xl p-8 flex flex-col items-center text-center h-full overflow-hidden">
                                             <motion.div
                                                 className="flex items-center justify-center h-20 mb-4"
                                                 variants={imageLoad}
@@ -91,7 +91,7 @@ export const ResidentialServices: React.FC = () => {
                                             <h3 className="text-[#a6ff48] font-bold text-xl mb-4 font-display min-h-[62px] flex items-center justify-center">
                                                 {item.title}
                                             </h3>
-                                            <p className="text-white/90 text-sm leading-relaxed flex-1">
+                                            <p className="text-white/90 text-base leading-relaxed flex-1">
                                                 {item.description}
                                             </p>
                                         </div>
@@ -106,12 +106,12 @@ export const ResidentialServices: React.FC = () => {
                                     >
                                         {/* Height placeholder - matches front card content with description */}
                                         <div className="opacity-0 pointer-events-none h-full">
-                                            <div className="bg-[#3d6e6e]/30 border border-[#a6ff48]/30 rounded-2xl p-8 flex flex-col items-center text-center h-full">
+                                            <div className="bg-[#3d6e6e]/30 border border-[#a6ff48]/30 rounded-2xl p-8 flex flex-col items-center text-center h-full overflow-hidden">
                                                 <div className="flex items-center justify-center h-20">
                                                     <div className={`relative ${item.iconSize}`}></div>
                                                 </div>
                                                 <h3 className="text-[#a6ff48] font-bold text-xl mb-4 font-display min-h-[62px] flex items-center justify-center">{item.title}</h3>
-                                                <p className="text-white/90 text-sm leading-relaxed flex-1">{item.description}</p>
+                                                <p className="text-white/90 text-base leading-relaxed flex-1">{item.description}</p>
                                             </div>
                                         </div>
 
@@ -127,7 +127,7 @@ export const ResidentialServices: React.FC = () => {
                                         >
                                             {/* Back of card (shown initially) - icon and title only, centered */}
                                             <motion.div
-                                                className="absolute inset-0 w-full h-full bg-[#3d6e6e]/30 border border-[#a6ff48]/30 rounded-2xl p-8 flex flex-col items-center justify-center text-center backface-hidden"
+                                                className="absolute inset-0 w-full h-full bg-[#3d6e6e]/30 border border-[#a6ff48]/30 rounded-2xl p-8 flex flex-col items-center justify-center text-center backface-hidden overflow-hidden"
                                                 style={{
                                                     ...flipCardBackfaceStyle,
                                                     transform: 'rotateY(180deg)',
@@ -155,7 +155,7 @@ export const ResidentialServices: React.FC = () => {
 
                                             {/* Front of card (shown after flip) - icon, title, and full description */}
                                             <motion.div
-                                                className="absolute inset-0 w-full h-full bg-[#3d6e6e]/30 border border-[#a6ff48]/30 rounded-2xl p-8 flex flex-col items-center text-center backface-hidden"
+                                                className="absolute inset-0 w-full h-full bg-[#3d6e6e]/30 border border-[#a6ff48]/30 rounded-2xl p-8 flex flex-col items-center text-center backface-hidden overflow-hidden"
                                                 style={flipCardBackfaceStyle}
                                             >
                                                 <motion.div
@@ -176,7 +176,7 @@ export const ResidentialServices: React.FC = () => {
                                                 <h3 className="text-[#a6ff48] font-bold text-xl mb-4 font-display min-h-[62px] flex items-center justify-center">
                                                     {item.title}
                                                 </h3>
-                                                <p className="text-white/90 text-sm leading-relaxed flex-1">
+                                                <p className="text-white/90 text-base leading-relaxed flex-1">
                                                     {item.description}
                                                 </p>
                                             </motion.div>

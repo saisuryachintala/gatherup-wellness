@@ -19,16 +19,16 @@ export const WellBeingImperative: React.FC = () => {
                 >
                     <motion.p
                         variants={scrollReveal}
-                        className="text-xl md:text-2xl font-bold text-[#a6ff48] mb-6"
+                        className="text-2xl md:text-3xl font-bold text-[#a6ff48] mb-6"
                     >
                         It's more than a perk.<br />
-                        <span className="inline-block bg-[#a6ff48] text-[#053d3d] px-4 py-2 mt-2 text-2xl md:text-4xl">
+                        <span className="inline-block bg-[#a6ff48] text-[#053d3d] px-4 py-2 mt-2 text-3xl md:text-4xl">
                             It's a property performance strategy.
                         </span>
                     </motion.p>
                     <motion.p
                         variants={scrollReveal}
-                        className="text-md md:text-lg text-white leading-relaxed"
+                        className="text-lg text-white leading-relaxed"
                     >
                         Properties that invest in <span className="font-bold">connection, activation, and community</span> see stronger satisfaction, higher retention, better renewals, and healthier NOI.
                     </motion.p>

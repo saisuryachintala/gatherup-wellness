@@ -61,11 +61,11 @@ export const WhyGatherUp: React.FC = () => {
                             <h3 className="text-2xl md:text-3xl font-bold text-[#053d3d] font-display">
                                 Why do you need GatherUp?
                             </h3>
-                            <div className="text-md md:text-lg space-y-4 text-gray-700 leading-relaxed">
+                            <div className="text-lg space-y-4 text-gray-700 leading-relaxed">
                                 <p>
                                     Most property teams know that wellness matters but few have the time, data, or expertise to turn it into a measurable strategy.
                                 </p>
-                                <div className="h-0.5 w-64 bg-[#053d3d]/40 rounded-full mb-6 mx-auto"></div>
+                                <div className="h-0.25 w-64 md:w-128 bg-[#053d3d]/40 rounded-full mb-6 mx-auto"></div>
                                 <p>
                                     <span className="italic">That's where we come in.</span>
                                 </p>
@@ -101,7 +101,7 @@ export const WhyGatherUp: React.FC = () => {
                                         <h4 className="text-[#a6ff48] font-bold text-lg mb-2 font-display">
                                             {feature.title}
                                         </h4>
-                                        <p className="text-white/90 text-sm leading-relaxed -mt-2">
+                                        <p className="text-white/90 text-base leading-relaxed -mt-2">
                                             {feature.description}
                                         </p>
                                     </div>
