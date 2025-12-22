@@ -70,8 +70,8 @@ export const ResidentialServices: React.FC = () => {
                                     variants={scrollReveal}
                                     className="relative h-full"
                                 >
-                                    {/* Mobile: Simple card without flip - icon, title, and description */}
-                                    <div className="md:hidden h-full">
+                                    {/* Mobile/Tablet: Simple card without flip - icon, title, and description */}
+                                    <div className="lg:hidden h-full">
                                         <div className="bg-[#3d6e6e]/30 border border-[#a6ff48]/30 rounded-2xl p-8 flex flex-col items-center text-center h-full">
                                             <motion.div
                                                 className="flex items-center justify-center h-20 mb-4"
@@ -99,7 +99,7 @@ export const ResidentialServices: React.FC = () => {
 
                                     {/* Desktop: Flip card with transition */}
                                     <div
-                                        className="hidden md:block relative cursor-pointer h-full"
+                                        className="hidden lg:block relative cursor-pointer h-full"
                                         style={flipCardPerspectiveStyle}
                                         onClick={() => handleCardFlip(index)}
                                         onMouseEnter={() => handleCardFlip(index)}
