@@ -1,5 +1,9 @@
-import React from 'react';
+'use client';
+
+import React, { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 import Image from 'next/image';
+import { scrollReveal } from '@/utils/animations';
 
 export const ScrollingLogos: React.FC = () => {
     const partners = [
@@ -12,8 +16,17 @@ export const ScrollingLogos: React.FC = () => {
     // Duplicate the array multiple times for seamless scrolling
     const duplicatedPartners = [...partners, ...partners, ...partners, ...partners, ...partners, ...partners, ...partners, ...partners, ...partners, ...partners];
 
+    const sectionRef = useRef(null);
+    const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
+
     return (
-        <div className="bg-[#f8fcfc] py-6 md:py-8 overflow-x-hidden relative">
+        <motion.div
+            ref={sectionRef}
+            className="bg-[#f8fcfc] py-6 md:py-8 overflow-x-hidden relative"
+            variants={scrollReveal}
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+        >
             <div className="flex w-max animate-scroll">
                 {duplicatedPartners.map((partner, index) => (
                     <div key={index} className="flex-shrink-0 mx-0 md:mx-1 lg:mx-0">
@@ -28,6 +41,6 @@ export const ScrollingLogos: React.FC = () => {
                     </div>
                 ))}
             </div>
-        </div>
+        </motion.div>
     );
 };

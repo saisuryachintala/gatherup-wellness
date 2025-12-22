@@ -1,3 +1,6 @@
+'use client';
+
+import { motion } from 'framer-motion';
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { WhyGatherUp } from "@/components/WhyGatherUp";
@@ -9,10 +12,16 @@ import { Footer } from "@/components/Footer";
 import { Testimonial } from "@/components/Testimonial";
 import { ScrollingLogos } from "@/components/ScrollingLogos";
 import { ImpactCalculator } from "@/components/ImpactCalculator";
+import { pageLoad } from "@/utils/animations";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white overflow-x-hidden">
+    <motion.main
+      className="min-h-screen bg-white overflow-x-hidden"
+      variants={pageLoad}
+      initial="hidden"
+      animate="visible"
+    >
       <Header />
       <Hero />
       <WhyGatherUp />
@@ -24,6 +33,6 @@ export default function Home() {
       <ThrivingWorkplace />
       <Testimonial />
       <Footer />
-    </main>
+    </motion.main>
   );
 }
