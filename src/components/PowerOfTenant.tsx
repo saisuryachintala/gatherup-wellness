@@ -67,7 +67,7 @@ export const PowerOfTenant: React.FC = () => {
                     />
                 </motion.div>
                 {/* Overlay for text readability */}
-                <div className="absolute inset-0 bg-black/20"></div>
+                {/* <div className="absolute inset-0 bg-black/20"></div> */}
 
                 {/* Overlay Content */}
                 <motion.div

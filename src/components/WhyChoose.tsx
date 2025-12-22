@@ -4,7 +4,6 @@ import React, { useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import Image from 'next/image';
 import { scrollReveal, imageLoad, staggerContainer } from '@/utils/animations';
-import { ExpandableText } from './ExpandableText';
 
 export const WhyChoose: React.FC = () => {
     const features = [
@@ -68,7 +67,7 @@ export const WhyChoose: React.FC = () => {
                 {/* Cards Grid */}
                 <motion.div
                     ref={sectionRef}
-                    className="grid md:grid-cols-2 lg:grid-cols-4 md:gap-4 gap-8"
+                    className="grid md:grid-cols-2 lg:grid-cols-4 md:gap-4 gap-8 items-stretch"
                     variants={staggerContainer}
                     initial="hidden"
                     animate={isInView ? "visible" : "hidden"}
@@ -80,69 +79,16 @@ export const WhyChoose: React.FC = () => {
                             <motion.div
                                 key={index}
                                 variants={scrollReveal}
-                                className="relative cursor-pointer"
-                                style={{ perspective: '1000px' }}
-                                onClick={() => handleCardFlip(index)}
-                                onTap={() => handleCardFlip(index)}
-                                onHoverStart={() => handleCardFlip(index)}
+                                className="relative h-full"
                             >
-                                {/* Height placeholder - matches front card content */}
-                                <div className="opacity-0 pointer-events-none">
-                                    <div className="bg-[#3d6e6e]/30 border border-[#a6ff48]/30 rounded-2xl p-8 flex flex-col items-center text-center">
-                                        <div className={`relative mb-6 ${feature.iconSize}`} style={{ minHeight: '56px' }}></div>
-                                        <h3 className="text-[#a6ff48] font-bold text-xl mb-4 font-display">{feature.title}</h3>
-                                        <p className="text-white/90 text-sm leading-relaxed">{feature.description.slice(0, 150)}...</p>
-                                    </div>
-                                </div>
-
-                                {/* Flip container */}
-                                <motion.div
-                                    className="absolute inset-0 w-full"
-                                    initial={{ rotateY: 180 }}
-                                    animate={{
-                                        rotateY: isFlipped ? 0 : 180,
-                                    }}
-                                    transition={{
-                                        duration: 0.6,
-                                        ease: [0.43, 0.13, 0.23, 0.96],
-                                    }}
-                                    style={{
-                                        transformStyle: 'preserve-3d',
-                                    }}
-                                >
-                                    {/* Back of card (shown initially) */}
-                                    <motion.div
-                                        className="absolute inset-0 w-full h-full bg-[#3d6e6e]/30 border border-[#a6ff48]/30 rounded-2xl p-8 flex flex-col items-center justify-center text-center backface-hidden"
-                                        style={{
-                                            backfaceVisibility: 'hidden',
-                                            transform: 'rotateY(180deg)',
-                                        }}
-                                    >
-                                        <div className={`relative mb-4 ${feature.iconSize}`}>
-                                            <Image
-                                                src={feature.icon}
-                                                alt={feature.title}
-                                                fill
-                                                className="object-contain opacity-70"
-                                            />
-                                        </div>
-                                        <div className="text-white/70 text-sm">
-                                            Tap or hover to reveal
-                                        </div>
-                                    </motion.div>
-
-                                    {/* Front of card (shown after flip) */}
-                                    <motion.div
-                                        className="absolute inset-0 w-full h-full bg-[#3d6e6e]/30 border border-[#a6ff48]/30 rounded-2xl p-8 flex flex-col items-center text-center backface-hidden"
-                                        style={{
-                                            backfaceVisibility: 'hidden',
-                                        }}
-                                    >
+                                {/* Mobile: Simple card without flip - icon, title, and description */}
+                                <div className="md:hidden h-full">
+                                    <div className="bg-[#3d6e6e]/30 border border-[#a6ff48]/30 rounded-2xl p-8 flex flex-col items-center text-center h-full">
                                         <motion.div
                                             className={`relative mb-6 ${feature.iconSize}`}
                                             variants={imageLoad}
                                             initial="hidden"
-                                            animate={isFlipped ? "visible" : "hidden"}
+                                            animate={isInView ? "visible" : "hidden"}
                                         >
                                             <Image
                                                 src={feature.icon}
@@ -154,13 +100,98 @@ export const WhyChoose: React.FC = () => {
                                         <h3 className="text-[#a6ff48] font-bold text-xl mb-4 font-display">
                                             {feature.title}
                                         </h3>
-                                        <ExpandableText
-                                            text={feature.description}
-                                            maxLength={120}
-                                            className="text-white/90 text-sm"
-                                        />
+                                        <p className="text-white/90 text-sm leading-relaxed">
+                                            {feature.description}
+                                        </p>
+                                    </div>
+                                </div>
+
+                                {/* Desktop: Flip card with transition */}
+                                <div
+                                    className="hidden md:block relative cursor-pointer h-full"
+                                    style={{ perspective: '1000px' }}
+                                    onClick={() => handleCardFlip(index)}
+                                    onMouseEnter={() => handleCardFlip(index)}
+                                >
+                                    {/* Height placeholder - matches front card content with description */}
+                                    <div className="opacity-0 pointer-events-none h-full">
+                                        <div className="bg-[#3d6e6e]/30 border border-[#a6ff48]/30 rounded-2xl p-8 flex flex-col items-center text-center h-full">
+                                            <div className={`relative mb-6 ${feature.iconSize}`} style={{ minHeight: '56px' }}></div>
+                                            <h3 className="text-[#a6ff48] font-bold text-xl mb-4 font-display">{feature.title}</h3>
+                                            <p className="text-white/90 text-sm leading-relaxed">{feature.description}</p>
+                                        </div>
+                                    </div>
+
+                                    {/* Flip container */}
+                                    <motion.div
+                                        className="absolute inset-0 w-full h-full"
+                                        initial={{ rotateY: 180 }}
+                                        animate={{
+                                            rotateY: isFlipped ? 0 : 180,
+                                        }}
+                                        transition={{
+                                            duration: 0.6,
+                                            ease: [0.43, 0.13, 0.23, 0.96],
+                                        }}
+                                        style={{
+                                            transformStyle: 'preserve-3d',
+                                        }}
+                                    >
+                                        {/* Back of card (shown initially) - icon and title only */}
+                                        <motion.div
+                                            className="absolute inset-0 w-full h-full bg-[#3d6e6e]/30 border border-[#a6ff48]/30 rounded-2xl p-8 flex flex-col items-center justify-center text-center backface-hidden"
+                                            style={{
+                                                backfaceVisibility: 'hidden',
+                                                transform: 'rotateY(180deg)',
+                                            }}
+                                        >
+                                            <motion.div
+                                                className={`relative mb-6 ${feature.iconSize}`}
+                                                variants={imageLoad}
+                                                initial="hidden"
+                                                animate={!isFlipped ? "visible" : "hidden"}
+                                            >
+                                                <Image
+                                                    src={feature.icon}
+                                                    alt={feature.title}
+                                                    fill
+                                                    className="object-contain"
+                                                />
+                                            </motion.div>
+                                            <h3 className="text-[#a6ff48] font-bold text-xl mb-4 font-display">
+                                                {feature.title}
+                                            </h3>
+                                        </motion.div>
+
+                                        {/* Front of card (shown after flip) - icon, title, and full description */}
+                                        <motion.div
+                                            className="absolute inset-0 w-full h-full bg-[#3d6e6e]/30 border border-[#a6ff48]/30 rounded-2xl p-8 flex flex-col items-center text-center backface-hidden"
+                                            style={{
+                                                backfaceVisibility: 'hidden',
+                                            }}
+                                        >
+                                            <motion.div
+                                                className={`relative mb-6 ${feature.iconSize}`}
+                                                variants={imageLoad}
+                                                initial="hidden"
+                                                animate={isFlipped ? "visible" : "hidden"}
+                                            >
+                                                <Image
+                                                    src={feature.icon}
+                                                    alt={feature.title}
+                                                    fill
+                                                    className="object-contain"
+                                                />
+                                            </motion.div>
+                                            <h3 className="text-[#a6ff48] font-bold text-xl mb-4 font-display">
+                                                {feature.title}
+                                            </h3>
+                                            <p className="text-white/90 text-sm leading-relaxed flex-1">
+                                                {feature.description}
+                                            </p>
+                                        </motion.div>
                                     </motion.div>
-                                </motion.div>
+                                </div>
                             </motion.div>
                         );
                     })}
