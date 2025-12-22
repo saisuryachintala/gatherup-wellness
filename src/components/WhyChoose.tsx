@@ -3,7 +3,7 @@
 import React, { useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import Image from 'next/image';
-import { scrollReveal, imageLoad, staggerContainer } from '@/utils/animations';
+import { scrollReveal, imageLoad, staggerContainer, flipCardTransition, flipCardContainerStyle, flipCardBackfaceStyle, flipCardPerspectiveStyle } from '@/utils/animations';
 
 export const WhyChoose: React.FC = () => {
     const features = [
@@ -97,10 +97,10 @@ export const WhyChoose: React.FC = () => {
                                                 className="object-contain"
                                             />
                                         </motion.div>
-                                        <h3 className="text-[#a6ff48] font-bold text-xl mb-4 font-display">
+                                        <h3 className="text-[#a6ff48] font-bold text-xl mb-4 font-display min-h-[62px] flex items-center justify-center">
                                             {feature.title}
                                         </h3>
-                                        <p className="text-white/90 text-sm leading-relaxed">
+                                        <p className="text-white/90 text-sm leading-relaxed flex-1">
                                             {feature.description}
                                         </p>
                                     </div>
@@ -109,16 +109,16 @@ export const WhyChoose: React.FC = () => {
                                 {/* Desktop: Flip card with transition */}
                                 <div
                                     className="hidden md:block relative cursor-pointer h-full"
-                                    style={{ perspective: '1000px' }}
+                                    style={flipCardPerspectiveStyle}
                                     onClick={() => handleCardFlip(index)}
                                     onMouseEnter={() => handleCardFlip(index)}
                                 >
                                     {/* Height placeholder - matches front card content with description */}
                                     <div className="opacity-0 pointer-events-none h-full">
                                         <div className="bg-[#3d6e6e]/30 border border-[#a6ff48]/30 rounded-2xl p-8 flex flex-col items-center text-center h-full">
-                                            <div className={`relative mb-6 ${feature.iconSize}`} style={{ minHeight: '56px' }}></div>
-                                            <h3 className="text-[#a6ff48] font-bold text-xl mb-4 font-display">{feature.title}</h3>
-                                            <p className="text-white/90 text-sm leading-relaxed">{feature.description}</p>
+                                            <div className={`relative mb-6 ${feature.iconSize}`}></div>
+                                            <h3 className="text-[#a6ff48] font-bold text-xl mb-4 font-display min-h-[62px] flex items-center justify-center">{feature.title}</h3>
+                                            <p className="text-white/90 text-sm leading-relaxed flex-1">{feature.description}</p>
                                         </div>
                                     </div>
 
@@ -129,19 +129,14 @@ export const WhyChoose: React.FC = () => {
                                         animate={{
                                             rotateY: isFlipped ? 0 : 180,
                                         }}
-                                        transition={{
-                                            duration: 0.6,
-                                            ease: [0.43, 0.13, 0.23, 0.96],
-                                        }}
-                                        style={{
-                                            transformStyle: 'preserve-3d',
-                                        }}
+                                        transition={flipCardTransition}
+                                        style={flipCardContainerStyle}
                                     >
-                                        {/* Back of card (shown initially) - icon and title only */}
+                                        {/* Back of card (shown initially) - icon and title only, centered */}
                                         <motion.div
                                             className="absolute inset-0 w-full h-full bg-[#3d6e6e]/30 border border-[#a6ff48]/30 rounded-2xl p-8 flex flex-col items-center justify-center text-center backface-hidden"
                                             style={{
-                                                backfaceVisibility: 'hidden',
+                                                ...flipCardBackfaceStyle,
                                                 transform: 'rotateY(180deg)',
                                             }}
                                         >
@@ -158,7 +153,7 @@ export const WhyChoose: React.FC = () => {
                                                     className="object-contain"
                                                 />
                                             </motion.div>
-                                            <h3 className="text-[#a6ff48] font-bold text-xl mb-4 font-display">
+                                            <h3 className="text-[#a6ff48] font-bold text-xl font-display">
                                                 {feature.title}
                                             </h3>
                                         </motion.div>
@@ -166,9 +161,7 @@ export const WhyChoose: React.FC = () => {
                                         {/* Front of card (shown after flip) - icon, title, and full description */}
                                         <motion.div
                                             className="absolute inset-0 w-full h-full bg-[#3d6e6e]/30 border border-[#a6ff48]/30 rounded-2xl p-8 flex flex-col items-center text-center backface-hidden"
-                                            style={{
-                                                backfaceVisibility: 'hidden',
-                                            }}
+                                            style={flipCardBackfaceStyle}
                                         >
                                             <motion.div
                                                 className={`relative mb-6 ${feature.iconSize}`}
@@ -183,7 +176,7 @@ export const WhyChoose: React.FC = () => {
                                                     className="object-contain"
                                                 />
                                             </motion.div>
-                                            <h3 className="text-[#a6ff48] font-bold text-xl mb-4 font-display">
+                                            <h3 className="text-[#a6ff48] font-bold text-xl mb-4 font-display min-h-[62px] flex items-center justify-center">
                                                 {feature.title}
                                             </h3>
                                             <p className="text-white/90 text-sm leading-relaxed flex-1">

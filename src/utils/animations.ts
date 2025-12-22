@@ -132,3 +132,24 @@ export const pageLoad: Variants = {
     },
   },
 };
+
+// Flip card transition configuration
+export const flipCardTransition: Transition = {
+  duration: 0.6,
+  ease: [0.43, 0.13, 0.23, 0.96] as [number, number, number, number],
+};
+
+// Flip card container style
+export const flipCardContainerStyle = {
+  transformStyle: 'preserve-3d' as const,
+};
+
+// Flip card backface style
+export const flipCardBackfaceStyle = {
+  backfaceVisibility: 'hidden' as const,
+};
+
+// Flip card perspective style
+export const flipCardPerspectiveStyle = {
+  perspective: '1000px',
+};
