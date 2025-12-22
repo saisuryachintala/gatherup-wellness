@@ -2,6 +2,7 @@
 
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
+import Image from 'next/image';
 import { scrollReveal, staggerContainer } from '@/utils/animations';
 
 export const WhatsAtStake: React.FC = () => {
@@ -66,8 +67,16 @@ export const WhatsAtStake: React.FC = () => {
                         <ul className="space-y-0">
                             {negativeStakes.map((item, i) => (
                                 <li key={i}>
-                                    <div className="py-3 text-white text-base">
-                                        {item}
+                                    <div className="py-3 text-white text-base flex items-center gap-3">
+                                        <div className="relative w-4 h-4 flex-shrink-0">
+                                            <Image
+                                                src="/assets/icons/D1.png"
+                                                alt="Down"
+                                                fill
+                                                className="object-contain"
+                                            />
+                                        </div>
+                                        <span>{item}</span>
                                     </div>
                                     {i < negativeStakes.length - 1 && (
                                         <div className="h-px bg-white/30"></div>
@@ -85,8 +94,16 @@ export const WhatsAtStake: React.FC = () => {
                         <ul className="space-y-0">
                             {positiveStakes.map((item, i) => (
                                 <li key={i}>
-                                    <div className="py-3 text-white text-base">
-                                        {item}
+                                    <div className="py-3 text-white text-base flex items-center gap-3">
+                                        <div className="relative w-4 h-4 flex-shrink-0">
+                                            <Image
+                                                src="/assets/icons/U1.png"
+                                                alt="Up"
+                                                fill
+                                                className="object-contain"
+                                            />
+                                        </div>
+                                        <span>{item}</span>
                                     </div>
                                     {i < positiveStakes.length - 1 && (
                                         <div className="h-px bg-white/30"></div>
