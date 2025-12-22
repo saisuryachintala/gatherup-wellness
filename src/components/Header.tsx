@@ -128,6 +128,20 @@ export const Header: React.FC = () => {
 
                         {/* Navigation Links */}
                         <nav className="hidden md:flex items-center gap-6 flex-1 justify-left">
+                            {/* Home Link */}
+                            <Link
+                                href="/"
+                                className={`transition-all duration-500 ease-in-out ${isActive('/')
+                                    ? 'text-[#a6ff48] font-bold'
+                                    : 'text-white hover:text-[#a6ff48] font-normal'
+                                    }`}
+                                style={{
+                                    fontSize: '1.05rem',
+                                    transition: 'color 0.5s ease-in-out, font-size 0.5s ease-in-out, font-weight 0.5s ease-in-out, filter 0.5s ease-in-out'
+                                }}
+                            >
+                                Home
+                            </Link>
                             {/* Our Solutions Dropdown */}
                             <div
                                 className="relative"
@@ -249,6 +263,21 @@ export const Header: React.FC = () => {
                     <nav className="md:hidden bg-[#053d3d] border-t border-[#a6ff48]/30 fixed left-0 right-0 z-50"
                         style={{ top: `${headerHeight}px` }}>
                         <div className="container mx-auto max-w-7xl px-6 py-4 flex flex-col gap-4">
+                            <Link
+                                href="/"
+                                className={`py-2 ${isActive('/')
+                                    ? 'text-[#a6ff48] '
+                                    : 'text-white hover:text-[#a6ff48] font-normal'
+                                    }`}
+                                style={{
+                                    fontSize: '1.125rem',
+                                    fontWeight: isActive('/') ? '600' : '400',
+                                    transition: 'color 0.5s ease-in-out, font-weight 0.5s ease-in-out, filter 0.5s ease-in-out'
+                                }}
+                                onClick={() => setMobileMenuOpen(false)}
+                            >
+                                Home
+                            </Link>
                             <div>
                                 <button
                                     className={`w-full text-left py-2 flex items-center justify-between ${isSolutionsActive()
