@@ -1,6 +1,12 @@
-import React from 'react';
+'use client';
+
+import React, { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
+import { scrollReveal, staggerContainer } from '@/utils/animations';
 
 export const GatherUp5DApproach: React.FC = () => {
+    const sectionRef = useRef(null);
+    const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
     const steps = [
         {
             number: "01",
@@ -32,19 +38,37 @@ export const GatherUp5DApproach: React.FC = () => {
     return (
         <section className="px-2 md:px-4 py-8 md:py-12 bg-[#053d3d]">
             <div className="container mx-auto px-4">
-                <div className="text-center mb-12 max-w-4xl mx-auto">
-                    <h2 className="text-3xl md:text-4xl font-bold text-[#a6ff48] mb-6 font-display">
+                <motion.div
+                    ref={sectionRef}
+                    className="text-center mb-12 max-w-4xl mx-auto"
+                    variants={staggerContainer}
+                    initial="hidden"
+                    animate={isInView ? "visible" : "hidden"}
+                >
+                    <motion.h2
+                        variants={scrollReveal}
+                        className="text-3xl md:text-4xl font-bold text-[#a6ff48] mb-6 font-display"
+                    >
                         The GatherUp 5D Approach
-                    </h2>
-                    <p className="text-md text-lg md:text-lg text-white leading-relaxed">
+                    </motion.h2>
+                    <motion.p
+                        variants={scrollReveal}
+                        className="text-md text-lg md:text-lg text-white leading-relaxed"
+                    >
                         We don't throw events at the wall and hope they work. Every engagement runs through the GatherUp 5D Approach so wellness and community initiatives support retention, reputation, and performance.
-                    </p>
-                </div>
+                    </motion.p>
+                </motion.div>
 
-                <div className="max-w-4xl mx-auto space-y-6 md:space-y-8">
+                <motion.div
+                    className="max-w-4xl mx-auto space-y-6 md:space-y-8"
+                    variants={staggerContainer}
+                    initial="hidden"
+                    animate={isInView ? "visible" : "hidden"}
+                >
                     {steps.map((step, index) => (
-                        <div
+                        <motion.div
                             key={index}
+                            variants={scrollReveal}
                             className="bg-[#3d6e6e]/30 border border-[#a6ff48]/20 rounded-2xl p-6 md:p-8"
                         >
                             <div className="flex flex-col md:flex-row gap-6 md:gap-8">
@@ -65,9 +89,9 @@ export const GatherUp5DApproach: React.FC = () => {
                                     </p>
                                 </div>
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
-                </div>
+                </motion.div>
             </div>
         </section>
     );

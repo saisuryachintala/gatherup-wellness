@@ -96,7 +96,7 @@ export const BusinessImpact: React.FC = () => {
                     The Impact on Property Performance
                 </h2>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 md:gap-4 gap-8 max-w-6xl mx-auto">
                     {impactMetrics.map((item, index) => (
                         <div key={index} className="bg-[#3d6e6e]/30 border border-[#a6ff48]/30 rounded-2xl p-8 flex flex-col items-center text-center">
                             <div className="text-[#a6ff48]">

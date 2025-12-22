@@ -61,7 +61,7 @@ export const WhyChoose: React.FC = () => {
                 {/* Cards Grid */}
                 <motion.div
                     ref={sectionRef}
-                    className="grid md:grid-cols-2 lg:grid-cols-4 gap-3"
+                    className="grid md:grid-cols-2 lg:grid-cols-4 md:gap-4 gap-8"
                     variants={staggerContainer}
                     initial="hidden"
                     animate={isInView ? "visible" : "hidden"}
@@ -71,7 +71,6 @@ export const WhyChoose: React.FC = () => {
                             key={index}
                             variants={scrollReveal}
                             className="bg-[#3d6e6e]/30 border border-[#a6ff48]/30 rounded-2xl p-8 flex flex-col items-center text-center transition-all duration-300"
-                            whileHover={{ y: -4, transition: { duration: 0.2 } }}
                         >
                             <motion.div
                                 className={`relative mb-6 ${feature.iconSize}`}
