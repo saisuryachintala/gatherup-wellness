@@ -22,21 +22,21 @@ export const CommercialServices: React.FC = () => {
             description: "Weekly or monthly wellness, social, and community touchpoints in spaces you already have.",
             iconSrc: "/assets/icons/Heart.png",
             iconAlt: "Heart",
-            iconSize: "w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20"
+            iconSize: "w-20 h-20 mb-4"
         },
         {
             title: "Workplace wellbeing sessions",
             description: "Short, practical sessions that support focus, mental health, and energy for tenant teams.",
             iconSrc: "/assets/icons/Lotus.png",
             iconAlt: "Lotus",
-            iconSize: "w-11 h-11 md:w-14 md:h-14 lg:w-[72px] lg:h-[72px]"
+            iconSize: "w-20 h-20 mb-4"
         },
         {
             title: "Strategy & measurement",
             description: "Simple frameworks for communications, feedback, and a small set of KPIs tied back to retention and NOI.",
             iconSrc: "/assets/icons/Flowers.png",
             iconAlt: "Flowers",
-            iconSize: "w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20"
+            iconSize: "w-20 h-20 mb-4"
         }
     ];
 
@@ -74,17 +74,19 @@ export const CommercialServices: React.FC = () => {
                                     <div className="md:hidden h-full">
                                         <div className="bg-[#3d6e6e]/30 border border-[#a6ff48]/30 rounded-2xl p-8 flex flex-col items-center text-center h-full">
                                             <motion.div
-                                                className={`relative mb-6 ${item.iconSize}`}
+                                                className="flex items-center justify-center h-20"
                                                 variants={imageLoad}
                                                 initial="hidden"
                                                 animate={isInView ? "visible" : "hidden"}
                                             >
-                                                <Image
-                                                    src={item.iconSrc}
-                                                    alt={item.iconAlt}
-                                                    fill
-                                                    className="object-contain"
-                                                />
+                                                <div className={`relative ${item.iconSize}`}>
+                                                    <Image
+                                                        src={item.iconSrc}
+                                                        alt={item.iconAlt}
+                                                        fill
+                                                        className="object-contain"
+                                                    />
+                                                </div>
                                             </motion.div>
                                             <h3 className="text-[#a6ff48] font-bold text-xl mb-4 font-display min-h-[62px] flex items-center justify-center">
                                                 {item.title}
@@ -105,7 +107,9 @@ export const CommercialServices: React.FC = () => {
                                         {/* Height placeholder - matches front card content with description */}
                                         <div className="opacity-0 pointer-events-none h-full">
                                             <div className="bg-[#3d6e6e]/30 border border-[#a6ff48]/30 rounded-2xl p-8 flex flex-col items-center text-center h-full">
-                                                <div className={`relative mb-6 ${item.iconSize}`}></div>
+                                                <div className="flex items-center justify-center h-20">
+                                                    <div className={`relative ${item.iconSize}`}></div>
+                                                </div>
                                                 <h3 className="text-[#a6ff48] font-bold text-xl mb-4 font-display min-h-[62px] flex items-center justify-center">{item.title}</h3>
                                                 <p className="text-white/90 text-sm leading-relaxed flex-1">{item.description}</p>
                                             </div>
@@ -130,17 +134,19 @@ export const CommercialServices: React.FC = () => {
                                                 }}
                                             >
                                                 <motion.div
-                                                    className={`relative mb-6 ${item.iconSize}`}
+                                                    className="flex items-center justify-center h-20"
                                                     variants={imageLoad}
                                                     initial="hidden"
                                                     animate={!isFlipped ? "visible" : "hidden"}
                                                 >
-                                                    <Image
-                                                        src={item.iconSrc}
-                                                        alt={item.iconAlt}
-                                                        fill
-                                                        className="object-contain"
-                                                    />
+                                                    <div className={`relative ${item.iconSize}`}>
+                                                        <Image
+                                                            src={item.iconSrc}
+                                                            alt={item.iconAlt}
+                                                            fill
+                                                            className="object-contain"
+                                                        />
+                                                    </div>
                                                 </motion.div>
                                                 <h3 className="text-[#a6ff48] font-bold text-xl font-display">
                                                     {item.title}
@@ -153,17 +159,19 @@ export const CommercialServices: React.FC = () => {
                                                 style={flipCardBackfaceStyle}
                                             >
                                                 <motion.div
-                                                    className={`relative mb-6 ${item.iconSize}`}
+                                                    className="flex items-center justify-center h-20"
                                                     variants={imageLoad}
                                                     initial="hidden"
                                                     animate={isFlipped ? "visible" : "hidden"}
                                                 >
-                                                    <Image
-                                                        src={item.iconSrc}
-                                                        alt={item.iconAlt}
-                                                        fill
-                                                        className="object-contain"
-                                                    />
+                                                    <div className={`relative ${item.iconSize}`}>
+                                                        <Image
+                                                            src={item.iconSrc}
+                                                            alt={item.iconAlt}
+                                                            fill
+                                                            className="object-contain"
+                                                        />
+                                                    </div>
                                                 </motion.div>
                                                 <h3 className="text-[#a6ff48] font-bold text-xl mb-4 font-display min-h-[62px] flex items-center justify-center">
                                                     {item.title}

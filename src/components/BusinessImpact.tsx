@@ -22,42 +22,42 @@ export const BusinessImpact: React.FC = () => {
             description: "Tenants who feel connected to their building and community are significantly more likely to renew rather than relocate.",
             iconSrc: "/assets/icons/Retention-1.png",
             iconAlt: "Retention",
-            iconSize: "w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-14 lg:h-14"
+            iconSize: "w-20 h-20"
         },
         {
             title: "Engagement",
             description: "Activated amenities and shared experiences turn unused spaces into daily touchpoints that increase satisfaction and loyalty.",
             iconSrc: "/assets/icons/Engagement.png",
             iconAlt: "Engagement",
-            iconSize: "w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-14 lg:h-14"
+            iconSize: "w-20 h-20"
         },
         {
             title: "Community",
             description: "Properties with strong community see better tenant relationships, smoother communication, and fewer friction points.",
             iconSrc: "/assets/icons/Culture.png",
             iconAlt: "Community",
-            iconSize: "w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-14 lg:h-14"
+            iconSize: "w-20 h-20"
         },
         {
             title: "Occupancy & Leasing Velocity",
             description: "Engaged tenants become advocates — supporting faster lease-ups and easier renewals through social proof and referrals.",
             iconSrc: "/assets/icons/Profitability.png",
             iconAlt: "Profitability",
-            iconSize: "w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-14 lg:h-14"
+            iconSize: "w-20 h-20"
         },
         {
             title: "Property Reputation",
             description: "Consistent on-site programming improves reviews, tours, and perception — without major capital investments.",
             iconSrc: "/assets/icons/Mental Wellbeing.png",
             iconAlt: "Mental Wellbeing",
-            iconSize: "w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-14 lg:h-14"
+            iconSize: "w-20 h-20"
         },
         {
             title: "Performance",
             description: "Reduced turnover, improved renewals, and stronger demand directly protect and grow net operating income.",
             iconSrc: "/assets/icons/Performance.png",
             iconAlt: "Performance",
-            iconSize: "w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-14 lg:h-14"
+            iconSize: "w-20 h-20"
         }
     ];
 
@@ -94,17 +94,19 @@ export const BusinessImpact: React.FC = () => {
                                     <div className="md:hidden h-full">
                                         <div className="bg-[#3d6e6e]/30 border border-[#a6ff48]/30 rounded-2xl p-8 flex flex-col items-center text-center h-full">
                                             <motion.div
-                                                className={`relative mb-6 ${item.iconSize}`}
+                                                className="flex items-center justify-center h-20"
                                                 variants={imageLoad}
                                                 initial="hidden"
                                                 animate={isInView ? "visible" : "hidden"}
                                             >
-                                                <Image
-                                                    src={item.iconSrc}
-                                                    alt={item.iconAlt}
-                                                    fill
-                                                    className="object-contain"
-                                                />
+                                                <div className={`relative ${item.iconSize}`}>
+                                                    <Image
+                                                        src={item.iconSrc}
+                                                        alt={item.iconAlt}
+                                                        fill
+                                                        className="object-contain"
+                                                    />
+                                                </div>
                                             </motion.div>
                                             <h3 className="text-[#a6ff48] font-bold text-xl mb-4 font-display min-h-[62px] flex items-center justify-center">
                                                 {item.title}
@@ -125,7 +127,9 @@ export const BusinessImpact: React.FC = () => {
                                         {/* Height placeholder - matches front card content with description */}
                                         <div className="opacity-0 pointer-events-none h-full">
                                             <div className="bg-[#3d6e6e]/30 border border-[#a6ff48]/30 rounded-2xl p-8 flex flex-col items-center text-center h-full">
-                                                <div className={`relative mb-6 ${item.iconSize}`}></div>
+                                                <div className="flex items-center justify-center h-20">
+                                                    <div className={`relative ${item.iconSize}`}></div>
+                                                </div>
                                                 <h3 className="text-[#a6ff48] font-bold text-xl mb-4 font-display min-h-[62px] flex items-center justify-center">{item.title}</h3>
                                                 <p className="text-white/90 text-sm leading-relaxed flex-1">{item.description}</p>
                                             </div>
@@ -150,17 +154,19 @@ export const BusinessImpact: React.FC = () => {
                                                 }}
                                             >
                                                 <motion.div
-                                                    className={`relative mb-6 ${item.iconSize}`}
+                                                    className="flex items-center justify-center h-20"
                                                     variants={imageLoad}
                                                     initial="hidden"
                                                     animate={!isFlipped ? "visible" : "hidden"}
                                                 >
-                                                    <Image
-                                                        src={item.iconSrc}
-                                                        alt={item.iconAlt}
-                                                        fill
-                                                        className="object-contain"
-                                                    />
+                                                    <div className={`relative ${item.iconSize}`}>
+                                                        <Image
+                                                            src={item.iconSrc}
+                                                            alt={item.iconAlt}
+                                                            fill
+                                                            className="object-contain"
+                                                        />
+                                                    </div>
                                                 </motion.div>
                                                 <h3 className="text-[#a6ff48] font-bold text-xl font-display">
                                                     {item.title}
@@ -173,17 +179,19 @@ export const BusinessImpact: React.FC = () => {
                                                 style={flipCardBackfaceStyle}
                                             >
                                                 <motion.div
-                                                    className={`relative mb-6 ${item.iconSize}`}
+                                                    className="flex items-center justify-center h-20"
                                                     variants={imageLoad}
                                                     initial="hidden"
                                                     animate={isFlipped ? "visible" : "hidden"}
                                                 >
-                                                    <Image
-                                                        src={item.iconSrc}
-                                                        alt={item.iconAlt}
-                                                        fill
-                                                        className="object-contain"
-                                                    />
+                                                    <div className={`relative ${item.iconSize}`}>
+                                                        <Image
+                                                            src={item.iconSrc}
+                                                            alt={item.iconAlt}
+                                                            fill
+                                                            className="object-contain"
+                                                        />
+                                                    </div>
                                                 </motion.div>
                                                 <h3 className="text-[#a6ff48] font-bold text-xl mb-4 font-display min-h-[62px] flex items-center justify-center">
                                                     {item.title}
