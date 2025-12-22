@@ -54,7 +54,7 @@ export const FounderBio: React.FC = () => {
                                     About <span className="text-[#a6ff48]">Jamin Gluck</span>
                                 </h3>
 
-                                <div className="space-y-4 text-white text-lg mb-4">
+                                <div className="space-y-4 text-white text-base md:text-lg mb-4">
                                     <p>
                                         Jamin Gluck is the founder of GatherUp and a tenant experience strategist focused on helping properties create stronger communities, retain tenants longer, and protect long-term value.
                                     </p>

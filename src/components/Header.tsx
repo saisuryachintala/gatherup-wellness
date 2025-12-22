@@ -17,7 +17,7 @@ export const Header: React.FC = () => {
     const pathname = usePathname();
 
     const isActive = (path: string) => pathname === path;
-    const isSolutionsActive = () => pathname === '/our-solutions' || pathname === '/our-solutions/residential';
+    const isSolutionsActive = () => pathname === '/our-commercial-solutions' || pathname === '/our-residential-solutions';
 
     // Measure header height dynamically
     useEffect(() => {
@@ -128,6 +128,20 @@ export const Header: React.FC = () => {
 
                         {/* Navigation Links */}
                         <nav className="hidden md:flex items-center gap-6 flex-1 justify-left">
+                            {/* Home Link */}
+                            <Link
+                                href="/"
+                                className={`transition-all duration-500 ease-in-out ${isActive('/')
+                                    ? 'text-[#a6ff48] font-bold'
+                                    : 'text-white hover:text-[#a6ff48] font-normal'
+                                    }`}
+                                style={{
+                                    fontSize: '1.05rem',
+                                    transition: 'color 0.5s ease-in-out, font-size 0.5s ease-in-out, font-weight 0.5s ease-in-out, filter 0.5s ease-in-out'
+                                }}
+                            >
+                                Home
+                            </Link>
                             {/* Our Solutions Dropdown */}
                             <div
                                 className="relative"
@@ -158,8 +172,8 @@ export const Header: React.FC = () => {
                                     <div className="absolute top-full left-0 pt-2 w-48 z-50">
                                         <div className="bg-[#053d3d] border border-[#a6ff48]/30 rounded-lg shadow-lg">
                                             <Link
-                                                href="/our-solutions"
-                                                className={`block px-4 py-3 transition-colors ${isActive('/our-solutions')
+                                                href="/our-commercial-solutions"
+                                                className={`block px-4 py-3 transition-colors ${isActive('/our-commercial-solutions')
                                                     ? 'text-[#a6ff48] font-bold bg-[#3d6e6e]/30'
                                                     : 'text-white hover:text-[#a6ff48] hover:bg-[#3d6e6e]/20'
                                                     }`}
@@ -168,8 +182,8 @@ export const Header: React.FC = () => {
                                                 Commercial
                                             </Link>
                                             <Link
-                                                href="/our-solutions/residential"
-                                                className={`block px-4 py-3 transition-colors rounded-b-lg ${isActive('/our-solutions/residential')
+                                                href="/our-residential-solutions"
+                                                className={`block px-4 py-3 transition-colors rounded-b-lg ${isActive('/our-residential-solutions')
                                                     ? 'text-[#a6ff48] font-bold bg-[#3d6e6e]/30'
                                                     : 'text-white hover:text-[#a6ff48] hover:bg-[#3d6e6e]/20'
                                                     }`}
@@ -249,6 +263,21 @@ export const Header: React.FC = () => {
                     <nav className="md:hidden bg-[#053d3d] border-t border-[#a6ff48]/30 fixed left-0 right-0 z-50"
                         style={{ top: `${headerHeight}px` }}>
                         <div className="container mx-auto max-w-7xl px-6 py-4 flex flex-col gap-4">
+                            <Link
+                                href="/"
+                                className={`py-2 ${isActive('/')
+                                    ? 'text-[#a6ff48] '
+                                    : 'text-white hover:text-[#a6ff48] font-normal'
+                                    }`}
+                                style={{
+                                    fontSize: '1.125rem',
+                                    fontWeight: isActive('/') ? '600' : '400',
+                                    transition: 'color 0.5s ease-in-out, font-weight 0.5s ease-in-out, filter 0.5s ease-in-out'
+                                }}
+                                onClick={() => setMobileMenuOpen(false)}
+                            >
+                                Home
+                            </Link>
                             <div>
                                 <button
                                     className={`w-full text-left py-2 flex items-center justify-between ${isSolutionsActive()
@@ -275,14 +304,14 @@ export const Header: React.FC = () => {
                                 {solutionsDropdownOpen && (
                                     <div className="ml-4 mt-2 flex flex-col gap-2">
                                         <Link
-                                            href="/our-solutions"
-                                            className={`py-2 ${isActive('/our-solutions')
+                                            href="/our-commercial-solutions"
+                                            className={`py-2 ${isActive('/our-commercial-solutions')
                                                 ? 'text-[#a6ff48] '
                                                 : 'text-white hover:text-[#a6ff48] font-normal'
                                                 }`}
                                             style={{
                                                 fontSize: '1rem',
-                                                fontWeight: isActive('/our-solutions') ? '600' : '400',
+                                                fontWeight: isActive('/our-commercial-solutions') ? '600' : '400',
                                                 transition: 'color 0.5s ease-in-out, font-weight 0.5s ease-in-out, filter 0.5s ease-in-out'
                                             }}
                                             onClick={() => {
@@ -293,14 +322,14 @@ export const Header: React.FC = () => {
                                             Commercial
                                         </Link>
                                         <Link
-                                            href="/our-solutions/residential"
-                                            className={`py-2 ${isActive('/our-solutions/residential')
+                                            href="/our-residential-solutions"
+                                            className={`py-2 ${isActive('/our-residential-solutions')
                                                 ? 'text-[#a6ff48] '
                                                 : 'text-white hover:text-[#a6ff48] font-normal'
                                                 }`}
                                             style={{
                                                 fontSize: '1rem',
-                                                fontWeight: isActive('/our-solutions/residential') ? '600' : '400',
+                                                fontWeight: isActive('/our-residential-solutions') ? '600' : '400',
                                                 transition: 'color 0.5s ease-in-out, font-weight 0.5s ease-in-out, filter 0.5s ease-in-out'
                                             }}
                                             onClick={() => {

@@ -37,11 +37,12 @@ export const CommercialHero: React.FC = () => {
                         className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-[#a6ff48] leading-tight"
                     >
                         Commercial Properties<br />
-                        & Workplace Campuses
+                        & <br />
+                        Workplace Campuses
                     </motion.p>
                     <motion.div
                         variants={fadeInUp}
-                        className="h-0.5 w-[60%] bg-[#a6ff48] mx-auto mt-10 -mb-20"
+                        className="h-0.5 w-[70%] bg-[#a6ff48] mx-auto mt-10 -mb-20"
                     ></motion.div>
                 </motion.div>
             </div>
