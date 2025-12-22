@@ -132,3 +132,48 @@ export const pageLoad: Variants = {
     },
   },
 };
+
+// Flip card transition configuration
+export const flipCardTransition: Transition = {
+  duration: 0.6,
+  ease: [0.43, 0.13, 0.23, 0.96] as [number, number, number, number],
+};
+
+// Flip card container style
+export const flipCardContainerStyle = {
+  transformStyle: 'preserve-3d' as const,
+};
+
+// Flip card backface style
+export const flipCardBackfaceStyle = {
+  backfaceVisibility: 'hidden' as const,
+};
+
+// Flip card perspective style
+export const flipCardPerspectiveStyle = {
+  perspective: '1000px',
+};
+
+// Down arrow bounce animation (for negative indicators)
+export const downArrowBounce: Variants = {
+  animate: {
+    y: [0, 10, 0],
+    transition: {
+      duration: 1.5,
+      repeat: 3, // Repeat once (4 cycles total = 6 seconds)
+      ease: [0.4, 0.0, 0.6, 1] as [number, number, number, number],
+    },
+  },
+};
+
+// Up arrow bounce animation (for positive indicators)
+export const upArrowBounce: Variants = {
+  animate: {
+    y: [0, -10, 0],
+    transition: {
+      duration: 1.5,
+      repeat: 3, // Repeat once (4 cycles total = 6 seconds)
+      ease: [0.4, 0.0, 0.6, 1] as [number, number, number, number],
+    },
+  },
+};

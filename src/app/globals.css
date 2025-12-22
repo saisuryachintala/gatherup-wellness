@@ -110,5 +110,11 @@ top: 50%;
 }
 
 .slider:focus::-moz-range-thumb {
-  box-shadow: 0 0 0 3px #E0F2CC;
+    box-shadow: 0 0 0 3px #E0F2CC;
+}
+
+/* Card flip backface visibility */
+.backface-hidden {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
 }
