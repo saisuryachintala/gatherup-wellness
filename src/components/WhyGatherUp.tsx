@@ -40,10 +40,10 @@ export const WhyGatherUp: React.FC = () => {
                 initial="hidden"
                 animate={headerInView ? "visible" : "hidden"}
             >
-                <h1 className="text-3xl md:text-5xl font-bold text-white font-display">
-                    Happier Tenants, <br />
-                    <span className="text-[#a6ff48]">Better Business Outcomes</span>
-                </h1>
+                <p className="text-4xl md:text-5xl font-bold text-white font-display">
+                    Happier Tenants,
+                </p>
+                <p className="pt-4 text-4xl md:text-5xl font-bold text-[#a6ff48]">Better Business Outcomes</p>
             </motion.div>
 
             {/* Content Section */}
