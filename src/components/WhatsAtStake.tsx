@@ -3,7 +3,7 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import Image from 'next/image';
-import { scrollReveal, staggerContainer } from '@/utils/animations';
+import { scrollReveal, staggerContainer, downArrowBounce, upArrowBounce } from '@/utils/animations';
 
 export const WhatsAtStake: React.FC = () => {
     const sectionRef = useRef(null);
@@ -68,14 +68,18 @@ export const WhatsAtStake: React.FC = () => {
                             {negativeStakes.map((item, i) => (
                                 <li key={i}>
                                     <div className="py-3 text-white text-base flex items-center gap-3">
-                                        <div className="relative w-4 h-4 flex-shrink-0">
+                                        <motion.div
+                                            className="relative w-4 h-4 flex-shrink-0"
+                                            variants={downArrowBounce}
+                                            animate={isInView ? "animate" : ""}
+                                        >
                                             <Image
                                                 src="/assets/icons/D1.png"
                                                 alt="Down"
                                                 fill
                                                 className="object-contain"
                                             />
-                                        </div>
+                                        </motion.div>
                                         <span>{item}</span>
                                     </div>
                                     {i < negativeStakes.length - 1 && (
@@ -95,14 +99,18 @@ export const WhatsAtStake: React.FC = () => {
                             {positiveStakes.map((item, i) => (
                                 <li key={i}>
                                     <div className="py-3 text-white text-base flex items-center gap-3">
-                                        <div className="relative w-4 h-4 flex-shrink-0">
+                                        <motion.div
+                                            className="relative w-4 h-4 flex-shrink-0"
+                                            variants={upArrowBounce}
+                                            animate={isInView ? "animate" : ""}
+                                        >
                                             <Image
                                                 src="/assets/icons/U1.png"
                                                 alt="Up"
                                                 fill
                                                 className="object-contain"
                                             />
-                                        </div>
+                                        </motion.div>
                                         <span>{item}</span>
                                     </div>
                                     {i < positiveStakes.length - 1 && (

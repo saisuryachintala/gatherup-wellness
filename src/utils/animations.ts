@@ -153,3 +153,27 @@ export const flipCardBackfaceStyle = {
 export const flipCardPerspectiveStyle = {
   perspective: '1000px',
 };
+
+// Down arrow bounce animation (for negative indicators)
+export const downArrowBounce: Variants = {
+  animate: {
+    y: [0, 10, 0],
+    transition: {
+      duration: 1.5,
+      repeat: 3, // Repeat once (4 cycles total = 6 seconds)
+      ease: [0.4, 0.0, 0.6, 1] as [number, number, number, number],
+    },
+  },
+};
+
+// Up arrow bounce animation (for positive indicators)
+export const upArrowBounce: Variants = {
+  animate: {
+    y: [0, -10, 0],
+    transition: {
+      duration: 1.5,
+      repeat: 3, // Repeat once (4 cycles total = 6 seconds)
+      ease: [0.4, 0.0, 0.6, 1] as [number, number, number, number],
+    },
+  },
+};
