@@ -10,7 +10,7 @@ import { CaseStudy } from '@/components/CaseStudy';
 import { CTASection } from '@/components/CTASection';
 import { pageLoad } from '@/utils/animations';
 
-export default function OurSolutions() {
+export default function CommercialSolutions() {
     return (
         <motion.main
             className="min-h-screen bg-white overflow-x-hidden"
