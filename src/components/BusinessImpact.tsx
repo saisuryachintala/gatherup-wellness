@@ -1,7 +1,13 @@
-import React from 'react';
+'use client';
+
+import React, { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 import Image from 'next/image';
+import { scrollReveal, imageLoad, staggerContainer } from '@/utils/animations';
 
 export const BusinessImpact: React.FC = () => {
+    const sectionRef = useRef(null);
+    const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
     const impactMetrics = [
         {
             title: "Retention",
@@ -92,23 +98,43 @@ export const BusinessImpact: React.FC = () => {
     return (
         <section className="px-2 md:px-4 pt-2 md:pt-4 pb-8 md:pb-12 bg-[#053d3d] text-white">
             <div className="container mx-auto px-4">
-                <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 font-display">
-                    The Impact on Property Performance
-                </h2>
+                <motion.div
+                    ref={sectionRef}
+                    variants={staggerContainer}
+                    initial="hidden"
+                    animate={isInView ? "visible" : "hidden"}
+                >
+                    <motion.h2
+                        variants={scrollReveal}
+                        className="text-3xl md:text-4xl font-bold text-center mb-16 font-display"
+                    >
+                        The Impact on Property Performance
+                    </motion.h2>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 md:gap-4 gap-8 max-w-6xl mx-auto">
-                    {impactMetrics.map((item, index) => (
-                        <div key={index} className="bg-[#3d6e6e]/30 border border-[#a6ff48]/30 rounded-2xl p-8 flex flex-col items-center text-center">
-                            <div className="text-[#a6ff48]">
-                                {item.icon}
-                            </div>
-                            <h3 className="text-[#a6ff48] font-bold text-xl mb-4 font-display">{item.title}</h3>
-                            <p className="text-white leading-relaxed text-base">
-                                {item.stat}
-                            </p>
-                        </div>
-                    ))}
-                </div>
+                    <motion.div
+                        className="grid md:grid-cols-2 lg:grid-cols-3 md:gap-4 gap-8 max-w-6xl mx-auto"
+                        variants={staggerContainer}
+                    >
+                        {impactMetrics.map((item, index) => (
+                            <motion.div
+                                key={index}
+                                variants={scrollReveal}
+                                className="bg-[#3d6e6e]/30 border border-[#a6ff48]/30 rounded-2xl p-8 flex flex-col items-center text-center"
+                            >
+                                <motion.div
+                                    className="text-[#a6ff48]"
+                                    variants={imageLoad}
+                                >
+                                    {item.icon}
+                                </motion.div>
+                                <h3 className="text-[#a6ff48] font-bold text-xl mb-4 font-display">{item.title}</h3>
+                                <p className="text-white leading-relaxed text-base">
+                                    {item.stat}
+                                </p>
+                            </motion.div>
+                        ))}
+                    </motion.div>
+                </motion.div>
             </div>
         </section>
     );

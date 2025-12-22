@@ -1,6 +1,12 @@
-import React from 'react';
+'use client';
+
+import React, { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
+import { scrollReveal, staggerContainer } from '@/utils/animations';
 
 export const WhatsAtStake: React.FC = () => {
+    const sectionRef = useRef(null);
+    const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
     const negativeStakes = [
         "Low engagement with amenities",
         "Weak sense of community",
@@ -20,18 +26,40 @@ export const WhatsAtStake: React.FC = () => {
     return (
         <section className="px-2 md:px-4 py-8 md:py-12 bg-[#053d3d]">
             <div className="container mx-auto px-4">
-                <div className="text-center mb-12">
-                    <h2 className="text-3xl font-bold text-[#a6ff48] font-display mb-4">What's at Stake?</h2>
-                    <p className="text-md md:text-lg text-white leading-relaxed mb-8">
+                <motion.div
+                    ref={sectionRef}
+                    className="text-center mb-12"
+                    variants={staggerContainer}
+                    initial="hidden"
+                    animate={isInView ? "visible" : "hidden"}
+                >
+                    <motion.h2
+                        variants={scrollReveal}
+                        className="text-3xl font-bold text-[#a6ff48] font-display mb-4"
+                    >
+                        What's at Stake?
+                    </motion.h2>
+                    <motion.p
+                        variants={scrollReveal}
+                        className="text-md md:text-lg text-white leading-relaxed mb-8"
+                    >
                         Workplace well-being is the antidote to disengagement, turnover, and culture.
-                    </p>
+                    </motion.p>
                     {/* White separator line */}
-                    <div className="w-full max-w-xl mx-auto h-px bg-white/100"></div>
-                </div>
+                    <motion.div
+                        variants={scrollReveal}
+                        className="w-full max-w-xl mx-auto h-px bg-white/100"
+                    ></motion.div>
+                </motion.div>
 
-                <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+                <motion.div
+                    className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto"
+                    variants={staggerContainer}
+                    initial="hidden"
+                    animate={isInView ? "visible" : "hidden"}
+                >
                     {/* Negative Stakes */}
-                    <div>
+                    <motion.div variants={scrollReveal}>
                         <p className="text-base text-[#a6ff48] mb-4 font-medium">
                             When tenant experience is passive or overlooked, properties experience:
                         </p>
@@ -47,10 +75,10 @@ export const WhatsAtStake: React.FC = () => {
                                 </li>
                             ))}
                         </ul>
-                    </div>
+                    </motion.div>
 
                     {/* Positive Stakes */}
-                    <div>
+                    <motion.div variants={scrollReveal}>
                         <p className="text-base text-[#a6ff48] mb-4 font-medium">
                             When the tenant experience is intentionally activated, properties see:
                         </p>
@@ -66,8 +94,8 @@ export const WhatsAtStake: React.FC = () => {
                                 </li>
                             ))}
                         </ul>
-                    </div>
-                </div>
+                    </motion.div>
+                </motion.div>
             </div>
         </section>
     );
