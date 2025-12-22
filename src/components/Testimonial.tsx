@@ -1,7 +1,9 @@
 'use client';
 
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 import Image from 'next/image';
+import { scrollReveal, imageLoad } from '@/utils/animations';
 
 interface TestimonialItem {
     quote: string;
@@ -51,20 +53,26 @@ export const Testimonial: React.FC<TestimonialProps> = ({
         testimonials ||
         (quote && author && authorTitle
             ? [
-                  {
-                      quote,
-                      author,
-                      authorTitle,
-                  },
-              ]
+                {
+                    quote,
+                    author,
+                    authorTitle,
+                },
+            ]
             : defaultItems);
 
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isAutoPlaying, setIsAutoPlaying] = useState(true);
     const [isTransitioning, setIsTransitioning] = useState(true);
-    
+
     // Duplicate items for infinite scroll
     const duplicatedItems = [...items, ...items];
+
+    const pauseAndResumeAutoplay = useCallback(() => {
+        // Pause on interaction and resume after the configured interval
+        setIsAutoPlaying(false);
+        setTimeout(() => setIsAutoPlaying(true), autoPlayInterval);
+    }, [autoPlayInterval]);
 
     const nextSlide = useCallback(() => {
         setCurrentIndex((prevIndex) => {
@@ -87,7 +95,7 @@ export const Testimonial: React.FC<TestimonialProps> = ({
             return prevIndex;
         });
         pauseAndResumeAutoplay();
-    }, [items.length, autoPlayInterval]);
+    }, [items.length, pauseAndResumeAutoplay]);
 
     const prevSlide = useCallback(() => {
         setCurrentIndex((prevIndex) => {
@@ -104,13 +112,7 @@ export const Testimonial: React.FC<TestimonialProps> = ({
             return prevIndex - 1;
         });
         pauseAndResumeAutoplay();
-    }, [items.length, autoPlayInterval]);
-
-    const pauseAndResumeAutoplay = () => {
-        // Pause on interaction and resume after the configured interval
-        setIsAutoPlaying(false);
-        setTimeout(() => setIsAutoPlaying(true), autoPlayInterval);
-    };
+    }, [items.length, pauseAndResumeAutoplay]);
 
     const goToSlide = (index: number) => {
         // Ensure we're using the original items index (not duplicated)
@@ -130,62 +132,77 @@ export const Testimonial: React.FC<TestimonialProps> = ({
     const handleMouseEnter = () => setIsAutoPlaying(false);
     const handleMouseLeave = () => setIsAutoPlaying(true);
 
+    const sectionRef = useRef(null);
+    const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
+
     if (items.length === 0) return null;
 
     return (
-        <section 
-            className="relative py-16 md:py-20 overflow-hidden min-h-[600px] w-full" 
-            style={{ 
+        <motion.section
+            ref={sectionRef}
+            className="relative py-16 md:py-20 overflow-hidden min-h-[600px] w-full"
+            style={{
                 backgroundColor: '#f8fcfc',
                 isolation: 'isolate',
                 position: 'relative'
             }}
+            variants={scrollReveal}
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
         >
             {/* Background wrapper to ensure color is visible */}
-            <div 
-                className="absolute inset-0 w-full" 
-                style={{ 
+            <div
+                className="absolute inset-0 w-full"
+                style={{
                     backgroundColor: '#f8fcfc',
                     zIndex: 0
                 }}
             ></div>
-            
+
             {/* Split background: top half color, bottom half image */}
             <div className="absolute inset-0 w-full" style={{ zIndex: 1, pointerEvents: 'none' }}>
                 {/* Top half - background color overlay to ensure visibility */}
-                <div 
-                    className="absolute inset-x-0 top-0 h-1/2 w-full" 
-                    style={{ 
+                <div
+                    className="absolute inset-x-0 top-0 h-1/2 w-full"
+                    style={{
                         backgroundColor: '#F5FAF5',
                         zIndex: 1
                     }}
                 ></div>
                 {/* Bottom half - background image using Next.js Image */}
-                <div 
-                    className="absolute inset-x-0 bottom-0 h-1/2 w-full overflow-hidden" 
+                <motion.div
+                    className="absolute inset-x-0 bottom-0 h-1/2 w-full overflow-hidden"
                     style={{ zIndex: 1 }}
+                    variants={imageLoad}
+                    initial="hidden"
+                    animate={isInView ? "visible" : "hidden"}
                 >
                     <Image
                         src="/assets/images/IMG_1221.JPG"
                         alt="Background"
                         fill
                         className="object-cover"
-                        style={{ 
+                        style={{
                             objectPosition: 'bottom center',
                             objectFit: 'cover'
                         }}
                         priority
                         sizes="100vw"
                     />
-                </div>
+                </motion.div>
             </div>
 
             <div className="container mx-auto px-4 md:px-8 max-w-6xl relative -mt-16" style={{ zIndex: 10 }}>
-                <h2 className="text-3xl md:text-4xl font-bold text-[#053d3d] mb-6 md:mb-8 text-center">
+                <motion.h2
+                    className="text-3xl md:text-4xl font-bold text-[#053d3d] mb-6 md:mb-8 text-center"
+                    variants={scrollReveal}
+                    initial="hidden"
+                    animate={isInView ? "visible" : "hidden"}
+                >
                     {title}
-                </h2>
+                </motion.h2>
 
-                <div 
+                <div
                     className="relative -mt-4"
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}
@@ -245,11 +262,10 @@ export const Testimonial: React.FC<TestimonialProps> = ({
                                     <button
                                         key={index}
                                         onClick={() => goToSlide(index)}
-                                        className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                                            (currentIndex % items.length) === index 
-                                                ? 'bg-[#a6ff48] w-8' 
+                                        className={`w-2 h-2 rounded-full transition-all duration-300 ${(currentIndex % items.length) === index
+                                                ? 'bg-[#a6ff48] w-8'
                                                 : 'bg-white/40 hover:bg-white/60'
-                                        }`}
+                                            }`}
                                         aria-label={`Go to slide ${index + 1}`}
                                     />
                                 ))}
@@ -303,7 +319,7 @@ export const Testimonial: React.FC<TestimonialProps> = ({
                     )}
                 </div>
             </div>
-        </section>
+        </motion.section>
     );
 };
 

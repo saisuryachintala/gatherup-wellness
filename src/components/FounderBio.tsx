@@ -1,17 +1,36 @@
-import React from 'react';
+'use client';
+
+import React, { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 import Image from 'next/image';
 import { FaLinkedin, FaInstagram, FaFacebook, FaXTwitter } from 'react-icons/fa6';
+import { scrollReveal, imageLoad, staggerContainer } from '@/utils/animations';
 
 export const FounderBio: React.FC = () => {
+    const sectionRef = useRef(null);
+    const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
+
     return (
         <section className="pt-40 px-2 md:px-2 pb-12 md:pb-16 lg:pb-20 bg-[#053d3d]">
             <div className="container mx-auto px-4 md:px-8">
                 <div className="max-w-6xl mx-auto">
-                    <div className="bg-[#053d3d] rounded-3xl overflow-hidden">
+                    <motion.div
+                        ref={sectionRef}
+                        className="bg-[#053d3d] rounded-3xl overflow-hidden"
+                        variants={staggerContainer}
+                        initial="hidden"
+                        animate={isInView ? "visible" : "hidden"}
+                    >
                         <div className="grid md:grid-cols-2 gap-0 md:items-stretch">
                             {/* Founder Image */}
-                            <div className="relative w-full aspect-[4/5] md:aspect-auto md:h-full">
-                                <div className="absolute inset-0 rounded-tl-3xl rounded-tr-3xl md:rounded-tr-none md:rounded-br-none md:rounded-bl-3xl overflow-hidden">
+                            <motion.div
+                                variants={scrollReveal}
+                                className="relative w-full aspect-[4/5] md:aspect-auto md:h-full"
+                            >
+                                <motion.div
+                                    className="absolute inset-0 rounded-tl-3xl rounded-tr-3xl md:rounded-tr-none md:rounded-br-none md:rounded-bl-3xl overflow-hidden"
+                                    variants={imageLoad}
+                                >
                                     <Image
                                         src="/assets/images/about-founder.png"
                                         alt="Jamin Gluck, Founder of GatherUp"
@@ -23,11 +42,14 @@ export const FounderBio: React.FC = () => {
                                         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 45vw, 50vw"
                                         priority
                                     />
-                                </div>
-                            </div>
+                                </motion.div>
+                            </motion.div>
 
                             {/* Bio Text */}
-                            <div className="bg-[#255656] p-8 md:p-12 flex flex-col justify-center space-y-6 text-white">
+                            <motion.div
+                                variants={scrollReveal}
+                                className="bg-[#255656] p-8 md:p-12 flex flex-col justify-center space-y-6 text-white"
+                            >
                                 <h3 className="text-3xl md:text-4xl font-bold font-display">
                                     About <span className="text-[#a6ff48]">Jamin Gluck</span>
                                 </h3>
@@ -69,9 +91,9 @@ export const FounderBio: React.FC = () => {
                                         <FaLinkedin className="w-6 h-6" />
                                     </a>
                                 </div>
-                            </div>
+                            </motion.div>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </section>

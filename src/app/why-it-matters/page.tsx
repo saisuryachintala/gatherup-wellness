@@ -1,4 +1,6 @@
-import React from 'react';
+'use client';
+
+import { motion } from 'framer-motion';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { WhyItMattersHero } from '@/components/WhyItMattersHero';
@@ -9,10 +11,16 @@ import { BeyondPerks } from '@/components/BeyondPerks';
 import { AtGatherUp } from '@/components/AtGatherUp';
 import { BlogPreview } from '@/components/BlogPreview';
 import { CTASection } from '@/components/CTASection';
+import { pageLoad } from '@/utils/animations';
 
 export default function WhyItMatters() {
     return (
-        <main className="min-h-screen bg-white overflow-x-hidden">
+        <motion.main
+            className="min-h-screen bg-white overflow-x-hidden"
+            variants={pageLoad}
+            initial="hidden"
+            animate="visible"
+        >
             <Header />
             <WhyItMattersHero />
             <WellBeingImperative />
@@ -23,6 +31,6 @@ export default function WhyItMatters() {
             {/* <BlogPreview /> */}
             <CTASection />
             <Footer />
-        </main>
+        </motion.main>
     );
 }

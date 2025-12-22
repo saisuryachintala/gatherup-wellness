@@ -1,7 +1,13 @@
-import React from 'react';
+'use client';
+
+import React, { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 import Image from 'next/image';
+import { scrollReveal, imageLoad, staggerContainer } from '@/utils/animations';
 
 export const AtGatherUp: React.FC = () => {
+    const sectionRef = useRef(null);
+    const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
     const beliefs = [
         "Tenant experience drives retention",
         "Community reduces turnover",
@@ -19,9 +25,18 @@ export const AtGatherUp: React.FC = () => {
     return (
         <section className="px-2 md:px-4 py-3 md:py-4 bg-[#053d3d]">
             <div className="container mx-auto px-4 max-w-6xl">
-                <div className="grid md:grid-cols-2 gap-8 items-center py-4">
+                <motion.div
+                    ref={sectionRef}
+                    className="grid md:grid-cols-2 gap-8 items-center py-4"
+                    variants={staggerContainer}
+                    initial="hidden"
+                    animate={isInView ? "visible" : "hidden"}
+                >
                     {/* Left Column - Text Content */}
-                    <div className="text-left">
+                    <motion.div
+                        className="text-left"
+                        variants={scrollReveal}
+                    >
                         <h2 className="text-3xl md:text-4xl font-bold text-[#a6ff48] mb-4 font-display">At GatherUp</h2>
                         <p className="text-lg text-white mb-4">
                             We help residential, commercial, and mixed-use properties turn wellbeing into measurable performance.
@@ -54,10 +69,13 @@ export const AtGatherUp: React.FC = () => {
                         <p className="text-lg font-semibold text-white leading-relaxed">
                             It’s property strategy — executed on-site.
                         </p>
-                    </div>
+                    </motion.div>
 
                     {/* Right Column - Image */}
-                    <div className="relative">
+                    <motion.div
+                        className="relative"
+                        variants={imageLoad}
+                    >
                         <div className="relative w-full min-h-[300px] h-[400px] md:h-[550px] rounded-2xl overflow-hidden bg-[#053d3d]">
                             <Image
                                 src="/assets/images/at-gatherup-illustration-v3-no-bg.png"
@@ -67,8 +85,8 @@ export const AtGatherUp: React.FC = () => {
                                 sizes="(max-width: 768px) 100vw, 50vw"
                             />
                         </div>
-                    </div>
-                </div>
+                    </motion.div>
+                </motion.div>
             </div>
         </section>
     );
