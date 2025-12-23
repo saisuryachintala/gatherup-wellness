@@ -40,22 +40,22 @@ export const BusinessImpact: React.FC = () => {
         },
         {
             title: "Occupancy & Leasing Velocity",
-            description: "Engaged tenants become advocates — supporting faster lease-ups and easier renewals through social proof and referrals.",
-            iconSrc: "/assets/icons/Profitability.png",
-            iconAlt: "Profitability",
+            description: "Engaged tenants become advocates supporting faster lease-ups and easier renewals through social proof and referrals.",
+            iconSrc: "/assets/icons/Occupancy-Leasing-Velocity.png",
+            iconAlt: "Occupancy-Leasing-Velocity",
             iconSize: "w-20 h-20"
         },
         {
             title: "Property Reputation",
-            description: "Consistent on-site programming improves reviews, tours, and perception — without major capital investments.",
-            iconSrc: "/assets/icons/Mental Wellbeing.png",
-            iconAlt: "Mental Wellbeing",
-            iconSize: "w-20 h-20"
+            description: "Consistent on-site programming improves reviews, tours, and perception without major capital investments.",
+            iconSrc: "/assets/icons/Property-Reputation.png",
+            iconAlt: "Property-Reputation",
+            iconSize: "w-24 h-24"
         },
         {
             title: "Performance",
             description: "Reduced turnover, improved renewals, and stronger demand directly protect and grow net operating income.",
-            iconSrc: "/assets/icons/Performance.png",
+            iconSrc: "/assets/icons/Profitability.png",
             iconAlt: "Performance",
             iconSize: "w-20 h-20"
         }

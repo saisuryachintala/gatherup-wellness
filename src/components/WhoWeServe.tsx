@@ -10,36 +10,20 @@ export const WhoWeServe: React.FC = () => {
     const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
     const propertyTypes = [
         {
-            name: "Corporate\nOffices",
-            icon: "/assets/icons/CorporateOffices.png"
-        },
-        {
-            name: "Nonprofit\nOrganizations",
-            icon: "/assets/icons/NonprofitOrganizations.png"
-        },
-        {
-            name: "Community\nHubs",
-            icon: "/assets/icons/CommunityHubs.png"
-        },
-        {
             name: "Residential\nCommunities",
-            icon: "/assets/icons/ResidentialCommunities.png"
+            icon: "/assets/icons/Residential-Communities.png"
         },
         {
-            name: "Coworking\nSpaces",
-            icon: "/assets/icons/CoworkingSpaces.png"
+            name: "Commercial\nOffice Properties",
+            icon: "/assets/icons/Commercial-Office-Properties.png"
         },
         {
-            name: "Educational\nInstitutions",
-            icon: "/assets/icons/EducationalInstitutions.png"
+            name: "Flexible\nWorkspaces",
+            icon: "/assets/icons/Coworking-Flexible-Workspaces.png"
         },
         {
-            name: "Fitness Centers\n& Yoga Studios",
-            icon: "/assets/icons/FitnessCentersYogaStudios.png"
-        },
-        {
-            name: "Healthcare\nFacilities",
-            icon: "/assets/icons/HealthcareFacilities.png"
+            name: "Mixed-Use\nDevelopments",
+            icon: "/assets/icons/Mixed-Use-Developments.png"
         }
     ];
 
@@ -81,7 +65,7 @@ export const WhoWeServe: React.FC = () => {
 
                     {/* Property Types Grid */}
                     <motion.div
-                        className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12"
+                        className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-12"
                         variants={staggerContainer}
                     >
                         {propertyTypes.map((property, index) => (

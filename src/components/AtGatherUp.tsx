@@ -14,14 +14,6 @@ export const AtGatherUp: React.FC = () => {
         "Activated spaces outperform passive amenities"
     ];
 
-    const experiences = [
-        "Increase tenant satisfaction",
-        "Strengthen community",
-        "Improve renewals and occupancy",
-        "Enhance property reputation",
-        "Support long-term NOI"
-    ];
-
     return (
         <section className="px-2 md:px-4 py-3 md:py-4 bg-[#053d3d]">
             <div className="container mx-auto px-4 max-w-6xl">
@@ -49,17 +41,6 @@ export const AtGatherUp: React.FC = () => {
                                 <div key={index} className="flex items-start gap-3 text-lg text-white">
                                     <span className="text-[#a6ff48] flex-shrink-0">✓</span>
                                     <span>{belief}</span>
-                                </div>
-                            ))}
-                        </div>
-                        <p className="text-lg text-white leading-relaxed mb-4">
-                            GatherUp designs and delivers curated, on-site wellbeing experiences that:
-                        </p>
-                        <div className="space-y-3 mb-6">
-                            {experiences.map((experience, index) => (
-                                <div key={index} className="flex items-start gap-3 text-lg text-white">
-                                    <span className="text-[#a6ff48] flex-shrink-0">-</span>
-                                    <span>{experience}</span>
                                 </div>
                             ))}
                         </div>

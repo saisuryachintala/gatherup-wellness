@@ -37,7 +37,7 @@ export const ResidentialBenefits: React.FC = () => {
                             <div className="flex justify-center mb-6">
                                 <span className="text-[#a6ff48] -mb-6" style={{ fontFamily: 'Lato', fontWeight: 300, fontSize: '60px' }}>01</span>
                             </div>
-                            <h3 className="text-xl md:text-2xl font-bold mb-3 text-[#a6ff48]">Higher renewal rates</h3>
+                            <h3 className="text-xl md:text-2xl font-bold mb-3 text-[#a6ff48]">Higher Renewal Rates</h3>
                             <p className="text-base md:text-lg leading-relaxed">
                                 When residents have real relationships and routines in the building, they stay longer and are more willing to accept rent increases.
                             </p>
@@ -51,7 +51,7 @@ export const ResidentialBenefits: React.FC = () => {
                             <div className="flex justify-center mb-6">
                                 <span className="text-[#a6ff48] -mb-6" style={{ fontFamily: 'Lato', fontWeight: 300, fontSize: '60px' }}>02</span>
                             </div>
-                            <h3 className="text-xl md:text-2xl font-bold mb-3 text-[#a6ff48]">Better reviews & referrals</h3>
+                            <h3 className="text-xl md:text-2xl font-bold mb-3 text-[#a6ff48]">Better Reviews & Referrals</h3>
                             <p className="text-base md:text-lg leading-relaxed">
                                 Thoughtful wellness and community experiences show up in how residents talk about you online and to friends.
                             </p>
@@ -65,7 +65,7 @@ export const ResidentialBenefits: React.FC = () => {
                             <div className="flex justify-center mb-6">
                                 <span className="text-[#a6ff48] -mb-6" style={{ fontFamily: 'Lato', fontWeight: 300, fontSize: '60px' }}>03</span>
                             </div>
-                            <h3 className="text-xl md:text-2xl font-bold mb-3 text-[#a6ff48]">Connected community</h3>
+                            <h3 className="text-xl md:text-2xl font-bold mb-3 text-[#a6ff48]">Connected Communities</h3>
                             <p className="text-base md:text-lg leading-relaxed">
                                 Regular, low-lift touchpoints make your property feel safe, connected, and cared for. This is especially important for urban, young professional, and family communities.
                             </p>

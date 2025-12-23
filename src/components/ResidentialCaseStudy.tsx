@@ -167,13 +167,13 @@ export const ResidentialCaseStudy: React.FC = () => {
 
                         <div className="pb-2 mb-2 text-center md:text-left">
                             <span className="inline-block text-[#053d3d] font-bold text-2xl md:text-xl">Location</span>
-                            <p className="text-[#053d3d] text-base">Growing metro near a central business district</p>
+                            <p className="text-[#053d3d] text-base">Nashville, TN</p>
                         </div>
 
                         <div className="pb-2 mb-2 text-center md:text-left">
                             <span className="inline-block text-[#053d3d] font-bold text-2xl md:text-xl">Challenge</span>
                             <p className="text-[#053d3d] text-base">
-                                Medium turnover in 12–18 months, and reviews stuck around 3.4 stars.
+                                Medium turnover in 12–18 months, and reviews stuck around 3.4 stars. Overall no sense of tenant community and brand loyalty.
                             </p>
                         </div>
                     </div>
@@ -191,7 +191,7 @@ export const ResidentialCaseStudy: React.FC = () => {
                         </div>
 
                         <div>
-                            <div className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-6 items-start">
+                            <div className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-6 items-center">
                                 <span className="text-4xl text-[#053d3d] leading-tight text-center align-top">01</span>
                                 <p className="text-[#053d3d] text-base pt-1">
                                     Two community events per month (one wellness-focused, one social)
@@ -204,7 +204,7 @@ export const ResidentialCaseStudy: React.FC = () => {
 
                                 <span className="text-4xl text-[#053d3d] leading-tight text-center align-top">03</span>
                                 <p className="text-[#053d3d] text-base pt-1">
-                                    Communications plan across email, SMS, and lobby screens
+                                    Communications plan across email, text, and lobby screens
                                 </p>
 
                                 <span className="text-4xl text-[#053d3d] leading-tight text-center align-top">04</span>
@@ -249,7 +249,7 @@ export const ResidentialCaseStudy: React.FC = () => {
                     </div>
 
                     <p className="text-[#053d3d] text-base text-center leading-relaxed max-w-4xl mx-auto">
-                        More residents reported "I know at least 3 neighbors by name" and "I feel a sense of community here" on follow-up surveys.
+                        More residents reported <span className="font-bold">"I know at least 3 neighbors by name"</span> and <span className="font-bold text-[#a6ff48]">"I feel a sense of community here"</span> on follow-up surveys.
                         This is the kind of community and retention shift we aim to achieve with a focused, manageable program.
                     </p>
                 </div>

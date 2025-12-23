@@ -56,7 +56,7 @@ export const WhyItMattersHero: React.FC = () => {
                         variants={fadeInUp}
                         className="mt-20 text-7xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-[#053d3d] leading-tight drop-shadow-sm font-display"
                     >
-                        Why does Employee<br />
+                        Why does Tenant<br />
                         Well-Being Matter
                     </motion.h1>
                 </motion.div>

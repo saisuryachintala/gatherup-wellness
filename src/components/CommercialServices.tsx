@@ -18,21 +18,21 @@ export const CommercialServices: React.FC = () => {
 
     const servicesIcons = [
         {
-            title: "Amenity activation & calendars",
+            title: "Amenity Activation & Calendars",
             description: "Weekly or monthly wellness, social, and community touchpoints in spaces you already have.",
             iconSrc: "/assets/icons/Heart.png",
             iconAlt: "Heart",
             iconSize: "w-20 h-20 mb-4"
         },
         {
-            title: "Workplace wellbeing sessions",
+            title: "Workplace Wellbeing Sessions",
             description: "Short, practical sessions that support focus, mental health, and energy for tenant teams.",
             iconSrc: "/assets/icons/Lotus.png",
             iconAlt: "Lotus",
             iconSize: "w-20 h-20 mb-4"
         },
         {
-            title: "Strategy & measurement",
+            title: "Strategy & Measurement",
             description: "Simple frameworks for communications, feedback, and a small set of KPIs tied back to retention and NOI.",
             iconSrc: "/assets/icons/Flowers.png",
             iconAlt: "Flowers",

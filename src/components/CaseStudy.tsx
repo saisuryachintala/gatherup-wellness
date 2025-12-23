@@ -173,7 +173,7 @@ export const CaseStudy: React.FC = () => {
                         <div className="pb-2 mb-4 text-center md:text-left">
                             <span className="inline-block text-[#053d3d] font-bold text-2xl md:text-xl">Challenge</span>
                             <p className="text-[#053d3d] text-base">
-                                Beautiful modern gym, low usage, and a renewal cycle coming up for three key tenants.
+                                Beautiful modern gym but low usage, and a renewal cycle coming up for three key tenants.
                             </p>
                         </div>
                     </div>
@@ -191,7 +191,7 @@ export const CaseStudy: React.FC = () => {
                         </div>
 
                         <div>
-                            <div className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-6 items-start">
+                            <div className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-6 items-center">
                                 <span className="text-4xl text-[#053d3d] leading-tight text-center align-top">01</span>
                                 <p className="text-[#053d3d] text-base pt-1">
                                     Weekly micro-activations (15–30 minutes) in the gym
@@ -225,7 +225,7 @@ export const CaseStudy: React.FC = () => {
                     <div className="px-2 md:px-4 grid md:grid-cols-3 gap-8 mb-8">
                         <div className="text-center border-b border-gray-300 pb-8 md:border-0 md:pb-0">
                             <div>
-                                <p className="text-[#053d3d] text-base mb-2">Increase in<br />Amenity usage by</p>
+                                <p className="text-[#053d3d] text-base mb-2">Increase in<br />amenity usage by</p>
                                 <div className="text-5xl md:text-6xl font-bold text-[#053d3d] mb-2">60%</div>
                                 <p className="text-base">(badge data +<br />event check-ins)</p>
                             </div>
@@ -233,7 +233,7 @@ export const CaseStudy: React.FC = () => {
 
                         <div className="text-center border-b border-gray-300 pb-8 md:border-0 md:pb-0">
                             <div>
-                                <p className="text-[#053d3d] text-base mb-2">Increase in Tenant<br />contact satisfaction to</p>
+                                <p className="text-[#053d3d] text-base mb-2">Increase in tenant<br />contact satisfaction to</p>
                                 <div className="text-5xl md:text-6xl font-bold text-[#053d3d] mb-2">4.7 / 5</div>
                                 <p className="text-base">from from 3.7 on "overall<br />building experience"</p>
                             </div>

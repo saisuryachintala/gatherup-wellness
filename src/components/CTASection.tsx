@@ -14,7 +14,7 @@ interface CTASectionProps {
 
 export const CTASection: React.FC<CTASectionProps> = ({
     title = "Ready to Turn Tenant Experience Into a Property Advantage?",
-    subtitle = "Let's activate your spaces — and your results.",
+    subtitle = "Let's activate your spaces and your results.",
     buttonText = "Book a Demo",
     buttonLink = "https://tidycal.com/gluckjamin/free-gatherup-consultation"
 }) => {

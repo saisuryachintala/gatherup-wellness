@@ -10,27 +10,27 @@ export const GatherUp5DApproach: React.FC = () => {
     const steps = [
         {
             number: "01",
-            keyword: "Discover",
+            keyword: "DISCOVER",
             description: "Not guessing. Not copying the property down the street. We collect real input from occupants and onsite teams, along with existing usage patterns, to understand what's working, what feels missing, and how the property is actually experienced day to day."
         },
         {
             number: "02",
-            keyword: "Define",
+            keyword: "DEFINE",
             description: "If it doesn't support outcomes, it doesn't make the cut. We align on clear priorities, such as satisfaction, renewals, occupancy, referrals, reviews, or leasing story, so every wellness and community initiative has a specific job to do."
         },
         {
             number: "03",
-            keyword: "Design",
+            keyword: "DESIGN",
             description: "Strategy first. Activities second. We create a focused activation roadmap that connects early momentum (quick wins) with a longer-term plan that can run with current staffing and scale across the property or portfolio."
         },
         {
             number: "04",
-            keyword: "Deliver",
+            keyword: "DELIVER",
             description: "No random acts of wellness. We run or support the rollout of targeted activations, workshops, and experiences that align with the property’s brand, the people who use it, and its overall positioning."
         },
         {
             number: "05",
-            keyword: "Demonstrate",
+            keyword: "DEMONSTRATE",
             description: "You shouldn’t have to “hope” wellness works, you should see it. We track a simple, property friendly set of metrics, engagement, satisfaction, renewal intent, and reputation or leasing story inputs, so you can report real outcomes, not just attendance."
         }
     ];
@@ -49,7 +49,7 @@ export const GatherUp5DApproach: React.FC = () => {
                         variants={scrollReveal}
                         className="text-3xl md:text-4xl font-bold text-[#a6ff48] mb-6 font-display"
                     >
-                        The GatherUp 5D Approach
+                        The GatherUp Approach
                     </motion.h2>
                     <motion.p
                         variants={scrollReveal}
@@ -71,9 +71,9 @@ export const GatherUp5DApproach: React.FC = () => {
                             variants={scrollReveal}
                             className="bg-[#3d6e6e]/30 border border-[#a6ff48]/20 rounded-2xl p-6 md:p-8"
                         >
-                            <div className="flex flex-col md:flex-row gap-6 md:gap-8">
+                            <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-center">
                                 {/* Left Side - Number and Keyword */}
-                                <div className="flex-shrink-0 w-fit md:w-32 mx-auto md:mx-0">
+                                <div className="flex-shrink-0 w-full md:w-40 mx-auto md:mx-0">
                                     <div className="text-center text-4xl md:text-5xl font-bold text-[#a6ff48] mb-2 font-display">
                                         {step.number}
                                     </div>
@@ -83,7 +83,7 @@ export const GatherUp5DApproach: React.FC = () => {
                                 </div>
 
                                 {/* Right Side - Description */}
-                                <div className="flex-1 flex items-center">
+                                <div className="flex-1 flex items-center md:items-center min-w-0">
                                     <p className="text-center md:text-left text-base md:text-lg text-white leading-relaxed">
                                         {step.description}
                                     </p>
