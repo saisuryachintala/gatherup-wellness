@@ -19,7 +19,7 @@ export const Footer: React.FC = () => {
                                 />
                             </div>
                             <p className="text-white text-lg max-w-md mb-6 font-bold">
-                                GatherUp partners with property leaders to turn tenant experience into measurable property performance.
+                                GatherUp partners with property leaders to turn tenant experiences into measurable property performance.
                             </p>
                             <p className="text-white text-lg max-w-md mb-6">
                                 Through strategic amenity activation and community-led wellbeing programming, we help properties increase tenant satisfaction, strengthen retention, and support long-term NOI.
@@ -64,7 +64,7 @@ export const Footer: React.FC = () => {
                     </div>
 
                     <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center font-bold text-sm text-[#a6ff48]">
-                        <p>&copy; 2025 Jamin Gluck Wellness, LLC. All rights reserved.</p>
+                        <p>&copy; 2026 Jamin Gluck Wellness, LLC. All rights reserved.</p>
                         <p>Atlanta, GA</p>
                     </div>
                 </div>
